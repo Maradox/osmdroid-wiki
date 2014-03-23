@@ -4,7 +4,7 @@ This page is to list some of the more important guidelines for developers contri
 
 ###General guidelines
 
- * Use tabs for intending, not spaces
+ * Use spaces for intending, not tabs (**recent change**)
  * Make variables final where possible
  * Prefix member variables with m
  * Prefix method arguments with p
@@ -17,6 +17,7 @@ This page is to list some of the more important guidelines for developers contri
 
 osmdroid-android references android.jar but the unit tests don't run on an Android device.  This means that the unit tests cannot invoke any Android methods.  In order to avoid this, proxies are used in the most common cases:
 
- * Use org.andnav.osm.ResourceProxy, not Context.getResource
+ * Use org.osmdroid.ResourceProxy, not Context.getResource
+ * Use org.slf4j.Logger, not android.util.Log
 
 Those are the main less obvious guidelines.  In general, try and follow the existing style.
