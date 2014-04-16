@@ -1,0 +1,41 @@
+# Changelog
+
+This list only includes major highlights or breaking changes. Check the [https://code.google.com/p/osmdroid/source/list changes list] for full commit logs.
+
+## 4.2 (upcoming)
+
+### Note - breaking changes
+We have made a number of changes to the maps that may require some changes for users that write their own Overlays.
+
+* The Projection class is the singular authority for lat/long <-> pixel conversions. Do NOT use TileSystem unless you really know what you're doing.
+* The Projection methods have been simplified and now strictly follow the Google Maps v1 API. One major change is that toMapPixels() is now correctly called toPixels(). Redundant and confusing methods were removed.
+* The Projection class is broken out into its own class. It can be extended to add additional functionality by users. Override MapView.getProjection() to pass back your own instance.
+* The "Safe" canvas classes have been eliminated. All "Safe" classes can be reverted back to their normal counterparts - so SafePaint can be reverted to Paint, SafeCanvas to Canvas, etc...
+* We have implemented an OsmPath which behaves similarly to the old SafePath class. By calling onDrawCycle() in the draw() method of your overlay, it will adjust the location of the path so as to avoid having to recalculate the points on every draw.
+
+### Other changes
+
+* Added experimental HW-acceleration support. See issue 413.
+* Issue 426, issue 479, issue 489, issue 520, issue 521.
+
+## 4.1
+
+* Fix issue with OSM tile servers rejecting GETs due to missing user-agent. See issue 515.
+* Issue 417, issue 477, issue 489, issue 491, issue 498, issue 500, issue 507.
+
+## 4.0
+
+* Added compatibility layer for Google Maps API v2.
+* Added !BitmapPool to reuse !MapTiles and prevent constant Bitmap allocation during scrolling.
+* Added fix to ignore !MapView 'clickable' setting that can prevent scrolling.
+* Added http client factory to !MapTileDownloader.
+* Some changes to clean up the !MapController. See issue 471.
+* Changed zoom animations to match pinch-to-zoom animations for consistency and to allow overlays to prevent their contents from scrolling. See issue 453.
+* Issue 298, issue 408, issue 427, issue 437, issue 438, issue 441, issue 442, issue 447, issue 450, issue 451, issue 483.
+
+## 3.0.10
+
+* Added limited scrolling area
+* Added simple setable min/max zoomlevel on the !MapView that overrides the values returned by the tile provider.
+* Pinch-to-zoom is relative to the pinch point, not the center of the screen.
+* New samples project with modern Fragments.
