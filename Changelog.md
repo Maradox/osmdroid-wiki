@@ -4,7 +4,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ## 4.2 (upcoming)
 
-### Note - breaking changes
+#### Note - breaking changes
 We have made a number of changes to the maps that may require some changes for users that write their own Overlays.
 
 * The Projection class is the singular authority for lat/long <-> pixel conversions. Do NOT use TileSystem unless you really know what you're doing.
@@ -13,7 +13,7 @@ We have made a number of changes to the maps that may require some changes for u
 * The "Safe" canvas classes have been eliminated. All "Safe" classes can be reverted back to their normal counterparts - so SafePaint can be reverted to Paint, SafeCanvas to Canvas, etc...
 * We have implemented an OsmPath which behaves similarly to the old SafePath class. By calling onDrawCycle() in the draw() method of your overlay, it will adjust the location of the path so as to avoid having to recalculate the points on every draw.
 
-### Other changes
+#### Other changes
 
 * Added experimental HW-acceleration support. See issue 413.
 * Issue 426, issue 479, issue 489, issue 520, issue 521.
