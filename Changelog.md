@@ -1,6 +1,6 @@
 # Changelog
 
-This list only includes major highlights or breaking changes. Check the [https://code.google.com/p/osmdroid/source/list changes list] for full commit logs.
+This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
 ## 4.2 (upcoming)
 
