@@ -12,7 +12,7 @@ osmdroid requires the [slf4j-android logging library](http://www.slf4j.org/andro
 <uses-sdk android:targetSdkVersion="16" android:minSdkVersion="7" />
 ```
 
-* You should turn off hardware acceleration in the manifest. We have experimental HW acceleration support but users will still run into some issues. See [issue 413](https://code.google.com/p/osmdroid/issues/detail?id=413) for more information.
+* You should turn off hardware acceleration in the manifest. We have experimental hardware acceleration support but users will still run into some issues. See [issue 413](https://code.google.com/p/osmdroid/issues/detail?id=413) for more information.
 * osmdroid requires certain permissions in the Android project manifest to perform correctly. You will need to add the following permissions in your manifest file:
 
 ```xml
