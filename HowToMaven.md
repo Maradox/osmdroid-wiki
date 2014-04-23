@@ -27,7 +27,7 @@ If you are not yet using Maven you can include osmdroid by downloading from the 
  * Install Maven support for Eclipse from Eclipse Marketplace. Search for "android m2e" and install "Android Connector for Maven". http://rgladwell.github.io/m2e-android/
  * Checkout the osmdroid source from svn to a local folder.
  * In Eclipse Import -> Maven -> Existing Maven project. Import all the osmdroid projects.
- * Download Android SDK dependency using Android SDK Deployer https://github.com/mosabua/maven-android-sdk-deployer  Follow instructions to deploy android sdk package to local repository.
+ * Download Android SDK dependency using [Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer).  Follow instructions to deploy android sdk package to local repository.
  * Right click on osmdroid-parent project. Click Run as --> Maven install.
 
 The project should then build successfully.
