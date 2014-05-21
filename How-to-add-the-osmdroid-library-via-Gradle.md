@@ -2,6 +2,6 @@ If you use [Gradle](http://www.gradle.org) you have to add the following depende
 
 ```groovy
 dependencies {
-    compile 'org.osmdroid:osmdroid-android:4.1'
+    compile 'org.osmdroid:osmdroid-android:4.2'
 }
 ```
