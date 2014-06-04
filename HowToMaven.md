@@ -12,9 +12,11 @@ If your project already uses Maven and you want to include osmdroid then it's as
 <dependency>
   <groupId>org.osmdroid</groupId>
   <artifactId>osmdroid-android</artifactId>
-  <version>4.1</version>
+  <version>4.2</version>
 </dependency>
 ```
+
+You will also need [Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer) in order to get the Google dependencies into your local repository.
 
 ##How to use osmdroid in your non-Maven project
 
@@ -31,3 +33,7 @@ If you are not yet using Maven you can include osmdroid by downloading from the 
  * Right click on osmdroid-parent project. Click Run as --> Maven install.
 
 The project should then build successfully.
+
+##How to build osmdroid using Android Studio
+
+Follow the instructions for [Importing Project from Maven Model](www.jetbrains.com/idea/webhelp/importing-project-from-maven-model.html).
