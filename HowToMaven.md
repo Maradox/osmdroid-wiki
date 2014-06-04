@@ -36,4 +36,4 @@ The project should then build successfully.
 
 ##How to build osmdroid using Android Studio
 
-Follow the instructions for [Importing Project from Maven Model](www.jetbrains.com/idea/webhelp/importing-project-from-maven-model.html).
+Follow the instructions for [Importing Project from Maven Model](http://www.jetbrains.com/idea/webhelp/importing-project-from-maven-model.html).
