@@ -3,5 +3,6 @@ If you use [Gradle](http://www.gradle.org) you have to add the following depende
 ```groovy
 dependencies {
     compile 'org.osmdroid:osmdroid-android:4.2'
+    compile 'org.slf4j:slf4j-simple:1.6.1'
 }
 ```
