@@ -2,7 +2,11 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
-## 4.2 (upcoming)
+## 4.3 (upcoming)
+ * Fixing issue #22: MapController.setCenter not centering when used in onCreate (and more generally: all actions on mapView positionning done in onCreate). 
+ * Fixing issues related to high density screens. 
+
+## 4.2 (current latest stable release)
 
 #### Note - breaking changes
 We have made a number of changes to the maps that may require some changes for users that write their own Overlays.
