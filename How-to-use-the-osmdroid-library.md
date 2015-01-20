@@ -3,7 +3,7 @@ This wiki page has been migrated from the [associated Google Code page](https://
 ---
 # "Hello osmdroid World"
 osmdroid's MapView is basically a replacement for Google's MapView class. 
-First of all, create your Android project, and follow [HowToMaven] explanations to include osmdroid in your project. 
+First of all, create your Android project, and follow [HowToMaven](HowToMaven) explanations to include osmdroid in your project. 
 
 ## Manifest
 In most cases, you will have to set the following authorizations in your AndroidManifest.xml:
