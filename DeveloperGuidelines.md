@@ -6,7 +6,7 @@ This page is to list some of the more important guidelines for developers contri
 
 ###General guidelines
 
- * Use spaces for intending, not tabs (**recent change**)
+ * Use spaces for indenting, not tabs (**recent change**)
  * Make variables final where possible
  * Prefix member variables with m
  * Prefix method arguments with p
