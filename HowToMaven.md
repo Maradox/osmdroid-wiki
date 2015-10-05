@@ -20,7 +20,7 @@ You will also need [Maven Android SDK Deployer](https://github.com/mosabua/maven
 
 ##How to use osmdroid in your Gradle
 
-Adding osmdroid to a gradle project is just as easy as with maven
+Drank the kool aid, huh? Adding osmdroid to a gradle project is just as easy as with maven
 ```
 compile 'org.osmdroid:osmdroid-android:4.3'
 ```
