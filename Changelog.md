@@ -2,6 +2,24 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
+## 5.0 (not yet released)
+ * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
+ * Tile inversion for a rudimentary night mode
+ * Better support for Android x86 with online map sources
+ * (Pending) using doubles internally for points instead of ints (increased precision)
+ * Better support for application specific control of map tile loading
+   * Can now use offline tiles from just a single zip/sqlite/etc which don't have to be in /sdcard/osmdroid
+ * (Pending) ability to change the cache folder
+ * (Pending) itemized icon overlay icons no longer scale while zooming
+ * My location icon can now be changed at runtime
+ * Read/write permissions change for sqlite databases
+ * Fling can be disabled programmatically
+ * Better handling of map motion events for listeners
+ * Updated build tech. Gradle build files also updated to reflect the changes
+ * SLF4J dependency dropped (except for Google Maps wrapper Sample App)
+
+
+
 ## 4.3 (current latest stable release)
  * Fixing issue #22: MapController.setCenter not centering when used in onCreate (and more generally: all actions on mapView positionning done in onCreate). 
  * Fixing issues related to high density screens. 
