@@ -2,8 +2,6 @@
 
 This Wiki is migrated from [Google Code](https://code.google.com/p/osmdroid/wiki/HowToMaven).
 
-How to use in Maven projects and how to build osmdroid using Maven.
-
 ##How to use osmdroid in your Maven project
 
 If your project already uses Maven and you want to include osmdroid then it's as simple as
