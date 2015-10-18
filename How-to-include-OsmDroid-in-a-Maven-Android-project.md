@@ -14,5 +14,5 @@ If your project already uses Maven and you want to include osmdroid then it's as
 </dependency>
 ```
 
-You will also need [Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer) in order to get the Google dependencies into your local repository.
+You will also need [Maven Android SDK Deployer](https://github.com/simpligility/maven-android-sdk-deployer) in order to get the Google dependencies into your local repository.
 
