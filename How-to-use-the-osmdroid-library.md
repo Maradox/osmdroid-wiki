@@ -3,7 +3,7 @@ This wiki page has been migrated from the [associated Google Code page](https://
 ---
 # "Hello osmdroid World"
 osmdroid's MapView is basically a replacement for Google's MapView class. 
-First of all, create your Android project, and follow [HowToMaven](HowToMaven) explanations to include osmdroid in your project. 
+First of all, create your Android project, and follow [HowToMaven](HowToMaven) if you're using Maven, or follow [HowToGradle[(HowToGradle) if you're using Gradle/Android Studio. This will help you get the binaries for osmdroid included in your project. 
 
 ## Manifest
 In most cases, you will have to set the following authorizations in your AndroidManifest.xml:
@@ -17,7 +17,7 @@ In most cases, you will have to set the following authorizations in your Android
 ```
 
 ## Layout
-Create a "main.xml" layout like this one:
+Create a "src/main/res/layouts/main.xml" layout like this one. With Android Studio, it probably created one already called. The default is "src/main/res/layouts/activity_main.xml":
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,6 +30,9 @@ Create a "main.xml" layout like this one:
                 android:layout_height="fill_parent" />
 </LinearLayout>
 ```
+
+## Images for Buttons and whatnot
+For OsmDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
 
 ## Main Activity
 We now create the main activity (MainActivity.java):
@@ -63,7 +66,7 @@ We can move the map on a default view point. For this, we need access to the map
 
 
 # Advanced tutorial
-The best example of how to use the osmdroid library is our [OpenStreetMapViewer sample project](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer). It contains a basic osmdroid application plus a few special-use examples. It is recommended you use this project as a starting point for building your application.
+The best example of how to use the osmdroid library is our [OpenStreetMapViewer sample project](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer). It contains a basic osmdroid application plus a few special-use examples. It is recommended you use this project as an example for building your application.
 
 # Adding a MapView
 
@@ -126,3 +129,55 @@ final MapTileProviderArray tileProviderArray = new MapTileProviderArray(
 // Create the mapview with the custom tile provider array
 mMapView = new MapView(context, 256, new DefaultResourceProxyImpl(context), tileProviderArray);
 ```
+
+# Create a custom Resource Proxy
+As mentioned above, the Resource Proxy is a bit of a strange animal that OsmDroid uses to load some images for user interface controls. If you're using any of the build in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from OsmDroid's example app, or provide your own implementation of Resource Proxy.
+
+The example OsmDroid app includes an example of this called CustomResourceProxy (included with > 4.3 OsmDroid). All it does is change the my location drawable (person) to an alternate image. The example is below.
+
+````
+public class CustomResourceProxy extends DefaultResourceProxyImpl {
+
+     private final Context mContext;
+     public CustomResourceProxy(Context pContext) {
+          super(pContext);
+		mContext = pContext;
+     }
+     
+     @Override
+	public Bitmap getBitmap(final bitmap pResId) {
+		switch (pResId){
+               case person:
+                    //your image goes here!!!
+                    return BitmapFactory.decodeResource(mContext.getResources(),org.osmdroid.example.R.drawable.sfgpuci);
+          }
+          return super.getBitmap(pResId);
+	}
+
+	@Override
+	public Drawable getDrawable(final bitmap pResId) {
+		switch (pResId){
+               case person:
+                    return mContext.getResources().getDrawable(org.osmdroid.example.R.drawable.sfgpuci);
+          }
+          return super.getDrawable(pResId);
+	}
+}
+````
+
+Then you can use your instance using the following snippet.
+
+````
+mResourceProxy = new CustomResourceProxy(getApplicationContext());
+final RelativeLayout rl = new RelativeLayout(this);
+this.mOsmv = new MapView(this,mResourceProxy);
+````
+
+In order to see any difference with our example (changes the person icon), we'll need to get a location fix and add it to the map layers.
+
+````
+this.mLocationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(this), mOsmv, mResourceProxy);
+this.mLocationOverlay.enableMyLocation();
+this.mOsmv.getOverlays().add(mLocationOverlay);
+this.mOsmv.setMultiTouchControls(true);
+````
