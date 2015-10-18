@@ -10,7 +10,7 @@ This page is to list some of the more important guidelines for developers contri
  * Make variables final where possible
  * Prefix member variables with m
  * Prefix method arguments with p
- * Use org.slf4j.Logger, not android.util.Log
+ * Versions <= 4.3, Use org.slf4j.Logger. Verions > 4.3 use android.util.Log
  * Use 100 character line width
  * Use final wherever possible, especially parameters
  * Eclipse formatting and clean-up XML settings files (both of which cover most of the above) are included in the repository. Import them, and use them to make your life easier!
