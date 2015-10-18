@@ -1,0 +1,2 @@
+
+If you are not yet using Maven or Gradle you can include osmdroid by downloading from the link on the home page or directly from [Maven Central](https://oss.sonatype.org/content/groups/public/org/osmdroid/) and then include the jar in your libs folder.
