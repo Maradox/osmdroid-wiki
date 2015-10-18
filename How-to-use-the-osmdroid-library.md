@@ -181,3 +181,27 @@ this.mLocationOverlay.enableMyLocation();
 this.mOsmv.getOverlays().add(mLocationOverlay);
 this.mOsmv.setMultiTouchControls(true);
 ````
+
+
+## Tile providers vs Tile Source
+
+OsmDroid uses a Tile Provider to figure out how to load tiles (online, offline, assets folders, etc) and a Tile Source (Bing, Mapquest, Mapnik, etc) to figure out how to load tiles. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader.
+
+## Using a different Tile Source
+OsmDroid comes with a bunch of tile sources preprogrammed for sources available on the internet. Some require API keys or additional information due to usage restrictions, developers accounts, pay schemes, etc. The following example will show you how to switch tile sources at runtime.
+
+To set to MapQuest satelite:
+````
+mMapView.setTileSource(TileSourceFactory.MAPQUESTAERIAL);
+````
+
+To set to MapQuest road maps:
+````
+mMapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
+````
+
+To set to a custom map server/tile source (this case is USGS Topographic maps):
+````
+mMapView.setTileSource(new XYTileSource("Custom Map Server", ResourceProxy.string.unknown, 0, 18, 256, ".png", 
+          new String[] { "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/" }));
+````
