@@ -1,7 +1,7 @@
 # Building OsmDroid from the command line/bash
  * Install the Android SDK and update it
  * Set a system environment variable for `ANDROID_HOME`, pointing to your Android SDK install location. Windows (My Computer, properties, advanced, environment variables...), Linux `export ANDROID_HOME=(path to android sdk install)`
- * Install Maven. http://maven.apache.org/download.html (you need at least version 3.2.1). You'll also want to add Maven to the system path. Windows `set PATH=$PATH%;(path to maven/bin). Linux `export PATH=$PATH:(path to maven/bin)`
+ * Install Maven. http://maven.apache.org/download.html (you need at least version 3.2.1). You'll also want to add Maven to the system path. Windows `set PATH=$PATH%;(path to maven/bin)`. Linux `export PATH=$PATH:(path to maven/bin)`
  * Checkout the osmdroid source from git to a local folder. (`git clone https://github.com/osmdroid/osmdroid.git`)
  * Download Maven Android SDK dependency using [Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer).  Follow instructions to deploy android sdk package to local repository. (Suggest `mvn install -fn`)
  * From the OsmDroid check out location, run the following `mvn clean install`. You will need a device or emulator running.
