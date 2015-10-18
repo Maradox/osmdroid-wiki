@@ -23,3 +23,4 @@ osmdroid-android references android.jar but the unit tests don't run on an Andro
  * Use org.slf4j.Logger, not android.util.Log
 
 Those are the main less obvious guidelines.  In general, try and follow the existing style.
+
