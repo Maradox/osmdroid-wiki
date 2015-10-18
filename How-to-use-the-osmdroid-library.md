@@ -200,8 +200,14 @@ To set to MapQuest road maps:
 mMapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
 ````
 
-To set to a custom map server/tile source (this case is USGS Topographic maps which doesn't use a file extension):
+To set to a custom map server/tile source. In this case, we are using the USGS Topographic maps. This tile source is a bit different and requires some explanation. Most OSM based map sources use a URL pattern  similar to Zoom/X/Y.png. USGS, as well as many other ArcGis based sources, use Zoom/Y/X and thus require a different URL pattern.
 ````
-mMapView.setTileSource(new XYTileSource("Custom Map Server", ResourceProxy.string.unknown, 0, 18, 256, "", 
-          new String[] { "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/" }));
+mMapView.setTileSource(new OnlineTileSourceBase("USGS Topo", ResourceProxy.string.custom, 0, 18, 256, "", 
+               new String[] { "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/" }) {
+               @Override
+               public String getTileURLString(MapTile aTile) {
+                    return getBaseUrl() + aTile.getZoomLevel() + "/" + aTile.getY() + "/" + aTile.getX()
+				+ mImageFilenameEnding;
+               }
+          });
 ````
