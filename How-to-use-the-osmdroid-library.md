@@ -200,8 +200,8 @@ To set to MapQuest road maps:
 mMapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
 ````
 
-To set to a custom map server/tile source (this case is USGS Topographic maps):
+To set to a custom map server/tile source (this case is USGS Topographic maps which doesn't use a file extension):
 ````
-mMapView.setTileSource(new XYTileSource("Custom Map Server", ResourceProxy.string.unknown, 0, 18, 256, ".png", 
+mMapView.setTileSource(new XYTileSource("Custom Map Server", ResourceProxy.string.unknown, 0, 18, 256, "", 
           new String[] { "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/" }));
 ````
