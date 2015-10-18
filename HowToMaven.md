@@ -18,23 +18,6 @@ If your project already uses Maven and you want to include osmdroid then it's as
 
 You will also need [Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer) in order to get the Google dependencies into your local repository.
 
-##How to use osmdroid in your Gradle
-
-Drank the kool aid, huh? Adding osmdroid to a gradle project is just as easy as with maven
-```
-compile 'org.osmdroid:osmdroid-android:4.3'
-```
-
-## If you get "resource not found" error
-This is because Osmdroid uses a number of graphics (Android drawables) that represent things like current device location, zoom in/out buttons, etc. These are not included with Osmdroid because it's distributed as a JAR file. You have two options
-
-1. Implement your own version of "ResourceProxy"
-2. Pull in the Osmdroid example application's drawable files into your own applicatio
-
-##How to use osmdroid in your non-Maven project
-
-If you are not yet using Maven you can include osmdroid by downloading from the link on the home page or directly from [Maven Central](https://oss.sonatype.org/content/groups/public/org/osmdroid/) and then include the jar in your libs folder.
-
 
 ##How to build osmdroid using Eclipse
 
