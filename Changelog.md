@@ -19,6 +19,8 @@ This list only includes major highlights or breaking changes. Check [here](https
  * SLF4J dependency dropped. All logging now goes to the standard logcat
  * New Map source added for USGS maps
  * Many additional examples and samples on the demo app.
+### BREAKING CHANGES
+ * The API structure ITileSource and everything related to it has changed. All methods that required a ResourceProxy.string value were modified to no longer require the ResourceProxy.string value. It wasn't really used anywhere, was unnecessary and only added confusion. 
 
 
 ## 4.3 (current latest stable release)
