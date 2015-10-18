@@ -2,7 +2,7 @@ This wiki page has been migrated from the [associated Google Code page](https://
 
 # External libraries
 
-osmdroid requires the [slf4j-android logging library](http://www.slf4j.org/android/). If you are using Gradle or Maven then it will be downloaded for you. If you are using a jar then you must download the slf4j-android library jar and place it in your libs folder.
+osmdroid requires the [slf4j-android logging library](http://www.slf4j.org/android/). If you are using Gradle or Maven then it will be downloaded for you. If you are using the OsmDroid jar in some archaic build system or IDE, then you must download the slf4j-android library jar and place it in your libs folder.
 
 # Manifest additions
 
