@@ -10,13 +10,14 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Better support for application specific control of map tile loading
    * Can now use offline tiles from just a single zip/sqlite/etc which don't have to be in /sdcard/osmdroid
  * Ability to change the cache folder and offline zip/database location
- * (Pending) itemized icon overlay icons no longer scale while zooming
+ * Itemized icon overlay icons no longer scale while zooming
  * My location icon can now be changed at runtime
  * Read/write permissions change for sqlite databases (now is read only)
  * Fling can be disabled programmatically
  * Better handling of map motion events for listeners
  * Updated build tech. Gradle build files also updated to reflect the changes
  * SLF4J dependency dropped. All logging now goes to the standard logcat
+ * New Map source added for USGS maps
  * Many additional examples and samples on the demo app.
 
 
