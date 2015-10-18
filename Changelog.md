@@ -17,7 +17,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Better handling of map motion events for listeners
  * Updated build tech. Gradle build files also updated to reflect the changes
  * SLF4J dependency dropped. All logging now goes to the standard logcat
-
+ * Many additional examples and samples on the demo app.
 
 
 ## 4.3 (current latest stable release)
