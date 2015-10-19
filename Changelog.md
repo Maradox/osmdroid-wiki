@@ -18,6 +18,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Updated build tech. Gradle build files also updated to reflect the changes
  * SLF4J dependency dropped. All logging now goes to the standard logcat
  * New Map source added for USGS maps
+ * Fix for MapBox data sources
  * Many additional examples and samples on the demo app.
 
 ### BREAKING CHANGES!!
