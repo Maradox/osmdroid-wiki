@@ -20,10 +20,12 @@ This list only includes major highlights or breaking changes. Check [here](https
  * New Map source added for USGS maps
  * Fix for MapBox data sources
  * Many additional examples and samples on the demo app.
+ * Android 6.0 support and the removal of Apache Http Client as a dependency
 
 ### BREAKING CHANGES!!
 
  * The API structure ITileSource and everything related to it has changed. All methods that required a ResourceProxy.string value were modified to no longer require the ResourceProxy.string value. It wasn't really used anywhere, was unnecessary and only added confusion. 
+ * Apache Http Client removed
 
 
 ## 4.3 (current latest stable release)
