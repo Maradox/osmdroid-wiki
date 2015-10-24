@@ -21,11 +21,14 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Fix for MapBox data sources
  * Many additional examples and samples on the demo app.
  * Android 6.0 support and the removal of Apache Http Client as a dependency
+ * Rotation gestures now have reduced jitter
+ * Can now set the HTTP User Agent for all HTTP connections
 
 ### BREAKING CHANGES!!
 
  * The API structure ITileSource and everything related to it has changed. All methods that required a ResourceProxy.string value were modified to no longer require the ResourceProxy.string value. It wasn't really used anywhere, was unnecessary and only added confusion. 
  * Apache Http Client removed
+ * Rotation Gesture detector is now included in osmdroid-android@aar and is in a new name space
 
 
 ## 4.3 (current latest stable release)
