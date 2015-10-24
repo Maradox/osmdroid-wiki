@@ -86,8 +86,10 @@ Required Java dependencies
 
 Code Sample:
 
+````
 final ITileSource tileSource = TileSourceFactory.USGS_TOPO;
 mMapView.setTileSource(tileSource);
+````
 
 ## Bing Maps
 
