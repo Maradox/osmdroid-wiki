@@ -141,5 +141,7 @@ Required Java dependencies
  - osmdroid-android
  - osmdroid-third-party
 
+MinSDK 9
+
 Code Sample:
 See the example "GoogleMapsWrapper" application
