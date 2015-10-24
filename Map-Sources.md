@@ -60,8 +60,25 @@ mMapView.setTileSource(tileSource);
 
 ## Map Box
 
+Required Java dependencies
+ - osmdroid-android
 
+Manifest (optional):
+Under manifest/application
 
+````
+<meta-data android:name="MAPBOX_MAPID" android:value="YOUR KEY" />
+<meta-data android:name="ACCESS_TOKEN" android:value="YOUR TOKEN" />
+````
+
+Code Sample:
+
+````
+MapBoxTileSource.retrieveAccessToken(context);
+MapBoxTileSource.retrieveMapBoxMapId(context);
+final MapBoxTileSource tileSource = new MapBoxTileSource();
+mMapView.setTileSource(tileSource);
+````
 ## USGS Topo
 
 Required Java dependencies
