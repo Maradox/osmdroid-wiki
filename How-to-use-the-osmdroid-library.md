@@ -227,3 +227,54 @@ mMapView.setTileSource(new OnlineTileSourceBase("USGS Topo", 0, 18, 256, "",
                }
           });
 ````
+
+
+# Map Overlays
+
+## How to add the My Location overlay
+
+````
+this.mLocationOverlay = new MyLocationNewOverlay(context, new GpsMyLocationProvider(context),mMapView);
+mMapView.getOverlays().add(this.mLocationOverlay);
+````
+
+## How to add a compass overlay
+
+````
+this.mCompassOverlay = new CompassOverlay(context, new InternalCompassOrientationProvider(context), mMapView);
+mMapView.getOverlays().add(this.mCompassOverlay);
+````
+
+## How to enable rotation gestures
+
+````
+mRotationGestureOverlay = new RotationGestureOverlay(context, mMapView);
+mRotationGestureOverlay.setEnabled(true);
+mMapView.setMultiTouchControls(true);
+mMapView.getOverlays().add(this.mRotationGestureOverlay);
+````
+
+## How to add Map Scale bar overlay
+
+````
+mScaleBarOverlay = new ScaleBarOverlay(context);
+mScaleBarOverlay.setCentred(true);
+//play around with these values to get the location on screen in the right place for your applicatio
+mScaleBarOverlay.setScaleBarOffset(dm.widthPixels / 2, 10);
+mMapView.getOverlays().add(this.mScaleBarOverlay);
+````
+
+## How to add the built in Minimap
+
+Note: do not use when rotation is enabled!
+
+````
+mMinimapOverlay = new MinimapOverlay(context, mMapView.getTileRequestCompleteHandler());
+mMinimapOverlay.setWidth(dm.widthPixels / 5);
+mMinimapOverlay.setHeight(dm.heightPixels / 5);
+//optionally, you can set the minimap to a different tile source
+//mMinimapOverlay.setTileSource(....);
+mMapView.getOverlays().add(this.mMinimapOverlay);
+````
+
+Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap.
