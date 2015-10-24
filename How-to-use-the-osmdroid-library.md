@@ -278,3 +278,4 @@ mMapView.getOverlays().add(this.mMinimapOverlay);
 ````
 
 Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap.
+
