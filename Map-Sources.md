@@ -127,3 +127,4 @@ Required Java dependencies
  - osmdroid-third-party
 
 Code Sample:
+See the example "GoogleMapsWrapper" application
