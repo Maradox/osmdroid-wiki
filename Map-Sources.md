@@ -115,9 +115,24 @@ org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource bing=new org.osmdroi
 mapView.setTileSource(bing);
 ````
 
-Set the imagery options
+### Set the imagery options
+
+#### Hybrid (Road + Aerial)
+
 ````
 bing.setStyle(BingMapTileSource.IMAGERYSET_AERIALWITHLABELS);
+````
+
+#### Road
+
+````
+bing.setStyle(BingMapTileSource.IMAGERYSET_ROAD);
+````
+
+#### Aerial
+
+````
+bing.setStyle(BingMapTileSource.IMAGERYSET_AERIAL);
 ````
 
 ## Google Maps
