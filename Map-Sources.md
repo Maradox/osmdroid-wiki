@@ -1,0 +1,110 @@
+# How tos for using various map sources
+
+
+## Mapnik (aka Open Street Maps)
+
+Required Java dependencies
+ - osmdroid-android
+
+Code Sample:
+
+````
+final ITileSource tileSource = TileSourceFactory.MAPNIK;
+mMapView.setTileSource(tileSource);
+````
+
+## Mapquest Roads
+
+Required Java dependencies
+ - osmdroid-android
+
+Code Sample:
+
+````
+final ITileSource tileSource = TileSourceFactory.MAPQUESTOSM;
+mMapView.setTileSource(tileSource);
+````
+
+## Mapquest Aerial
+
+Required Java dependencies
+ - osmdroid-android
+
+Code Sample:
+
+````
+final ITileSource tileSource = TileSourceFactory.MAPQUESTAERIAL;
+mMapView.setTileSource(tileSource);
+````
+
+## Cloud made
+
+Required Java dependencies
+ - osmdroid-android
+
+Manifest (optional):
+Under manifest/application
+
+````
+<meta-data android:name="CLOUDMADE_KEY" android:value="YOUR KEY" />
+````
+
+Code Sample:
+
+````
+CloudmadeUtil.retrieveCloudmadeKey(context);
+final ITileSource tileSource = TileSourceFactory.CLOUDMADESTANDARDTILES;
+mMapView.setTileSource(tileSource);
+````
+
+
+## Map Box
+
+
+
+## USGS Topo
+
+Required Java dependencies
+ - osmdroid-android
+
+Code Sample:
+
+final ITileSource tileSource = TileSourceFactory.USGS_TOPO;
+mMapView.setTileSource(tileSource);
+
+## Bing Maps
+
+Required Java dependencies
+ - osmdroid-android
+ - osmdroid-third-party
+
+Manifest (optional):
+Under manifest/application
+
+````
+<meta-data android:name="BING_KEY" android:value="YOUR KEY" />
+````
+
+Code Sample:
+
+````
+//load from manifest
+org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource.retrieveBingKey(this);
+//or load programmatically
+ org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource.retrieveBingKey(this);
+org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource bing=new org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource(null);
+mapView.setTileSource(bing);
+````
+
+Set the imagery options
+````
+bing.setStyle(BingMapTileSource.IMAGERYSET_AERIALWITHLABELS);
+````
+
+## Google Maps
+
+Required Java dependencies
+ - osmdroid-android
+ - osmdroid-third-party
+
+Code Sample:
