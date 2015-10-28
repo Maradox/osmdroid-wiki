@@ -26,6 +26,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ### BREAKING CHANGES!!
 
+ * The API structure for IArchiveFile has changed. If you have a custom one, it can now be registered by file extension via ArchiveFileFactory.registerArchiveFileProvier(Class, file extension)
  * The API structure ITileSource and everything related to it has changed. All methods that required a ResourceProxy.string value were modified to no longer require the ResourceProxy.string value. It wasn't really used anywhere, was unnecessary and only added confusion. 
  * Apache Http Client removed
  * Rotation Gesture detector is now included in osmdroid-android@aar and is in a new name space
