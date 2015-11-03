@@ -307,3 +307,10 @@ The primary usage is downloaded map tiles
 //this will set the disk cache size in MB to 1GB , 9GB trim size
 OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
 ````
+
+
+## How many icons can I put on the map?
+
+The answer is greatly dependent on what hardware the OSMDroid based app is ran on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary.
+
+If you're also drawing paths, lines, polygons, etc, then this also changes the equation. Drawing multipoint graphics is computationally more expensive and thus negatively affects performance under higher loads. To mitigate performance issues with multipoint graphics, one strategy would be to reduce the amount of points handed off to the map engine when at a higher zoom level (numerically lower), then increase the fidelity as the user zoom's in.
