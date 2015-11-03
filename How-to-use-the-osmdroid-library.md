@@ -279,3 +279,31 @@ mMapView.getOverlays().add(this.mMinimapOverlay);
 
 Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap.
 
+
+
+
+## How to adjust the tile cache (in memory)
+
+Since many devices have support for `android:largeHeap="true"` settings, which enables your app to use more memory than "normal". This code snippet will allow you to increase the tile cache (in memory) to meet your needs. It's normally set to the exact number of tiles to fill the screen.
+
+````
+Iterator<Overlay> iterator = mMapView.getOverlays().iterator();
+while(iterator.hasNext()){
+	Overlay next = iterator.next();
+	if (next instanceof TilesOverlay){
+		TilesOverlay x = (TilesOverlay)next;
+		x.setOvershootTileCache(x.getOvershootTileCache() * 2);
+		Toast.makeText(getActivity(), "Tiles overlay cache set to " + x.getOvershootTileCache(), Toast.LENGTH_LONG).show();
+		break;
+	}
+}
+````
+
+## Adjust the size of the cache on disk
+
+The primary usage is downloaded map tiles
+
+````
+//this will set the disk cache size in MB to 1GB , 9GB trim size
+OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
+````
