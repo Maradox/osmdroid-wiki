@@ -32,7 +32,9 @@ Create a "src/main/res/layouts/main.xml" layout like this one. With Android Stud
 ```
 
 ## Images for Buttons and whatnot
-For OsmDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
+For OSMDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
+
+For OSMDroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
 
 ## Main Activity
 We now create the main activity (MainActivity.java):
