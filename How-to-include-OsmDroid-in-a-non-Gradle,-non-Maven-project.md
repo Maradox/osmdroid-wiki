@@ -1,2 +1,2 @@
 
-If you are not yet using Maven or Gradle you can include osmdroid by downloading from the link on the home page or directly from [Maven Central](https://oss.sonatype.org/content/groups/public/org/osmdroid/) and then include the jar in your libs folder.
+If you are not yet using Maven or Gradle you can include osmdroid by downloading from the link on the home page or directly from [Maven Central](https://oss.sonatype.org/content/groups/public/org/osmdroid/) and then include the AAR (for >=5.0) or JAR (for < 4.3) in your libs folder. For versions < 4.3, you also need slf4j-api and slf4j-android.
