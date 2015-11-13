@@ -2,7 +2,7 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
-## 5.0
+## 5.0 (current latest stable release)
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
  * Tile inversion for a rudimentary night mode
  * Better support for Android x86 with online map sources
@@ -32,7 +32,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Rotation Gesture detector is now included in osmdroid-android@aar and is in a new name space
 
 
-## 4.3 (current latest stable release)
+## 4.3
  * Fixing issue #22: MapController.setCenter not centering when used in onCreate (and more generally: all actions on mapView positionning done in onCreate). 
  * Fixing issues related to high density screens. 
 
