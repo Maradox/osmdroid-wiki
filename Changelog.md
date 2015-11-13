@@ -2,7 +2,7 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
-## 5.0 (current latest stable release)
+## 5.0.1 (current latest stable release)
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
  * Tile inversion for a rudimentary night mode
  * Better support for Android x86 with online map sources
