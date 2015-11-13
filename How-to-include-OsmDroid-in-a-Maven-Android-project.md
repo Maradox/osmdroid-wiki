@@ -10,7 +10,7 @@ If your project already uses Maven and you want to include osmdroid then it's as
 <dependency>
   <groupId>org.osmdroid</groupId>
   <artifactId>osmdroid-android</artifactId>
-  <version>5.0</version>
+  <version>5.0.1</version>
   <type>aar</type>
 </dependency>
 ```
