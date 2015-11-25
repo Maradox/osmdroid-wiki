@@ -310,6 +310,30 @@ The primary usage is downloaded map tiles
 OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
 ````
 
+## How do I place icons on the map with a click listener?
+
+````
+//your items
+ArrayList<OverlayItem> items = new ArrayList<OverlayItem>();
+items.add(new OverlayItem("Title", "Description", new GeoPoint(0.0d,0.0d))); // Lat/Lon decimal degrees
+
+//the overlay
+ItemizedOverlayWithFocus<OverlayItem> mOverlay = new ItemizedOverlayWithFocus<OverlayItem>(items,
+	new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
+	@Override
+	public boolean onItemSingleTapUp(final int index, final OverlayItem item) {
+	//do something
+	    return true;
+	}
+	@Override
+	public boolean onItemLongPress(final int index, final OverlayItem item) {
+		return false;
+	}
+}, mResourceProxy);
+mOverlay.setFocusItemsOnTap(true);
+
+mMapView.getOverlays().add(mOverlay);
+````
 
 ## How many icons can I put on the map?
 
