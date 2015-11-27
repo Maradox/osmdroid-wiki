@@ -110,7 +110,7 @@ Code Sample:
 //load from manifest
 org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource.retrieveBingKey(this);
 //or load programmatically
-org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource.retrieveBingKey(this);
+org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource.setBingKey("YOUR KEY");
 org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource bing=new org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource(null);
 mapView.setTileSource(bing);
 ````
