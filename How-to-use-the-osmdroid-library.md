@@ -187,12 +187,12 @@ this.mOsmv.setMultiTouchControls(true);
 
 ## Tile providers vs Tile Source
 
-OsmDroid uses two components to display map imagery, the Tile Provider and the Tile Source. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader. There are other alternate providers included with OsmDroid that change the way tiles are loaded offline. OsmDroid BonusPack has a number of alternative provides that use other libraries like MapForge to generate tiles on the fly using OSM data while offline.
+OsmDroid uses two components to display map imagery, the Tile Provider and the Tile Source. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqlite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader. There are other alternate providers included with OsmDroid that change the way tiles are loaded offline. OsmDroid BonusPack has a number of alternative provides that use other libraries like MapForge to generate tiles on the fly using OSM data while offline.
 
 ## Using a different Tile Source
 OsmDroid comes with a bunch of tile sources preprogrammed for sources available on the internet. Some require API keys or additional information due to usage restrictions, developers accounts, pay schemes, etc. The following example will show you how to switch tile sources at runtime.
 
-To set to MapQuest satelite:
+To set to MapQuest satellite:
 ````
 mMapView.setTileSource(TileSourceFactory.MAPQUESTAERIAL);
 ````
