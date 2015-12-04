@@ -275,7 +275,9 @@ See the example "GoogleMapsWrapper" application
 
 ## WMS Support
 
-Coming soon...
+WMS Support on device is something that we're working on, but it's not a high priority on the moment.
+
+You can however use MOBAC to connected to a WMS map provider, then convert those tiles into an offline map source in the mean time.
 
 ## Geopackage Support
 
