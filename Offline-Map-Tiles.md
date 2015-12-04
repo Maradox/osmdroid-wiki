@@ -2,7 +2,7 @@ This document has the definitive guide for using Osmdroid without a network conn
 
 Most of this was written by @MKer (osmbounspack lead)
 
-# What are the support storage formats?
+# What are the supported storage formats?
 
 Osmdroid provides out of the box support for several different types of offline map tile caches.
 
