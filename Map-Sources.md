@@ -1,11 +1,15 @@
-This document is all about Map Sources, Tile loading and more
+This document is all about Map Sources, Tile loading, caching, offline setups and more
+
+# Map Projections
+
+TODO
+
+What map projection does Osmdroid use and or support?
 
 
-
-## Tile providers vs Tile Source
+# Tile providers vs Tile Source
 
 OsmDroid uses two components to display map imagery, the Tile Provider and the Tile Source. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqlite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader. There are other alternate providers included with OsmDroid that change the way tiles are loaded offline. OsmDroid BonusPack has a number of alternative provides that use other libraries like MapForge to generate tiles on the fly using OSM data while offline.
-
 
 # Creating a custom tile provider chain
 
@@ -120,6 +124,8 @@ OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
 
 
 # Online Map Sources (out of the box)
+
+Osmdroid comes with a few map sources preconfigured for you to use. Usage access rules vary based on the source. Make sure you read the fine print.
 
 ## Mapnik (aka Open Street Maps)
 
@@ -265,3 +271,17 @@ MinSDK 9
 
 Code Sample:
 See the example "GoogleMapsWrapper" application
+
+
+## WMS Support
+
+Coming soon...
+
+## Geopackage Support
+
+Coming soon...
+
+
+# Offline map tiles
+
+TODO
