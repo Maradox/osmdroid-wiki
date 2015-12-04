@@ -284,4 +284,4 @@ Coming soon...
 
 # Offline map tiles
 
-TODO
+See this article https://github.com/osmdroid/osmdroid/wiki/Offline-Map-Tiles
