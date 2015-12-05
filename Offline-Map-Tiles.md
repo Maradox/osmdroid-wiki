@@ -12,7 +12,7 @@ Osmdroid provides out of the box support for several different types of offline 
  * GEMF
  * GeoPackage (still under development)
 
-# How can I create them?
+# How can I create an offline storage archive?
 
 There's a few different options.
 
@@ -67,8 +67,15 @@ MOBAC, especially with huge tile sets, can be a memory hog. It's algorithms from
 
 ## OSMBonus Pack
 
-OSMBonus Pack is an addon Android library for Osmdroid that has the ability to download and cache map tiles on device. Absolutely worth looking at...
+OSMBonus Pack is an addon Android library for Osmdroid that has the ability to download and cache map tiles on device. Absolutely worth looking at... Check out the OSMBonus Pack repo on github for details.
 
 # What legal things do I need to know?
 
 Many map sources have disclaimers and legal statements that specifically state to NOT cache and rehost their map imagery. Some may have wording to disallows you to use their map imagery offline or to download large portions of the world.  Make sure you read the fine print!! Osmdroid takes no responsibility for map imagery misuse. That's between you and the imagery owner.
+
+# Can you support tile format `x`?
+
+We'll happily take pull requests. That said, it's fairly simple to make a new tile source for OsmDroid. Here's the basic steps...
+ 1. Create a class that implements IArchiveProvider. At the most basic level, the IArchiveProvider needs to turn an OSM tile coordinates (Zoom, X and Y coordinates) into an InputStream representing the tile if it's available.
+ 2. Register the IArchiveProvider with `ArchiveFileFactory`
+ 3. Build, deploy and start up OsmDroid
