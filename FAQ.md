@@ -11,3 +11,5 @@ Make sure you don't set the MapView to be "clickable". If you are using xml layo
 ## The map is drawing incorrectly/misaligned
 
 Turn off hardware acceleration in your manifest. See Prerequisites.
+
+Update, turning off hardware acceleration is generally not required unless you have specific problems with a given device
