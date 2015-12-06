@@ -292,7 +292,7 @@ You can use MOBAC to connected to a WMS map provider, then convert those tiles i
 
 ## Geopackage Support
 
-Coming soon...
+Geopackage is an open standard for defining a file format that can contain multiple imagery sets and/or vector graphics. It's possible to [convert geopackage files](https://github.com/spyhunter99/geopkg4osmdroid) into Osmdroid compatible sqlite database. It's also possible to perform this task on an android device, however initial experiments showed that the performance wasn't very good.
 
 
 # Offline map tiles
