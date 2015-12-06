@@ -2,6 +2,10 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
+## 5.1 (under development)
+ * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
+ * Fix for classes that extend IconOverlays not calling onDraw 
+ 
 ## 5.0.1 (current latest stable release)
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
  * Tile inversion for a rudimentary night mode
