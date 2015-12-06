@@ -2,10 +2,21 @@ This document is all about Map Sources, Tile loading, caching, offline setups an
 
 # Map Projections
 
-TODO
+What map projection does Osmdroid use and or support? There are tons of map projections out there. The important part to know is that Osmdroid is based on Open Street Maps, which currently uses the EPSG:3857 projection. 
 
-What map projection does Osmdroid use and or support?
+It is possible to support different projections with Osmdroid, but you'll either need to preprocess the imagery (convert it) or use a WMS based product like http://geoserver.org/ in conjunction with MOBAC to prepare offline tile packages. It may also be possible to add WMS support to Osmdroid.
 
+
+Related source material from Open Street Maps
+http://wiki.openstreetmap.org/wiki/Perl/Projected_version_of_an_OSM_extract
+
+# What map tile number system does Osmdroid support?
+
+Osmdroid is based on Open Street Maps, which uses something called the "Slippy Map Format". It's the same format used by many of the common map providers. These tile servers almost always use the Zoom/X/Y URL format where X and Y are integer coordinates based on dividing the entire map into quadrants. Some map tile servers, such as ESRI based products, use the Zoom/Y/X URL format. 
+
+
+Sources
+http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
 
 # Tile providers vs Tile Source
 
@@ -277,7 +288,7 @@ See the example "GoogleMapsWrapper" application
 
 WMS Support on device is something that we're working on, but it's not a high priority on the moment.
 
-You can however use MOBAC to connected to a WMS map provider, then convert those tiles into an offline map source in the mean time.
+You can use MOBAC to connected to a WMS map provider, then convert those tiles into an offline map source in the mean time.
 
 ## Geopackage Support
 
