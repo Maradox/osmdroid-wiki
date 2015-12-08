@@ -9,7 +9,7 @@ OsmDroid requires the [slf4j-android logging library](http://www.slf4j.org/andro
 
 ## Version 5.0 and newer
 
-None for the osmdroid-android@aar. [osmdroid-thirdparty] requires org.json:json, google maps, google play services, and the android support compatv4 libraries
+None for the osmdroid-android aar. (osmdroid-thirdparty)[osmdroid-thirdparty] requires org.json:json, google maps, google play services, and the android support compatv4 libraries
  
 
 # Manifest additions
