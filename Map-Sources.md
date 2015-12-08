@@ -197,6 +197,8 @@ mMapView.setTileSource(tileSource);
 
 ## Map Box
 
+Note: This was updated with v5.1
+
 Required Java dependencies
  - osmdroid-android
 
@@ -211,9 +213,13 @@ Under manifest/application
 Code Sample:
 
 ````
-MapBoxTileSource.retrieveAccessToken(context);
-MapBoxTileSource.retrieveMapBoxMapId(context);
 final MapBoxTileSource tileSource = new MapBoxTileSource();
+//option 1, load your settings from the manifest
+tileSource.retrieveAccessToken(context);
+tileSource.retrieveMapBoxMapId(context);
+//option 2, provide them programmatically
+tileSource.setAccessToken(context);
+tileSource.setMapBoxMapId(context);
 mMapView.setTileSource(tileSource);
 ````
 ## USGS Topo
