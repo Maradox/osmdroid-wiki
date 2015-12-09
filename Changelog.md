@@ -6,6 +6,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
  * Fix for classes that extend IconOverlays not calling onDraw 
  * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
+ * Added Animated Zoom To feature
  
 ## 5.0.1 (current latest stable release)
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
