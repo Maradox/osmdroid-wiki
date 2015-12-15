@@ -2,6 +2,9 @@
 
 This list only includes major highlights or breaking changes. Check [here](https://github.com/osmdroid/osmdroid/commits/master) for full commit logs.
 
+## 5.x (some future version)
+ * Using doubles internally for points instead of ints (increased precision)
+
 ## 5.1 (under development)
  * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
  * Fix for classes that extend IconOverlays not calling onDraw 
@@ -12,7 +15,6 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
  * Tile inversion for a rudimentary night mode
  * Better support for Android x86 with online map sources
- * (Pending) using doubles internally for points instead of ints (increased precision)
  * Better support for application specific control of map tile loading
    * Can now use offline tiles from just a single zip/sqlite/etc which don't have to be in /sdcard/osmdroid
  * Ability to change the cache folder and offline zip/database location
@@ -27,7 +29,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Fix for MapBox data sources
  * Many additional examples and samples on the demo app.
  * Android 6.0 support and the removal of Apache Http Client as a dependency
- * Rotation gestures now have reduced jitter
+ * Rotation gestures now has reduced jitter
  * Can now set the HTTP User Agent for all HTTP connections
 
 ### BREAKING CHANGES!!
