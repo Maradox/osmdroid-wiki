@@ -9,7 +9,7 @@
      * Windows: `set PATH=$PATH%;(path to maven/bin)`.
      * Linux: `export PATH=$PATH:(path to maven/bin)`
  * Download [Maven Android SDK Deployer](https://github.com/simpligility/maven-android-sdk-deployer). This project will make available the necessary Android dependencies for a maven build.
-   * Navigate to the Maven Android SDK Deployer folder and run the command `mvn install -fn`
+   * Navigate to Maven Android SDK Deployer folder and run the command `mvn install -fn`
      * This command will try to make available all Android packages for Maven, do not worry about the errors for the platforms we are not using.
  * Checkout the osmdroid source from git to a local folder.
    * `git clone https://github.com/osmdroid/osmdroid.git`
