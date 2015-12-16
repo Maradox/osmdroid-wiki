@@ -1,8 +1,8 @@
 # Building OsmDroid from the command line
 
  * Download the latest Android SDK and update the packages. The command line build requires the **Google-Play-Services** package.
-   * Create the `ANDROID_HOME` path variable, pointing to your Android SDK install location.
-     * Windows: My Computer, Properties, Advanced, Environment Variables and append the Android SDK to the PATH variable
+   * Create the **ANDROID_HOME** path variable, pointing to your Android SDK install location.
+     * Windows: Right Click on My Computer, select Properties, Select Environment Variables, and create the variable ANDROID_HOME with the location of your Android SDK
      * Linux: `export ANDROID_HOME=(path to Android SDK install)`
  * Download [Maven](http://maven.apache.org/download.html) (Project requires at least version 3.2.1)
    * Add the **maven/bin** to your **PATH**.
@@ -13,9 +13,9 @@
      * This command will try to make available all Android packages for Maven, do not worry about the errors for the platforms we are not using.
  * Checkout the osmdroid source from git to a local folder.
    * `git clone https://github.com/osmdroid/osmdroid.git`
- * Compile OSMDroid from the command line by navigating to its folder and running the command `mvn clean install`. You will need a device or emulator running.
+ * Navigate to the OSMDroid folder and run the command **mvn clean install**. NOTE: You will need a device or emulator running.
 
-The project should then build successfully.
+You have now completed all steps to compile OSMDroid.
 
 # Building OsmDroid from Eclipse
  * Follow the above instructions for command line builds first.
