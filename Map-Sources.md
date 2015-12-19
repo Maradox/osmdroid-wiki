@@ -304,3 +304,47 @@ Geopackage is an open standard for defining a file format that can contain multi
 # Offline map tiles
 
 See this article https://github.com/osmdroid/osmdroid/wiki/Offline-Map-Tiles
+
+# Can I use more than one tile source at a time?
+
+The answer is yes. First, a few use cases.
+ * Weather
+ * Grid lines
+ * Data that's too complex to draw or that's drawn on a server
+ * Elevation data
+ * Tile sources that use transparency 
+
+Example (MGRS grid lines from an older ArcGIS REST endpoint. This is a US military provided service and may not be available everywhere and may go away at any point. It's just an example):
+ 1. First setup your base layer.
+```` 
+mMapView.setTileSource(TileSourceFactory.USGS_TOPO);
+````
+ 2. Create a new Tile Provider and associated Tile Source
+````
+MapTileProviderBasic provider = new MapTileProviderBasic(getActivity(), new OnlineTileSourceBase("MGRS",0,15,256,"PNG", new String[0]) {
+			@Override
+			public String getTileURLString(MapTile aTile) {
+				BoundingBox bbox=tile2boundingBox(aTile.getX(), aTile.getY(), aTile.getZoomLevel());
+				String baseUrl ="http://egeoint.nrlssc.navy.mil/arcgis/rest/services/usng/USNG_93/MapServer/export?dpi=96&transparent=true&format=png24&bbox="+bbox.west+","+bbox.south+","+bbox.east+","+bbox.north+"&size=256,256&f=image";
+				return baseUrl;
+			}
+		});
+````
+Note: the method `tile2boundingBox` was pulled from OSM's [Slippy Map](http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Java) wiki entry. It converts a tile coordinate to a lat/lon bounds.
+ 3. Create the tile layer
+````  TilesOverlay layer = new TilesOverlay(provider, getActivity());````
+ 4. Important, set the background and loading bits to transparent
+````
+		layer.setLoadingBackgroundColor(Color.TRANSPARENT);
+		layer.setLoadingLineColor(Color.TRANSPARENT);
+````
+ 5. Add it to the map view
+```` mMapView.getOverlays().add(layer); ````
+
+
+
+
+# Can I use an ESRI ArcGIS REST API to display tiles on OsmDroid?
+
+Yes, as long as the endpoint supports the `export` API with bounding box then the above example should get you going. Note: ESRI's APIs can vary significantly by version and configuration settings. Consult their API guide additional details (and report back here!)
+
