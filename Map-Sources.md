@@ -10,9 +10,9 @@ It is possible to support different projections with Osmdroid, but you'll either
 Related source material from Open Street Maps
 http://wiki.openstreetmap.org/wiki/Perl/Projected_version_of_an_OSM_extract
 
-# What map tile number system does Osmdroid support?
+# What map tile numbering system does Osmdroid support?
 
-Osmdroid is based on Open Street Maps, which uses something called the "Slippy Map Format". It's the same format used by many of the common map providers. These tile servers almost always use the Zoom/X/Y URL format where X and Y are integer coordinates based on dividing the entire map into quadrants. Some map tile servers, such as ESRI based products, use the Zoom/Y/X URL format. 
+Osmdroid is based on Open Street Maps, which uses something called the "Slippy Map Format". It's the same format used by many of the common map providers. Most online tile sources use the Zoom/X/Y URL format where X and Y are integer coordinates based on dividing the entire map into quadrants. Some map tile servers, such as ESRI based products, use the Zoom/Y/X URL format. Others use the TMS specification in which the zoom level is reversed.
 
 
 Sources
