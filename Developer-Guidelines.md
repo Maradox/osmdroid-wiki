@@ -20,7 +20,7 @@ This page is to list some of the more important guidelines for developers contri
 osmdroid-android references android.jar but the unit tests don't run on an Android device.  This means that the unit tests cannot invoke any Android methods.  In order to avoid this, proxies are used in the most common cases:
 
  * Use org.osmdroid.ResourceProxy, not Context.getResource
- * Use org.slf4j.Logger, not android.util.Log
+ * Use android.util.Log (slf4j is no longer used)
 
 Those are the main less obvious guidelines.  In general, try and follow the existing style.
 
