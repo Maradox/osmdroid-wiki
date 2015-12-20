@@ -1,3 +1,5 @@
+A collection of related projects for OSM, geospatial index, map sources and more... 
+
 * Mobile Atlas Creator - http://mobac.sourceforge.net/
 * OSMBonusPack - https://github.com/MKergall/osmbonuspack
 * Geopackage for osmdroid - https://github.com/spyhunter99/geopkg4osmdroid
