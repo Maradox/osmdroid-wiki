@@ -1,5 +1,7 @@
 # Building OsmDroid from the command line
+Osmdroid's current, authoritative, build environment is with Maven. We also maintain Gradle build files to make life a bit easier with Android Studio. Unfortunately, not all of the Maven projects have been migrated over to Gradle, such as the integration tests. 
 
+## Building with Maven
  * Download the latest Android SDK and update the packages. The command line build requires the **Google-Play-Services** package.
    * Create the **ANDROID_HOME** path variable, pointing to your Android SDK install location.
      * Windows: Right Click on My Computer, select Properties, Select Environment Variables, and create the variable ANDROID_HOME with the location of your Android SDK
@@ -16,7 +18,14 @@
    * `git clone https://github.com/osmdroid/osmdroid.git`
  * Navigate to the OSMDroid folder and run the command **mvn clean install**. NOTE: You will need a device or emulator running.
 
-You have now completed all steps to compile OSMDroid.
+You have now completed all steps to compile OSMDroid using Maven
+
+## Building with Gradle
+ * Checkout the osmdroid source from git to a local folder.
+   * `git clone https://github.com/osmdroid/osmdroid.git`
+ * Navigate to the OSMDroid folder and run the command **gradle clean build**. 
+
+You have now completed all steps to compile OSMDroid using Gradle
 
 # Building OsmDroid from Eclipse
  * Follow the above instructions for command line builds first.
