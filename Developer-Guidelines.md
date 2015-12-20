@@ -26,6 +26,8 @@ Those are the main less obvious guidelines.  In general, try and follow the exis
 
 ## Building
 
-Make sure you build with the follow commands before opening a pull request.
+Make sure you build with the follow commands before opening a pull request. There are several related wiki pages on setting up the development environment (Maven is the only oddball) See https://github.com/osmdroid/osmdroid/wiki/How-to-build-OsmDroid-from-source
+
 ```` mvn clean install ````
+
 ```` gradle clean build ````
