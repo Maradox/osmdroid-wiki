@@ -6,10 +6,17 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Using doubles internally for points instead of ints (increased precision)
 
 ## 5.1 (under development)
- * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
- * Fix for classes that extend IconOverlays not calling onDraw 
- * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
- * Added Animated Zoom To feature
+ * Fixes
+   * Fix for classes that extend IconOverlays not calling onDraw 
+   * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
+   * Fix for offline zip/sqlite files not being detected in /sdcard/osmdroid/
+   * Added .nomedia files to tile download cache to prevent the gallery from picking it up
+ * New features
+   * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
+   * Added Animated Zoom To feature
+ * Other
+   * Refactoring of the sample app to make things easier to find
+   * Java 7 APIs
  
 ## 5.0.1 (current latest stable release)
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
