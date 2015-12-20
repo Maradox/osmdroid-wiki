@@ -24,3 +24,8 @@ osmdroid-android references android.jar but the unit tests don't run on an Andro
 
 Those are the main less obvious guidelines.  In general, try and follow the existing style.
 
+## Building
+
+Make sure you build with the follow commands before opening a pull request.
+```` mvn clean install ````
+```` gradle clean build ````
