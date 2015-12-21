@@ -16,6 +16,12 @@ In most cases, you will have to set the following authorizations in your Android
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
+Note that if you are targeting Android devices >= 6.0 (SDK >= 23), you have to check for "dangerous" permissions at runtime. 
+Dangerous permissions needed by osmdroid are: WRITE_EXTERNAL_STORAGE and ACCESS_COARSE_LOCATION/ACCESS_FINE_LOCATION. 
+Refer to [explanations](https://developer.android.com/training/permissions/requesting.html),
+or to [this implementation](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/MainActivity.java)
+
+
 ## Layout
 Create a "src/main/res/layouts/main.xml" layout like this one. With Android Studio, it probably created one already called. The default is "src/main/res/layouts/activity_main.xml":
 ```xml
@@ -30,11 +36,6 @@ Create a "src/main/res/layouts/main.xml" layout like this one. With Android Stud
                 android:layout_height="fill_parent" />
 </LinearLayout>
 ```
-
-## Images for Buttons and whatnot
-For OSMDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
-
-For OSMDroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
 
 ## Main Activity
 We now create the main activity (MainActivity.java):
@@ -62,7 +63,7 @@ We can move the map on a default view point. For this, we need access to the map
 ```java
         IMapController mapController = map.getController();
         mapController.setZoom(9);
-        GeoPoint startPoint = new GeoPoint(48.8583, 2,2944);
+        GeoPoint startPoint = new GeoPoint(48.8583, 2.2944);
         mapController.setCenter(startPoint);
 ```
 
@@ -95,8 +96,13 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 }
 ```
 
+# Images for Buttons and whatnot
+For OSMDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
+
+For OSMDroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
+
 # Create a custom Resource Proxy
-As mentioned above, the Resource Proxy is a bit of a strange animal that OsmDroid uses to load some images for user interface controls. If you're using any of the build in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from OsmDroid's example app, or provide your own implementation of Resource Proxy.
+As mentioned above, the Resource Proxy is a bit of a strange animal that OsmDroid uses to load some images for user interface controls. If you're using any of the built-in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from OsmDroid's example app, or provide your own implementation of Resource Proxy.
 
 The example OsmDroid app includes an example of this called CustomResourceProxy (included with > 4.3 OsmDroid). All it does is change the my location drawable (person) to an alternate image. The example is below.
 
@@ -185,7 +191,7 @@ mScaleBarOverlay.setScaleBarOffset(dm.widthPixels / 2, 10);
 mMapView.getOverlays().add(this.mScaleBarOverlay);
 ````
 
-## How to add the built in Minimap
+## How to add the built-in Minimap
 
 Note: do not use when rotation is enabled!
 
