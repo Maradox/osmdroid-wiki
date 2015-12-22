@@ -1,4 +1,3 @@
-This wiki page has been migrated from the [associated Google Code page](https://code.google.com/p/osmdroid/wiki/HowToIncludeInYourProject).
 
 ---
 # "Hello osmdroid World"
@@ -193,7 +192,7 @@ mMapView.getOverlays().add(this.mScaleBarOverlay);
 
 ## How to add the built-in Minimap
 
-Note: do not use when rotation is enabled!
+Note: do not use when rotation is enabled! (Keep reading for a work around)
 
 ````
 mMinimapOverlay = new MinimapOverlay(context, mMapView.getTileRequestCompleteHandler());
@@ -204,7 +203,7 @@ mMinimapOverlay.setHeight(dm.heightPixels / 5);
 mMapView.getOverlays().add(this.mMinimapOverlay);
 ````
 
-Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap.
+Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap. For the reverse, you need to do the same process, however you have to filter map motion events to prevent infinite looping.
 
 
 
@@ -236,10 +235,11 @@ mMapView.getOverlays().add(mOverlay);
 
 ## How many icons can I put on the map?
 
-The answer is greatly dependent on what hardware the OSMDroid based app is ran on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary.
+The answer is greatly dependent on what hardware the OSMDroid based app is ran on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary. X86 Android running on modern hardware will perform great at even higher numbers. However it's recommended to limit the amount of stuff you're rendering, if at all possible.
 
-If you're also drawing paths, lines, polygons, etc, then this also changes the equation. Drawing multipoint graphics is computationally more expensive and thus negatively affects performance under higher loads. To mitigate performance issues with multipoint graphics, one strategy would be to reduce the amount of points handed off to the map engine when at a higher zoom level (numerically lower), then increase the fidelity as the user zoom's in.
+If you're also drawing paths, lines, polygons, etc, then this also changes the equation. Drawing multipoint graphics is computationally more expensive and thus negatively affects performance under higher loads. To mitigate performance issues with multipoint graphics, one strategy would be to reduce the amount of points handed off to the map engine when at a higher zoom level (numerically lower), then increase the fidelity as the user zoom's in. In effect, you would be clipping the visible data at the map view bounds so that the map view only "knows" about what's in screen and doesn't have to loop through all 10k icons that you want on the map. Although you can give the map view all 10k objects, but every time the map moves or zooms, it will iterate over all 10k items to calculate where to draw them (if at all). Using this mechanism paired with map motion listeners and a database query that supports geographic bounds, you can support a rich experience for users with lots of data and still have reasonable performance.
 
+Reusing drawables for icons will help with memory usage too. 
 
 ## Map Sources, Imagery and Tile sets.
 
