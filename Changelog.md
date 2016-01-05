@@ -9,6 +9,8 @@ This list only includes major highlights or breaking changes. Check [here](https
  * WMS Map Source Client
  * Removal of MapControllerOld (been deprecated for a long time)
  * Fix for #214, non-scaling itemized icon popups
+  * potentially breaking change, adds new methods to the ResourceProxy
+ * Use Sqlite based tile cache instead of file system
 
 ## 5.1 (under development)
  * Fixes
@@ -16,6 +18,7 @@ This list only includes major highlights or breaking changes. Check [here](https
    * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
    * Fix for offline zip/sqlite files not being detected in /sdcard/osmdroid/
    * Added .nomedia files to tile download cache to prevent the gallery from picking it up
+
  * New features
    * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
    * Potentially breaking change. NightMode was removed from IMapController and moved to the TilesOverlay
