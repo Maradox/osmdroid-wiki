@@ -14,6 +14,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ## 5.1 (under development)
  * Fixes
+   * OSM Tile Packager updated and resolved issues with full paths being included in zip files
    * Fix for classes that extend IconOverlays not calling onDraw 
    * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
    * Fix for offline zip/sqlite files not being detected in /sdcard/osmdroid/
