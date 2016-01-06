@@ -21,6 +21,7 @@ This list only includes major highlights or breaking changes. Check [here](https
    * Added .nomedia files to tile download cache to prevent the gallery from picking it up
 
  * New features
+   * Potentially breaking change. Scalebar can now moved to different parts of the screen. Only the constructor is different
    * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
    * Potentially breaking change. NightMode was removed from IMapController and moved to the TilesOverlay
    * Added Animated Zoom To feature
