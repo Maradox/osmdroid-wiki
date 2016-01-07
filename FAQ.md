@@ -14,6 +14,8 @@ Turn off hardware acceleration in your manifest. See Prerequisites.
 
 Update, turning off hardware acceleration is generally not required unless you have specific problems with a given device
 
+This condition can also occur if you somehow manage to change the screen resolution of your android device or virtual machine and do not reboot before launching osmdroid.
+
 
 ## Night Mode
 
