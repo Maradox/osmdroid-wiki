@@ -17,7 +17,7 @@ Update, turning off hardware acceleration is generally not required unless you h
 
 ## Night Mode
 
-Osmdroid, since v5.0, has support for inverting the color scheme of map tiles to have a more user friendly experience at night. Your mileage may vary based on map sources. Lighter map sources, such as TOPO or road maps,  will appear darker at night. Satellite based tile sources may actually appear brighter at night.
+osmdroid, since v5.0, has support for inverting the color scheme of map tiles to have a more user friendly experience at night. Your mileage may vary based on map sources. Lighter map sources, such as TOPO or road maps,  will appear darker at night. Satellite based tile sources may actually appear brighter at night.
 
 ````
 this.mMapView.getController().setInvertedTiles(true);

@@ -1,6 +1,5 @@
 ##Introduction
 
-This Wiki is migrated from [Google Code](https://code.google.com/p/osmdroid/wiki/HowToMaven).
 
 ##How to use osmdroid in your Maven project
 

@@ -3,7 +3,7 @@
 
 ## Version 4.3 and older
 
-osmdroid-android jar requires the [slf4j-android logging library](http://www.slf4j.org/android/). If you are using Gradle or Maven then it will be downloaded for you. If you are using the OsmDroid JAR/AAR in some archaic build system or IDE, then you must download the slf4j-android (only for OsmDroid < 5) library jar and place it in your libs folder.
+osmdroid-android jar requires the [slf4j-android logging library](http://www.slf4j.org/android/). If you are using Gradle or Maven then it will be downloaded for you. If you are using the osmdroid JAR/AAR in some archaic build system or IDE, then you must download the slf4j-android (only for osmdroid < 5) library jar and place it in your libs folder.
 
 osmdroid-thirdparty jar requires org.json:json, google maps, google play services, and the android support compatv4 libraries
 

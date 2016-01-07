@@ -99,14 +99,14 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 ```
 
 # Images for Buttons and whatnot
-For OSMDroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from OsmDroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
+For osmdroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from osmdroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
 
-For OSMDroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
+For osmdroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
 
 # Create a custom Resource Proxy
-As mentioned above, the Resource Proxy is a bit of a strange animal that OsmDroid uses to load some images for user interface controls. If you're using any of the built-in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from OsmDroid's example app, or provide your own implementation of Resource Proxy.
+As mentioned above, the Resource Proxy is a bit of a strange animal that osmdroid uses to load some images for user interface controls. If you're using any of the built-in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from osmdroid's example app, or provide your own implementation of Resource Proxy.
 
-The example OsmDroid app includes an example of this called CustomResourceProxy (included with > 4.3 OsmDroid). All it does is change the my location drawable (person) to an alternate image. The example is below.
+The example osmdroid app includes an example of this called CustomResourceProxy (included with > 4.3 osmdroid). All it does is change the my location drawable (person) to an alternate image. The example is below.
 
 ````
 public class CustomResourceProxy extends DefaultResourceProxyImpl {
@@ -238,7 +238,7 @@ mMapView.getOverlays().add(mOverlay);
 
 ## How many icons can I put on the map?
 
-The answer is greatly dependent on what hardware the OSMDroid based app is ran on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary. X86 Android running on modern hardware will perform great at even higher numbers. However it's recommended to limit the amount of stuff you're rendering, if at all possible.
+The answer is greatly dependent on what hardware the osmdroid based app is ran on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary. X86 Android running on modern hardware will perform great at even higher numbers. However it's recommended to limit the amount of stuff you're rendering, if at all possible.
 
 If you're also drawing paths, lines, polygons, etc, then this also changes the equation. Drawing multipoint graphics is computationally more expensive and thus negatively affects performance under higher loads. To mitigate performance issues with multipoint graphics, one strategy would be to reduce the amount of points handed off to the map engine when at a higher zoom level (numerically lower), then increase the fidelity as the user zoom's in. In effect, you would be clipping the visible data at the map view bounds so that the map view only "knows" about what's in screen and doesn't have to loop through all 10k icons that you want on the map. Although you can give the map view all 10k objects, but every time the map moves or zooms, it will iterate over all 10k items to calculate where to draw them (if at all). Using this mechanism paired with map motion listeners and a database query that supports geographic bounds, you can support a rich experience for users with lots of data and still have reasonable performance.
 
