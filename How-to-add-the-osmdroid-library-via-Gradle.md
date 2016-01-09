@@ -6,3 +6,13 @@ dependencies {
     //Note as of 5.0, this is no longer needed!  compile 'org.slf4j:slf4j-simple:1.6.1'
 }
 ```
+
+
+osmdroid also has an optional library to provide addition features of 3rd party organizations.
+
+```groovy
+dependencies {
+    compile 'org.osmdroid:osmdroid-thirdparty:5.0.1@aar'
+    //Note as of 5.0, this is no longer needed!  compile 'org.slf4j:slf4j-simple:1.6.1'
+}
+```
