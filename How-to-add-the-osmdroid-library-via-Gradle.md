@@ -1,3 +1,5 @@
+#osmdroid-android (the map engine)
+
 If you use [Gradle](http://www.gradle.org) you have to add the following dependency to your `build.gradle` file:
 
 ```groovy
@@ -7,7 +9,7 @@ dependencies {
 }
 ```
 
-
+#osmdroid-thirdparty (google maps and bing support)
 osmdroid also has an optional library to provide addition features of 3rd party organizations.
 
 ```groovy
