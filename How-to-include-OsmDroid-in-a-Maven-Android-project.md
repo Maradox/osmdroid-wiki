@@ -1,7 +1,6 @@
-##Introduction
 
 
-##How to use osmdroid in your Maven project
+#osmdroid-android (map engine)
 
 If your project already uses Maven and you want to include osmdroid then it's as simple as
 
@@ -14,5 +13,16 @@ If your project already uses Maven and you want to include osmdroid then it's as
 </dependency>
 ```
 
-You will also need [Maven Android SDK Deployer](https://github.com/simpligility/maven-android-sdk-deployer) in order to get the Google dependencies into your local repository.
+If you're new to using maven with android, you'll probably want to either follow our [guide](https://github.com/osmdroid/osmdroid/wiki/How-to-build-OsmDroid-from-source).
 
+osmdroid-thirdparty (google maps and bing support)
+#osmdroid also has an optional library to provide addition features of 3rd party organizations.
+
+```xml
+<dependency>
+  <groupId>org.osmdroid</groupId>
+  <artifactId>osmdroid-thirdparty</artifactId>
+  <version>5.0.1</version>
+  <type>aar</type>
+</dependency>
+```
