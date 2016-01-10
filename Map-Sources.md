@@ -12,8 +12,13 @@ http://wiki.openstreetmap.org/wiki/Perl/Projected_version_of_an_OSM_extract
 
 # What map tile numbering system does osmdroid support?
 
-osmdroid is based on Open Street Maps, which uses something called the "Slippy Map Format". It's the same format used by many of the common map providers. Most online tile sources use the Zoom/X/Y URL format where X and Y are integer coordinates based on dividing the entire map into quadrants. Some map tile servers, such as ESRI based products, use the Zoom/Y/X URL format. Others use the TMS specification in which the zoom level is reversed.
+ * ZXY - osmdroid is based on Open Street Maps, which uses something called the "Slippy Map Format". It's the same format used by many of the common map providers. Most online tile sources use the Zoom/X/Y URL format where X and Y are integer coordinates based on dividing the entire map into quadrants. This is the natively supported format for osmdroid.
 
+ * ZYX - Some map tile servers, such as some ESRI based products, use the Zoom/Y/X URL format. Since it's trivial to convert to ZXY, support for this format is easy to setup on osmdroid. We currently have at least one map source that uses this mechanism (see USGS maps).
+
+ * [TMS](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification) - Tile Map Service Specification is used by a number map services online. Conversion between ZXY and TMS is also pretty straight forward. In this case, X and Y are the same and the zoom levels are inverted.
+
+ * Everything else - many other map services serve map imagery using geographic lat/lon decimal bounds instead of a numbering system. In these cases, it's fairly easy convince these services to provide imagery that fit the OSM style of map tiles by converting what osmdroid wants  in ZXY coordinates to their bounding boxes.
 
 Sources
 http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
