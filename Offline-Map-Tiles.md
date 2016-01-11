@@ -15,9 +15,8 @@ osmdroid provides out of the box support for several different types of offline 
 There's a few different options.
 
 ## OSM Map Tile Packager
-osmdroid comes with a tool to enable you to download tiles and storage them for offline use called the `OSM Map Tile Packager`.
 
-TODO guide on operation
+osmdroid comes with a tool to enable you to download tiles and storage them for offline use called the `OSM Map Tile Packager`. See the [readme.md for more information](https://github.com/osmdroid/osmdroid/blob/master/OSMMapTilePackager/readme.md).
 
 ## Mobile Atlas Creator (MOBAC)
 
