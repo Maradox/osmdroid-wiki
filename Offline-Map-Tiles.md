@@ -64,7 +64,7 @@ MOBAC, especially with huge tile sets, can be a memory hog. It's algorithms from
 
 ## OSMBonusPack
 
-[OSMBonusPack](https://github.com/MKergall/osmbonuspack) is an addon Android library for osmdroid that has the ability to download and cache map tiles on device.
+[OSMBonusPack](https://github.com/MKergall/osmbonuspack) is an addon Android library for osmdroid that has the ability to download and cache map tiles on device. See the [CacheManager](https://github.com/MKergall/osmbonuspack/blob/master/OSMBonusPack/src/main/java/org/osmdroid/bonuspack/cachemanager/CacheManager.java)
 
 # What legal things do I need to know?
 
