@@ -10,7 +10,8 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Removal of MapControllerOld (been deprecated for a long time)
  * Fix for #214, non-scaling itemized icon popups
   * potentially breaking change, adds new methods to the ResourceProxy
- * Use Sqlite based tile cache instead of file system
+ * Mapsforge as a tile source
+
 
 ## 5.1 (under development)
  * Fixes
@@ -19,11 +20,14 @@ This list only includes major highlights or breaking changes. Check [here](https
    * API change for MapBox, you can now set access tokens and map id sources per tile source (instead of a static variable). You can also set them programmatically.
    * Fix for offline zip/sqlite files not being detected in /sdcard/osmdroid/
    * Added .nomedia files to tile download cache to prevent the gallery from picking it up
+   * ItemizedOverlayWithFocus is not scaled for screen resolution #214
 
  * New features
+   * Downloaded tiles are now stored in a database instead of on the raw file system.
+    * potentially breaking change, adds new methods to the ResourceProxy
    * Potentially breaking change. Scalebar can now moved to different parts of the screen. Only the constructor is different
    * Potentially breaking change. Thread pool size for map tile downloading is now adjustable.
-   * Potentially breaking change. NightMode was removed from IMapController and moved to the TilesOverlay
+   * Potentially breaking change. NightMode was removed from IMapController and moved to the TilesOverlay. You can now set your own color filters too.
    * Added Animated Zoom To feature
  * Other
    * Refactoring of the sample app to make things easier to find
