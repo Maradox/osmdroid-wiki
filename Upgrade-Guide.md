@@ -7,6 +7,8 @@ If you were previously using IMapController.isNightMode or setNightMode or exten
 this.mMapView.getOverlayManager().getTilesOverlay().setColorFilter(TilesOverlay.INVERT_COLORS);
 ````
 
+If you were using the ScaleBarOverlay, the constructor has changed from passing in `Context` to `MapView`.
+
 ## From version v4.3 to v5.0.1
 Output target is now AAR and the default osmdroid resources are now included (my location icon and whatnot). If you 'borrowed' those icons from osmdroid, you now will no longer need to include them.
 
