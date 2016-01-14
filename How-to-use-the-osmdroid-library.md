@@ -16,10 +16,10 @@ In most cases, you will have to set the following authorizations in your Android
 ```
 
 **Android 6.0+ devices require you have to check for "dangerous" permissions at runtime.**  
-osmdroid requires the following dangerous permissions:
+osmdroid requires the following dangerous permissions:  
 `WRITE_EXTERNAL_STORAGE and ACCESS_COARSE_LOCATION/ACCESS_FINE_LOCATION.`  
-Refer to our [OpenStreetMapViewer's implementation](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/MainActivity.java)
-or [Google Documentation on Permissions](https://developer.android.com/training/permissions/requesting.html) for more information
+See [OpenStreetMapViewer's implementation](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/MainActivity.java#L83)
+or [Google Documentation on Permissions](https://developer.android.com/training/permissions/requesting.html)
 
 
 ## Layout
