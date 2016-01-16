@@ -34,3 +34,7 @@ When your app starts up, try the following. This will produce a lot of log outpu
         OpenStreetMapTileProviderConstants.DEBUG_TILE_PROVIDERS=true;
         OpenStreetMapTileProviderConstants.DEBUGMODE=true;
 ````
+
+## Does my device need an sd card or some kind of storage medium?
+
+Yes. osmdroid downloads and caches map data on device and it needs to be stored on some writable medium. We use `Environment.getExternalStorage` and if that doesn't return a writable location then the cache won't be available, which well lead to significantly increased data usage.
