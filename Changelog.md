@@ -8,12 +8,14 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Using doubles internally for points instead of ints (increased precision)
  * WMS Map Source Client
  * Removal of MapControllerOld (been deprecated for a long time)
- * Fix for #214, non-scaling itemized icon popups
-  * potentially breaking change, adds new methods to the ResourceProxy
+ * osmdroid JDK and ADK raster tile server
+
+## 5.2 (under development)
  * Mapsforge as a tile source
+ * Refactor of the 3rd party sample app and support library
+ * Use SQLite database for tile cache instead of file system
 
-
-## 5.1 (under development)
+## 5.1 
  * Fixes
    * OSM Tile Packager updated and resolved issues with full paths being included in zip files
    * Fix for classes that extend IconOverlays not calling onDraw 
@@ -21,7 +23,8 @@ This list only includes major highlights or breaking changes. Check [here](https
    * Fix for offline zip/sqlite files not being detected in /sdcard/osmdroid/
    * Added .nomedia files to tile download cache to prevent the gallery from picking it up
    * ItemizedOverlayWithFocus is not scaled for screen resolution #214
-
+   * Fix for #214, non-scaling itemized icon popups
+     * potentially breaking change, adds new methods to the ResourceProxy
  * New features
    * Downloaded tiles are now stored in a database instead of on the raw file system.
     * potentially breaking change, adds new methods to the ResourceProxy
