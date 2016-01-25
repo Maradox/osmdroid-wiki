@@ -1,7 +1,5 @@
 ##Introduction
 
-This Wiki is migrated from [Google Code](https://code.google.com/p/osmdroid/wiki/DeveloperGuidelines).
-
 This page is to list some of the more important guidelines for developers contributing code to osmdroid.  This is not intended to strictly enforce a particular style - more to keep the code internally consistent.
 
 ###General guidelines
