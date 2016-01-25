@@ -8,5 +8,6 @@ A collection of related projects for OSM, geospatial index, map sources and more
 * Geopackage-Android - https://github.com/ngageoint/geopackage-android
 * GeoPaparzzi - https://github.com/geopaparazzi/geopaparazzi
 * Splte (Geospatial extensions for Sqlite) - https://www.gaia-gis.it/fossil/libspatialite/wiki?name=splite-android
-* Open Scient Map - https://github.com/opensciencemap/vtm
+* Open Science Map - https://github.com/opensciencemap/vtm
 * MapZen https://mapzen.com/projects/vector-tiles
+* Common Map API - http://cmapi.org/
