@@ -1,6 +1,5 @@
 # A guide for upgrading your app 
-
-## From version 5.0.1 to 5.1
+## From version 5.1 to 5.2 (future)
 
 ### Data Storage
 
@@ -9,6 +8,9 @@ osmdroid has always stored map tiles to the local file system. When upgrading to
 Tiles that were already loaded in device....
 
 TBD do we leave it or delete it? Or run an import routine, then delete from local storage....
+
+
+## From version 5.0.1 to 5.1
 
 ### Night Mode changes
 
@@ -20,6 +22,11 @@ this.mMapView.getOverlayManager().getTilesOverlay().setColorFilter(TilesOverlay.
 ### Scale Bar
 
 If you were using the ScaleBarOverlay, the constructor has changed from passing in `Context` to `MapView`.
+
+
+### Changed to the Resource Proxy
+
+There were some changes to the resource proxy interface. If you inherit from one of the provided implementations, you're probably good to go.
 
 
 ## From version v4.3 to v5.0.1
