@@ -38,3 +38,7 @@ When your app starts up, try the following. This will produce a lot of log outpu
 ## Does my device need an sd card or some kind of storage medium?
 
 Yes. osmdroid downloads and caches map data on device and it needs to be stored on some writable medium. We use `Environment.getExternalStorage` and if that doesn't return a writable location then the cache won't be available, which well lead to significantly increased data usage.
+
+## What's the Dex count for osmdroid?
+
+Rather small, at just over 2000 methods.
