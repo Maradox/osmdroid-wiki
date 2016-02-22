@@ -18,6 +18,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Use SQLite database for tile cache instead of file system
  * Death of the resource proxy
  * Partial merger of osmbonus pack
+ * Lat/Lon gridline overlay
 
 ## 5.1 
  * Fixes
