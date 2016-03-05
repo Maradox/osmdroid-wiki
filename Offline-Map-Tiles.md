@@ -12,7 +12,7 @@ osmdroid provides out of the box support for several different types of offline 
 
 # How can I create an offline storage archive?
 
-There's a few different options.
+There are a few different options.
 
 ## OSM Map Tile Packager
 
@@ -31,6 +31,11 @@ General guidance
  5. Click 'Create Atlas'
  6. Once it's done, copy the atlas file (.sqlite, .zip, etc) onto your osmdroid powered device to /sdcard/osmdroid/
  7. Tell osmdroid to not use a network connection and set the map tile source. **
+
+
+### Use the Cache Manager on device ( > version 5.2)
+
+TODO
 
 ### Important note on tile source names.
 
@@ -76,3 +81,23 @@ We'll happily take pull requests. That said, it's fairly simple to make a new ti
  1. Create a class that implements IArchiveProvider. At the most basic level, the IArchiveProvider needs to turn an OSM tile coordinates (Zoom, X and Y coordinates) into an InputStream representing the tile if it's available.
  2. Register the IArchiveProvider with `ArchiveFileFactory`
  3. Build, deploy and start up osmdroid
+
+
+# Can I change the location osmdroid looks for map tiles archives?
+
+Yes! However the answer depends on what version of osmdroid you're using.
+
+In general, the answer files within the following class.
+
+https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/constants/OpenStreetMapTileProviderConstants.java
+
+See `setCachePath` and `TILE_PATH_BASE`. Even though the class is called `Constants` many of the fields are writable. You can use this to tweak a number of settings for your needs.
+
+# What other mechanisms exists for loading tiles?
+
+Out of the box, we have the following (any they are checked in this order)
+
+ - Assets, you can place exploded zip archives in the assets folder of your app
+ - Local file system
+ - Network sources cache
+ - Network sources
