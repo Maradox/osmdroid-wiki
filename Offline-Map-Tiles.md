@@ -98,6 +98,6 @@ See `setCachePath` and `TILE_PATH_BASE`. Even though the class is called `Consta
 Out of the box, we have the following (any they are checked in this order)
 
  - Assets, you can place exploded zip archives in the assets folder of your app
- - Local file system
- - Network sources cache
- - Network sources
+ - Local file system (archives like zip, sqlite, etc)
+ - Network sources cache - by default /sdcard/osmdroid/tiles/SOURCE/Z/X/Y.extension
+ - Network sources - download what you need, when you need it
