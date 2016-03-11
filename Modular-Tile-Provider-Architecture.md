@@ -1,3 +1,6 @@
+# NOTICE
+This page was blindly copied over from the old wiki on google code. it may be out of date
+
 ## Introduction
 
 osmdroid has a modular and extensible tile provider architecture that allows tiles to be provided from a number of sources including online sources, local archive sources, and file store sources.
