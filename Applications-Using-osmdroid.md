@@ -6,7 +6,7 @@ This page lists projects that use osmdroid, separated into those that use the ja
 
 If you know of any inaccuracies or additions to this page, please add a comment.
 
-Projects using osmdroid jar
+Projects using osmdroid jar/aar
 
 * MySpeed
 * Open Avation Maps
