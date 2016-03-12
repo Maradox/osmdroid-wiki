@@ -21,7 +21,7 @@ osmdroid also has an optional library to provide addition features of 3rd party 
 ```xml
 <dependency>
   <groupId>org.osmdroid</groupId>
-  <artifactId>osmdroid-thirdparty</artifactId>
+  <artifactId>osmdroid-third-party</artifactId>
   <version>5.0.1</version>
   <type>aar</type>
 </dependency>
