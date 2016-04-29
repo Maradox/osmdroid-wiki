@@ -10,9 +10,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Removal of MapControllerOld (been deprecated for a long time)
  * osmdroid JDK and ADK raster tile server
 
-
-
-## 5.2 (under development)
+## 5.2
  * Mapsforge as a tile source
  * Refactor of the 3rd party sample app and support library
  * Use SQLite database for tile cache instead of file system

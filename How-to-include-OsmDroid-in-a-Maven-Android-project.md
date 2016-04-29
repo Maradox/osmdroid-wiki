@@ -8,7 +8,7 @@ If your project already uses Maven and you want to include osmdroid then it's as
 <dependency>
   <groupId>org.osmdroid</groupId>
   <artifactId>osmdroid-android</artifactId>
-  <version>5.0.1</version>
+  <version>5.2</version>
   <type>aar</type>
 </dependency>
 ```
@@ -22,7 +22,7 @@ osmdroid also has an optional library to provide addition features of 3rd party 
 <dependency>
   <groupId>org.osmdroid</groupId>
   <artifactId>osmdroid-third-party</artifactId>
-  <version>5.0.1</version>
+  <version>5.2</version>
   <type>aar</type>
 </dependency>
 ```

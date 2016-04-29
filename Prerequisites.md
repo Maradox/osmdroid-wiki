@@ -14,10 +14,10 @@ None for the osmdroid-android aar. osmdroid-thirdparty aar requires org.json:jso
 
 # Manifest additions
 
-* You should be targeting the latest API in your project. We support compatibility back to API 7. Note: if you're using the Google Maps Wrapper, you'll need API 9 as the min. Your manifest should have a uses-sdk tag similar to:
+* You should be targeting the latest API in your project. We support compatibility back to API 8. Note: if you're using the Google Maps Wrapper, you'll need API 9 as the min. Your manifest should have a uses-sdk tag similar to:
 
 ```xml
-<uses-sdk android:targetSdkVersion="NEWEST AVAILABLE" android:minSdkVersion="7" />
+<uses-sdk android:targetSdkVersion="NEWEST AVAILABLE" android:minSdkVersion="8" />
 ```
 
 * You should turn off hardware acceleration in the manifest. We have experimental hardware acceleration support but users will still run into some issues. See [issue 413](https://code.google.com/p/osmdroid/issues/detail?id=413) for more information. **In most cases, hardware acceleration turned on will work** and it appears to be a hardware specific thing. If you run into issues with hardware acceleration turned on, please let us know.

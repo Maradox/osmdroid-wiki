@@ -1,5 +1,5 @@
 # A guide for upgrading your app 
-## From version 5.1 to 5.2 (future)
+## From version 5.1 to 5.2
 
 ### Data Storage
 
