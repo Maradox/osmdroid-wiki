@@ -34,6 +34,10 @@ Ever wanted Lat/Lon gridlines? We have to covered.
 
 The command line and swing GUI tile packagers also received some attention and are now included with the distribution. This adds a number of bug fixes.
 
+### Refactoring (moving classes)
+
+All my location type overlays were consolidated into it's own package
+
 ### Resource Proxy and older classes
 
 * Resource Proxy and all derived classes were deleted and removed from all resource paths and constructors
