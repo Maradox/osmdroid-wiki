@@ -1,5 +1,6 @@
 # A guide for upgrading your app 
-## From version 5.1 to 5.2
+
+## From version 5.2 to X.Y (future placeholder)
 
 ### Data Storage
 
@@ -9,6 +10,33 @@ Tiles that were already loaded in device....
 
 TBD do we leave it or delete it? Or run an import routine, then delete from local storage....
 
+
+## From version 5.1 to 5.2 (current release)
+
+### Partial Merger of OSM Bonus Pack
+
+If you were using OSMBonusPack with osmdroid, there's been some significant changes recently. Namely, everything but the KML/GeoJson parsing and online routing tools have been migrated (with Git history). As a consequence, several packages were shuffled around and renamed in order to prevent collisions and to better align with osmdroid's package structure. We also made some minor, hopefully non-breaking changes to the CacheManager and to Marker (both from OSMBonusPack).
+
+* CacheManager - org.osmdroid.tileprovider.cachemanager
+* Marker and Overlays from OSMBonusPack - org.osmdroid.views.overlay, org.osmdroid.views.overlay.infowindow
+
+### Mapsforge Adapter and sample app
+
+Included with the migration of OSMBonusPack's capabilities is the Mapsforge Adapter, which lets you use on device rendered tiles with Mapsforge's rendering engine. Since Mapsforge is LGPL based license, so is this adapter.
+ 
+### Gridline overlay
+
+Ever wanted Lat/Lon gridlines? We have to covered.
+
+* org.osmdroid.views.overlay.gridlines
+
+### Tilepackager
+
+The command line and swing GUI tile packagers also received some attention and are now included with the distribution. This adds a number of bug fixes.
+
+### Resource Proxy
+
+Resource Proxy is deleted and removed from all resource paths.
 
 ## From version 5.0.1 to 5.1
 
