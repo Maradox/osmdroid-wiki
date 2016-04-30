@@ -9,11 +9,11 @@ This list only includes major highlights or breaking changes. Check [here](https
  * WMS Map Source Client
  * Removal of MapControllerOld (been deprecated for a long time)
  * osmdroid JDK and ADK raster tile server
+ * Use SQLite database for tile cache instead of file system
 
 ## 5.2
  * Mapsforge as a tile source
  * Refactor of the 3rd party sample app and support library
- * Use SQLite database for tile cache instead of file system
  * Death of the resource proxy
  * Partial merger of osmbonus pack
  * Lat/Lon gridline overlay
