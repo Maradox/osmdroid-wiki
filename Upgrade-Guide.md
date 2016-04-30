@@ -34,9 +34,11 @@ Ever wanted Lat/Lon gridlines? We have to covered.
 
 The command line and swing GUI tile packagers also received some attention and are now included with the distribution. This adds a number of bug fixes.
 
-### Resource Proxy
+### Resource Proxy and older classes
 
-Resource Proxy is deleted and removed from all resource paths.
+* Resource Proxy and all derived classes were deleted and removed from all resource paths and constructors
+* MapControllerOld was deleted (use MapController)
+* MyLocationOverlay was deleted (use MyNewLocationOverlay)
 
 ## From version 5.0.1 to 5.1
 
