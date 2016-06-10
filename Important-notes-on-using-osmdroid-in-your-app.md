@@ -19,15 +19,8 @@ Advantage: it's faster
 Disadvantage: it uses a more memory and many android devices have limited capacity, even with the large heap setting. Unfortunately, there's no way to tell what the ceiling is. On many modern devices, it's 500MB, but not all. This is inclusive of all of the heap space for your app, so use with caution. 
 
 ````
-Iterator<Overlay> iterator = mMapView.getOverlays().iterator();
-		while(iterator.hasNext()){
-			Overlay next = iterator.next();
-			if (next instanceof TilesOverlay){
-				TilesOverlay x = (TilesOverlay)next;
-				x.setOvershootTileCache(x.getOvershootTileCache() * 2);
-				break;
-			}
-		}
+TilesOverlay x=this.mMapView.getOverlayManager().getTilesOverlay();
+x.setOvershootTileCache(x.getOvershootTileCache() * 2);
 ````
 
 ## Changing the loading tile grid colors
