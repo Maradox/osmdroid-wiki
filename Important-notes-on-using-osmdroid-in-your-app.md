@@ -31,3 +31,7 @@ By default, osmdroid renders a gray background with a grid on it while tiles are
 this.mMapView.getOverlayManager().getTilesOverlay().setLoadingBackgroundColor(android.R.color.black);
 this.mMapView.getOverlayManager().getTilesOverlay().setLoadingLineColor(Color.argb(255,0,255,0));
 ````
+
+## Notes on programmatic construction of the MapView
+
+Osmdroid supports the manual creating (not XML Layout based) construction of MapViews. In fact, it's used throughout the examples. BE CAREFUL creating the view manually, it's very easy to accidentally introduce memory leaks in your application this way. You'll have to handle onDestoryView and manually call MapView#onDetach.
