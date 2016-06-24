@@ -15,12 +15,13 @@ This page is to list some of the more important guidelines for developers contri
 
 ###Guidelines for osmdroid-android project
 
-osmdroid-android references android.jar but the unit tests don't run on an Android device.  This means that the unit tests cannot invoke any Android methods.  In order to avoid this, proxies are used in the most common cases:
+Test your app with a device or emulate
 
- * Use org.osmdroid.ResourceProxy, not Context.getResource
- * Use android.util.Log (slf4j is no longer used)
+`mvn clean install`
 
-Those are the main less obvious guidelines.  In general, try and follow the existing style.
+or with gradle
+
+`gradle clean connectedCheck`
 
 ## Building
 
@@ -28,4 +29,4 @@ Make sure you build with the follow commands before opening a pull request. Ther
 
 ```` mvn clean install ````
 
-```` gradle clean build ````
+```` gradle clean build connectedCheck ````
