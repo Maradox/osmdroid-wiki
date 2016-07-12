@@ -11,7 +11,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * osmdroid JDK and ADK raster tile server
  * Use SQLite database for tile cache instead of file system
 
-## 5.2
+## 5.2 (current release)
  * Mapsforge as a tile source
  * Refactor of the 3rd party sample app and support library
  * Death of the resource proxy
@@ -39,7 +39,7 @@ This list only includes major highlights or breaking changes. Check [here](https
    * Refactoring of the sample app to make things easier to find
    * Java 7 APIs
  
-## 5.0.1 (current release)
+## 5.0.1
  * Target output and publication to maven central is AAR which includes the default resource files (person icon, etc)
  * Tile inversion for a rudimentary night mode
  * Better support for Android x86 with online map sources
