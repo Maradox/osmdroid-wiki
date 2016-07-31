@@ -7,9 +7,16 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.x (some future version)
  * Using doubles internally for points instead of ints (increased precision)
  * WMS Map Source Client
- * Removal of MapControllerOld (been deprecated for a long time)
  * osmdroid JDK and ADK raster tile server
+
+
+## 5.3 (not yet released)
  * Use SQLite database for tile cache instead of file system
+ * Removal of MapControllerOld (been deprecated for a long time)
+ * Cache manager improvements, can download tiles from a path, customizable UIs
+ * Fix for zoom out/in animation on < 10 APIs
+ * Fix for pinch to zoom sensitivity
+ * Many memory leak fixes
 
 ## 5.2 (current release)
  * Mapsforge as a tile source
