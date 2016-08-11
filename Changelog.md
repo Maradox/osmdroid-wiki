@@ -5,10 +5,8 @@ This list only includes major highlights or breaking changes. Check [here](https
 [Upgrading?](https://github.com/osmdroid/osmdroid/wiki/Upgrade-Guide)
 
 ## 5.x (some future version)
- * Using doubles internally for points instead of ints (increased precision)
  * WMS Map Source Client
  * osmdroid JDK and ADK raster tile server
-
 
 ## 5.3 (not yet released)
  * Use SQLite database for tile cache instead of file system
@@ -17,6 +15,9 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Fix for zoom out/in animation on < 10 APIs
  * Fix for pinch to zoom sensitivity
  * Many memory leak fixes
+ * Using doubles internally for points instead of ints (increased precision)
+ * MapBox samples updated
+ * MapQuest tile source fixed to meet the newer access token requirements
 
 ## 5.2 (current release)
  * Mapsforge as a tile source
