@@ -1,6 +1,10 @@
 # A guide for upgrading your app 
 
-## From version 5.2 to 5.3 (future placeholder)
+## From version 5.2 to X.Y (future placeholder)
+
+### Switch to Doubles
+
+The "Doubles" branch was finally merged. This means that osmdroid uses doubles internally now for higher precision as lower zoom levels (higher numerically). All 1E6 based APIs are deprecated but still accessible. This does not resolve issues with zoom > 20 due to Android using an integer based coordinate system.
 
 ### Data Storage
 
