@@ -1,6 +1,6 @@
 # A guide for upgrading your app 
 
-## From version 5.2 to X.Y (future placeholder)
+## From version 5.2 to 5.3 (future placeholder)
 
 ### Data Storage
 
@@ -9,6 +9,14 @@ osmdroid has always stored map tiles to the local file system. When upgrading to
 Tiles that were already loaded in device....
 
 TBD do we leave it or delete it? Or run an import routine, then delete from local storage....
+
+### MapBox/MapQuest manifest access tokens
+
+Mapquest now apparently uses MapBox for map tiles. Go to MapBox's website to get an access token, then use that access token for both MapQuest and MapBox tile sources.
+
+The MapBox tile source formerly used the "ACCESS_TOKEN" meta-data entry in the manifest. It now uses "MAPBOX_ACCESS_TOKEN". 
+
+MapQuest uses "MAPQUEST_ACCESS_TOKEN" and "MAPQUEST_MAPID" (default is "mapquest.streets-mb" if not defined)
 
 
 ## From version 5.1 to 5.2 (current release)
