@@ -28,6 +28,8 @@ Projects using osmdroid jar/aar
 * Seismic Explorer
 * My Uni
 * CycleStreets (Android version not yet released)
+* [LocationMapViewer](https://github.com/k3b/LocationMapViewer)
+* [APhotoManager](https://github.com/k3b/APhotoManager/)
 
 Projects using a copy of osmdroid source
 
