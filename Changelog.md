@@ -11,13 +11,16 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.3 (not yet released)
  * Use SQLite database for tile cache instead of file system
  * Removal of MapControllerOld (been deprecated for a long time)
- * Cache manager improvements, can download tiles from a path, customizable UIs
+ * Cache manager improvements, can download tiles from a path, customizable UIs and can create MOBAC like tile archives
  * Fix for zoom out/in animation on < 10 APIs
  * Fix for pinch to zoom sensitivity
  * Many memory leak fixes
  * Using doubles internally for points instead of ints (increased precision)
  * MapBox samples updated
  * MapQuest tile source fixed to meet the newer access token requirements
+ * HERE We Go map tile source
+ * Primary build system switched to gradle (with gradle-fury)
+
 
 ## 5.2 (current release)
  * Mapsforge as a tile source
