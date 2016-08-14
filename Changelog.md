@@ -20,7 +20,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * MapQuest tile source fixed to meet the newer access token requirements
  * HERE We Go map tile source
  * Primary build system switched to gradle (with gradle-fury)
-
+ * Customizable loading and file not found image placeholders
 
 ## 5.2 (current release)
  * Mapsforge as a tile source
