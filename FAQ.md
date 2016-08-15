@@ -4,6 +4,8 @@
 
 Make sure your AndroidManifest.xml file has the android.permission.INTERNET permission. See Prerequisites.
 
+Aug 2016 - someone managed to get the default user agent used by osmdroid banned from Open Street Maps tile servers. This can also be a reason for tiles failing to load (usually with an access denied, bad request or other similar HTTP error message). To fix, set your user agent to something unique for your app.
+
 ##The map will not scroll when I drag my finger on the screen
 
 Make sure you don't set the MapView to be "clickable". If you are using xml layouts make sure you don't have android:clickable="true" or if you are creating your MapView programmatically make sure you don't have mMapView.setClickable(true);. This should no longer be necessary starting with osmdroid-3.0.11.
@@ -37,7 +39,7 @@ When your app starts up, try the following. This will produce a lot of log outpu
 
 ## Does my device need an sd card or some kind of storage medium?
 
-Yes. osmdroid downloads and caches map data on device and it needs to be stored on some writable medium. We use `Environment.getExternalStorage` and if that doesn't return a writable location then the cache won't be available, which well lead to significantly increased data usage.
+Yes. osmdroid downloads and caches map data on device and it needs to be stored on some writable medium. We use `Environment.getExternalStorage` and if that doesn't return a writable location (which happens some devices) then the cache won't be available, which well lead to significantly increased data usage (or osmdroid just won't work at all). The location can be overridden to use application private storage or whatever.
 
 ## What's the Dex count for osmdroid?
 
