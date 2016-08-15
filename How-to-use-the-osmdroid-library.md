@@ -96,8 +96,7 @@ However, for more control over your `MapView`, you will want to create a `MapVie
 ```java
 @Override
 public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    mResourceProxy = new ResourceProxyImpl(inflater.getContext().getApplicationContext());
-    mMapView = new MapView(inflater.getContext(), 256, mResourceProxy);
+    mMapView = new MapView(inflater.getContext(), 256, getContext());
     return mMapView;
 }
 ```
@@ -105,9 +104,14 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 # Images for Buttons and whatnot
 For osmdroid 4.3 and older, there's a number of resources that the map uses for various user interface helpers, such as zoom in/out buttons, the device's current location when GPS is available and more. These resources are loaded via the "ResourceProxy". The idea is that you can either bring your own images or borrow the ones from osmdroid. If you're borrowing, then you'll want to grab the files located [here](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/res/drawable) and add them to your project "src/main/res/drawable".
 
-For osmdroid 5.0 and newer, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
+For osmdroid 5.0 and 5.1, the drawables are included with the AAR package. The resource proxy is still present and used so you can override values and images as needed.
+
+For osmdroid 5.2 and up, the resource proxy is removed from the API set and replaced with Android context.
 
 # Create a custom Resource Proxy
+
+Applies only to versions prior to 5.2
+
 As mentioned above, the Resource Proxy is a bit of a strange animal that osmdroid uses to load some images for user interface controls. If you're using any of the built-in controls that need images (zoom in/out, person icon, etc) you'll either need to provide your own images, borrow the images from osmdroid's example app, or provide your own implementation of Resource Proxy.
 
 The example osmdroid app includes an example of this called CustomResourceProxy (included with > 4.3 osmdroid). All it does is change the my location drawable (person) to an alternate image. The example is below.
@@ -210,7 +214,7 @@ mMinimapOverlay.setHeight(dm.heightPixels / 5);
 mMapView.getOverlays().add(this.mMinimapOverlay);
 ````
 
-Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap. For the reverse, you need to do the same process, however you have to filter map motion events to prevent infinite looping.
+Pro tip: If you want the minimap to stay put when rotation is enabled, create a second map view in your layout file, then wire up a change listener on the main map and use that to set the location on the minimap. For the reverse, you need to do the same process, however you have to filter map motion events to prevent infinite looping. There's an example on how to sync the views within the example application.
 
 
 
