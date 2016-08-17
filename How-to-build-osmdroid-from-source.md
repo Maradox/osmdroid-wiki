@@ -2,6 +2,9 @@
 osmdroid's current, authoritative, build environment is with Maven. We also maintain Gradle build files to make life a bit easier with Android Studio. As of Jan 2015, all of the Maven projects have been migrated over to Gradle. This means you can build the whole thing with Maven or Gradle.
 
 ## Building with Maven
+
+** NOTICE ** since April 2016, Google's Android team in their infinite wisdom have broken all things related to the maven repository for Google Play Services and Google Maps. As such, osmdroid's maven based build has been failing on on both the 3rd party library and the Google Wrapper APK project. As such, we've been actively using Gradle for the primary build system. See [here](https://github.com/simpligility/maven-android-sdk-deployer/issues/295) for details.
+
  * Download the latest Android SDK and update the packages. The command line build requires the **Google-Play-Services** package.
    * Create the **ANDROID_HOME** path variable, pointing to your Android SDK install location.
      * Windows: Right Click on My Computer, select Properties, Select Environment Variables, and create the variable ANDROID_HOME with the location of your Android SDK
@@ -23,7 +26,8 @@ You have now completed all steps to compile osmdroid using Maven
 ## Building with Gradle
  * Checkout the osmdroid source from git to a local folder.
    * `git clone https://github.com/osmdroid/osmdroid.git`
- * Navigate to the osmdroid folder and run the command **gradle clean build**. 
+ * Navigate to the osmdroid folder and run the command **gradlew clean install**. This will also install to your local maven repository.
+ * To run tests against a device or avd, run **gradlew cC**
 
 You have now completed all steps to compile osmdroid using Gradle
 
@@ -34,13 +38,11 @@ You have now completed all steps to compile osmdroid using Gradle
  * Right click on osmdroid-parent project. Click Run as --> Maven install.
 
 # Building osmdroid using Android Studio
-Note, this config isn't 100% supported due to Android Studio and Intellij's lack of support for maven based Android builds.
-
- * Follow the above instructions for command line builds first.
+ * Follow the above instructions for command line builds first (the gradle instructions).
  * Ensure you can build from the command line first!
- * Start up Android Studio and import the project in your checkout_folder/OpenStreetMapViewer
+ * Start up Android Studio and import the project in your checkout_folder
 
 
-# Building osmdroid from NetBeans
+# Building osmdroid from NetBeans (with maven)
  * Follow the above instructions for command line builds first.
  * As long as the environment variable for ANDROID_HOME is set, it should build by right clicking on "osmdroid parent", then "Clean and Build"
