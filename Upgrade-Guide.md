@@ -2,7 +2,7 @@
 
 ## From version 5.2 to X.Y (future placeholder)
 
-### Switch to Doubles
+### Switch to Doubles (API Change)
 
 The "Doubles" branch was finally merged. This means that osmdroid uses doubles internally now for higher precision as lower zoom levels (higher numerically). All 1E6 based APIs are deprecated but still accessible. This does not resolve issues with zoom > 20 due to Android using an integer based coordinate system.
 
@@ -22,6 +22,8 @@ The MapBox tile source formerly used the "ACCESS_TOKEN" meta-data entry in the m
 
 MapQuest uses "MAPQUEST_ACCESS_TOKEN" and "MAPQUEST_MAPID" (default is "mapquest.streets-mb" if not defined)
 
+### Overlay API Changes
+Everything based on overlay has had it's constructor simplified in order to support the [creation of overlays in an async task](https://github.com/osmdroid/osmdroid/pull/373). As such, you may have some work to do for updating overlays. There was one field removed from the base Overlay class, mScale, which wasn't used anywhere except for the ScaleBarOverlay.
 
 ## From version 5.1 to 5.2 (current release)
 
