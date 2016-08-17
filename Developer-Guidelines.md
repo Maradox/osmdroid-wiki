@@ -21,7 +21,7 @@ Test your app with a device or emulate
 
 or with gradle
 
-`gradle clean connectedCheck`
+`gradle clean install connectedCheck`
 
 ## Building
 
@@ -29,4 +29,4 @@ Make sure you build with the follow commands before opening a pull request. Ther
 
 ```` mvn clean install ````
 
-```` gradle clean build connectedCheck ````
+```` gradle clean install connectedCheck ````
