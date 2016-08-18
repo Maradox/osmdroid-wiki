@@ -44,3 +44,16 @@ Yes. osmdroid downloads and caches map data on device and it needs to be stored 
 ## What's the Dex count for osmdroid?
 
 Rather small, at just over 2000 methods.
+
+## Can I change where osmdroid looks for tile archives and the location of the tile cache?
+
+Yes! Both of these settings are in the following class
+
+````
+        OpenStreetMapTileProviderConstants.setCachePath(...)
+        OpenStreetMapTileProviderConstants.setCacheSizes(...)
+        OpenStreetMapTileProviderConstants.setOfflineMapsPath(...)
+        OpenStreetMapTileProviderConstants.setUserAgentValue(...)
+````
+
+
