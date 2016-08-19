@@ -2,13 +2,21 @@ There's a few things you need to know about osmdroid before deploying your app t
 
 ## Set the HTTP User-Agent variable
 
-This setting identifies your app uniquely to tile servers. It's not the end user's identity, but the name of your app. If your users abuse the tile server or your app does in some way, this will prevent everyone that uses osmdroid from getting banned rather than just the users of your app.
+... by adding
+
+````
+   OpenStreetMapTileProviderConstants.setUserAgentValue(BuildConfig.APPLICATION_ID);
+````
+
+in onCreate in the Map Activity, Fragment or Application.
+
+Background: This setting identifies your app uniquely to tile servers. It's not the end user's identity, but the name of your app. If your users abuse the tile server or your app does in some way, this will prevent everyone that uses osmdroid from getting banned rather than just the users of your app.
 `org.osmdroid.tileprovider.constants.OpenStreetMapTileProviderConstants#setUserAgentValue`
 
 
 ## Number of concurrent download threads
 
-We set the default for Open Street Map's tile usage policy, but you can adjust it based on your tile source and device capabilities (don't set it to 1000 or something ridiculous like that). We limit it to 12 as a max.
+We set the default for [Open Street Map's tile usage policy](http://wiki.openstreetmap.org/wiki/Tile_usage_policy), but you can adjust it based on your tile source and device capabilities (don't set it to 1000 or something ridiculous like that). We limit it to 12 as a max.
 
 `org.osmdroid.tileprovider.constants.OpenStreetMapTileProviderConstants#setNumberOfTileDownloadThreads`
 
@@ -35,3 +43,11 @@ this.mMapView.getOverlayManager().getTilesOverlay().setLoadingLineColor(Color.ar
 ## Notes on programmatic construction of the MapView
 
 Osmdroid supports the manual creating (not XML Layout based) construction of MapViews. In fact, it's used throughout the examples. BE CAREFUL creating the view manually, it's very easy to accidentally introduce memory leaks in your application this way. You'll have to handle onDestoryView and manually call MapView#onDetach.
+
+Prefer using MapViews via xml layouts instead as demonstrated in 
+
+* OpenStreetMapViewer/src/main/res/layout/activity_starter_mapview.xml
+
+## How to credit OpenStreetMap
+
+OpenStreetMap requires that you add “© OpenStreetMap contributors” to the map, if you use their data. For more dedails see http://www.openstreetmap.org/copyright/en 
