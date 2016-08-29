@@ -13,3 +13,4 @@ A collection of related projects for OSM, geospatial index, map sources and more
 * Common Map API - http://cmapi.org/
 * OsmReader - bz2 to sqlite on ADK or JDK - https://github.com/spyhunter99/osmreader
 * USGS Earth Explorer - http://earthexplorer.usgs.gov/
+* Nifty trick for better performance with polylines - http://fiskurgit.github.io/osmdroid_polyline_performance
