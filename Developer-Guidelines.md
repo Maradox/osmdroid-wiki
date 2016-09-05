@@ -17,7 +17,7 @@ This page is to list some of the more important guidelines for developers contri
 
 Test your app with a device or emulate
 
-`mvn clean install`
+`mvn clean install` - NOTE Maven has been broken for Android builds since Apr 2016
 
 or with gradle
 
