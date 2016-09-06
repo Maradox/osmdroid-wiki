@@ -6,9 +6,12 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ## 5.x (some future version)
  * WMS Map Source Client
- * osmdroid JDK and ADK raster tile server
 
-## 5.3 (not yet released)
+## 5.5 
+ * osmdroid JDK and ADK raster tile server
+ * IMap, IMapView API clean up
+
+## 5.4 
  * Use SQLite database for tile cache instead of file system
  * Removal of MapControllerOld (been deprecated for a long time)
  * Cache manager improvements, can download tiles from a path, customizable UIs and can create MOBAC like tile archives
@@ -21,6 +24,9 @@ This list only includes major highlights or breaking changes. Check [here](https
  * HERE We Go map tile source
  * Primary build system switched to gradle (with gradle-fury)
  * Customizable loading and file not found image placeholders
+
+## 5.3
+5.3 is the same source base as 5.4, but the version was skipped due to a release snafu.
 
 ## 5.2 (current release)
  * Mapsforge as a tile source
