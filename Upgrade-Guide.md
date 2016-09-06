@@ -1,6 +1,12 @@
 # A guide for upgrading your app 
 
-## From version 5.2 to X.Y (future placeholder)
+## From version 5.4 to x.y (future placeholder)
+
+
+## From version 5.2 to 5.4 
+
+### Overlay constructor change
+Overlays no longer require a Context constructor
 
 ### Switch to Doubles (API Change)
 
