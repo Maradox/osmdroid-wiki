@@ -3,7 +3,7 @@
 ## From version 5.4 to x.y (future placeholder)
 
 
-## From version 5.2 to 5.4 
+## From version 5.2 to 5.4  (current release from 2016-09-07)
 
 ### Overlay constructor change
 Overlays no longer require a Context constructor
@@ -31,7 +31,7 @@ MapQuest uses "MAPQUEST_ACCESS_TOKEN" and "MAPQUEST_MAPID" (default is "mapquest
 ### Overlay API Changes
 Everything based on overlay has had it's constructor simplified in order to support the [creation of overlays in an async task](https://github.com/osmdroid/osmdroid/pull/373). As such, you may have some work to do for updating overlays. There was one field removed from the base Overlay class, mScale, which wasn't used anywhere except for the ScaleBarOverlay. The old api with Context parameters is still there but set to depricated.
 
-## From version 5.1 to 5.2 (current release)
+## From version 5.1 to 5.2
 
 ### Partial Merger of OSM Bonus Pack
 
