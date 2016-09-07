@@ -11,7 +11,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * osmdroid JDK and ADK raster tile server
  * IMap, IMapView API clean up
 
-## 5.4 
+## 5.4  (current release from 2016-09-07)
  * Use SQLite database for tile cache instead of file system
  * Removal of MapControllerOld (been deprecated for a long time)
  * Cache manager improvements, can download tiles from a path, customizable UIs and can create MOBAC like tile archives
@@ -28,7 +28,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.3
 5.3 is the same source base as 5.4, but the version was skipped due to a release snafu.
 
-## 5.2 (current release)
+## 5.2
  * Mapsforge as a tile source
  * Refactor of the 3rd party sample app and support library
  * Death of the resource proxy
