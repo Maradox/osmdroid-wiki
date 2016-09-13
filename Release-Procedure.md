@@ -1,6 +1,10 @@
 ## Pre-release steps
 
-Edit gradle.properties and update the version information (android.versionCode and pom.version). Commit the change and tag with git.
+Edit gradle.properties and update the version information 
+ - android.versionCode
+ - pom.version
+ 
+Commit the change and tag with git.
 
 Use the tag name: 'osmdroid-parent-{version}' to keep in line with the previous releases.
 
