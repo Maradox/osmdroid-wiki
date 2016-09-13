@@ -1,5 +1,5 @@
 # Building osmdroid from the command line
-osmdroid's current, authoritative, build environment is with Maven. We also maintain Gradle build files to make life a bit easier with Android Studio. As of Jan 2015, all of the Maven projects have been migrated over to Gradle. This means you can build the whole thing with Maven or Gradle.
+osmdroid's current, authoritative, build environment is with gradle. We also maintain maven build files however it's non-functional at the moment. As of Jan 2015, all of the Maven projects have been migrated over to Gradle. 
 
 ## Building with Maven
 
