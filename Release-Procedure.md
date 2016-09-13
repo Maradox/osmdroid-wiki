@@ -34,3 +34,6 @@ https://github.com/osmdroid/osmdroid/releases/new
 
 Output zip is at osmdroid-dist/build/distributions/
 
+## Post-release steps
+
+Update readme.md to have the current version number listed
