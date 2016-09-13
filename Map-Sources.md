@@ -70,14 +70,14 @@ mMapView = new MapView(context, 256, new DefaultResourceProxyImpl(context), tile
 ## Using a different Tile Source
 osmdroid comes with a bunch of tile sources preprogrammed for sources available on the internet. Some require API keys or additional information due to usage restrictions, developers accounts, pay schemes, etc. The following example will show you how to switch tile sources at runtime.
 
-To set to MapQuest satellite:
+To set to USGS satellite:
 ````
-mMapView.setTileSource(TileSourceFactory.MAPQUESTAERIAL);
+mMapView.setTileSource(TileSourceFactory.USGS_SAT);
 ````
 
-To set to MapQuest road maps:
+To set to USGS Topo maps:
 ````
-mMapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
+mMapView.setTileSource(TileSourceFactory.USGS_TOPO);
 ````
 
 To set to a custom map server/tile source. In this case, we are using the USGS Topographic maps. This tile source is a bit different and requires some explanation. Most OSM based map sources use a URL pattern  similar to Zoom/X/Y.png. USGS, as well as many other ArcGis based sources, use Zoom/Y/X and thus require a different URL pattern.
@@ -155,7 +155,9 @@ final ITileSource tileSource = TileSourceFactory.MAPNIK;
 mMapView.setTileSource(tileSource);
 ````
 
-## Mapquest Roads
+## Mapquest
+
+Note: This was updated with v5.3
 
 Required Java dependencies
  - osmdroid-android
@@ -163,11 +165,24 @@ Required Java dependencies
 Code Sample:
 
 ````
-final ITileSource tileSource = TileSourceFactory.MAPQUESTOSM;
+final ITileSource tileSource = new MapQuestTileSource(context);
 mMapView.setTileSource(tileSource);
 ````
 
-## Mapquest Aerial
+Requires access key in your manifest for **MapBox**.
+Manifest (optional):
+Under manifest/application
+
+````
+<meta-data android:name="MAPQUEST_MAPID" android:value="YOUR KEY" />
+<meta-data android:name="MAPQUEST_ACCESS_TOKEN" android:value="YOUR TOKEN" />
+````
+
+
+
+## HERE We Go Maps
+
+Note: This was added with v5.3
 
 Required Java dependencies
  - osmdroid-android
@@ -175,9 +190,21 @@ Required Java dependencies
 Code Sample:
 
 ````
-final ITileSource tileSource = TileSourceFactory.MAPQUESTAERIAL;
+final ITileSource tileSource = new HEREWeGoTileSource(context);
 mMapView.setTileSource(tileSource);
 ````
+
+Requires access key in your manifest.
+Manifest (optional):
+Under manifest/application
+
+````
+<meta-data android:name="HEREWEGO_MAPID" android:value="YOUR KEY" />
+<meta-data android:name="HEREWEGO_APPID" android:value="YOUR TOKEN" />
+<meta-data android:name="HEREWEGO_APPCODE" android:value="YOUR TOKEN" />
+````
+
+
 
 ## Cloud made
 
@@ -202,7 +229,7 @@ mMapView.setTileSource(tileSource);
 
 ## Map Box
 
-Note: This was updated with v5.1
+Note: This was updated with v5.3
 
 Required Java dependencies
  - osmdroid-android
@@ -212,7 +239,7 @@ Under manifest/application
 
 ````
 <meta-data android:name="MAPBOX_MAPID" android:value="YOUR KEY" />
-<meta-data android:name="ACCESS_TOKEN" android:value="YOUR TOKEN" />
+<meta-data android:name="MAPBOX_ACCESS_TOKEN" android:value="YOUR TOKEN" />
 ````
 
 Code Sample:
