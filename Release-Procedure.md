@@ -3,7 +3,7 @@
 Edit gradle.properties and update the version information :
  - pom.version (usually just remove SNAPSHOT)
  - android.versionCode (it’s probably already okay)
- 
+
 Commit the change and tag with git.
 
 Use the tag name: 'osmdroid-parent-{version}' to keep in line with the previous releases.
@@ -64,4 +64,4 @@ Edit gradle.properties and update the version information :
  - pom.version (next SNAPSHOT)
  - android.versionCode (increment by 1)
 
-`git push`
+git commit and push
