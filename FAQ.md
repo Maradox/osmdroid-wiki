@@ -61,7 +61,11 @@ Yes! Both of these settings are in the following class
 First all, I'd love to know what your requirement is for just a high zoom level and what map source you are using.
 
 Yup, it's a known issue. See the following issues.
-#416 #329 #230 #114 #46
+https://github.com/osmdroid/osmdroid/issues/416
+https://github.com/osmdroid/osmdroid/issues/329
+https://github.com/osmdroid/osmdroid/issues/230
+https://github.com/osmdroid/osmdroid/issues/114
+https://github.com/osmdroid/osmdroid/issues/46
 
 The root cause is that we're using Android's "View" class to map pixel x,y integer coordinates to lat,long (double). As you zoom in, the size of world in pixels increases exponentially and causes integer overflows at zoom levels above 20 towards the extremes of the planet and nearly everywhere by zoom 22. As such, zoom 20 is really the highest that's supported, although osmdroid doesn't restrict you from going to the extremes. 
 
