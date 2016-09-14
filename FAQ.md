@@ -56,4 +56,15 @@ Yes! Both of these settings are in the following class
         OpenStreetMapTileProviderConstants.setUserAgentValue(...)
 ````
 
+## I zoomed past level 20 and the everything disappeared!
 
+First all, I'd love to know what your requirement is for just a high zoom level and what map source you are using.
+
+Yup, it's a known issue. See the following issues.
+#416 #329 #230 #114 #46
+
+The root cause is that we're using Android's "View" class to map pixel x,y integer coordinates to lat,long (double). As you zoom in, the size of world in pixels increases exponentially and causes integer overflows at zoom levels above 20 towards the extremes of the planet and nearly everywhere by zoom 22. As such, zoom 20 is really the highest that's supported, although osmdroid doesn't restrict you from going to the extremes. 
+
+Behaviors to expect when at zoom > 20
+ - double tapping to zoom in can cause the map to fling towards the other side of the planet
+ - lines and polygons can disappear
