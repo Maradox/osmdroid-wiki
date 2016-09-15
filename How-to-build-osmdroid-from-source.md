@@ -44,5 +44,6 @@ You have now completed all steps to compile osmdroid using Gradle
 
 
 # Building osmdroid from NetBeans (with maven)
+**Needs updating** - See note above on the status of maven builds
  * Follow the above instructions for command line builds first.
  * As long as the environment variable for ANDROID_HOME is set, it should build by right clicking on "osmdroid parent", then "Clean and Build"
