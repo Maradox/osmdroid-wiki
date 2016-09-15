@@ -9,44 +9,34 @@ Chances are good that you want to get a map up and running in your app as soon a
 2. Walk through the [tutorial](How-to-use-the-osmdroid-library)
 
 
+## Usage Guides
 
-[[Applications Using osmdroid|Applications Using osmdroid]]
+ * [[How to use the osmdroid library|How to use the osmdroid library]]
+ * [[Tile Caching Settings|Tile Caching Settings]]
+ * [[osmdroid thirdparty|osmdroid thirdparty]]
 
-[[How to use the osmdroid library|How to use the osmdroid library]]
+## Upgrades and Changes
+ * [[Upgrade Guide|Upgrade Guide]]
+ * [[Prerequisites|Prerequisites]]
+ * [[Changelog|Changelog]]
+ * [[Generated Change Log|Generated Change Log]]
 
-[[Upgrade Guide|Upgrade Guide]]
+## Understanding osmdroid's architecture and design
+ * [[Modular Tile Provider Architecture|Modular Tile Provider Architecture]]
+ * [[Map Sources|]]
+ * [[Offline Map Tiles|Offline Map Tiles]]
 
-[[Changelog|Changelog]]
+## Commonly asked questions
+ * [[How big is it|How big is it]]
+ * [[Developer Guidelines|Developer Guidelines]]
+ * [[Important notes on using osmdroid in your app|Important notes on using osmdroid in your app]]
+ * [[FAQ|FAQ]]
+ * [[If you get 'resource not found' error|If you get 'resource not found' error]]
 
-[[Generated Change Log|Generated Change Log]]
+## Other information
+ * [[Related Projects|Related Projects]]
+ * [[Applications Using osmdroid|Applications Using osmdroid]]
 
-
-[[How big is it|How big is it]]
-
-[[Developer Guidelines|Developer Guidelines]]
-
-[[Important notes on using osmdroid in your app|Important notes on using osmdroid in your app]]
-
-[[FAQ|FAQ]]
-
-[[If you get 'resource not found' error|If you get 'resource not found' error]]
-
-
-[[Tile Caching Settings|Tile Caching Settings]]
-
-[[Map Sources|]]
-
-[[Modular Tile Provider Architecture|Modular Tile Provider Architecture]]
-
-[[Offline Map Tiles|Offline Map Tiles]]
-
-[[osmdroid thirdparty|osmdroid thirdparty]]
-
-
-[[Related Projects|Related Projects]]
-
-[[How to build osmdroid from source|How to build osmdroid from source]]
-
-[[Release Procedure|Release Procedure]]
-
-[[Prerequisites|Prerequisites]]
+## Committer/Staff Notes
+ * [[Release Procedure|Release Procedure]]
+ * [[How to build osmdroid from source|How to build osmdroid from source]]
