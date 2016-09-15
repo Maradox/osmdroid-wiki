@@ -3,7 +3,8 @@
 ## From version 5.4 to x.y (future placeholder)
 
 ## From version 5.4 to 5.4.1 (current release from 2016-09-13)
-No changes.
+No APIs changes, just bug fixes
+
 ## From version 5.2 to 5.4  
 
 ### Overlay constructor change
