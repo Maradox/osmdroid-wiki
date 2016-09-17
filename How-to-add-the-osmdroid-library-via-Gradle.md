@@ -10,7 +10,7 @@ dependencies {
 ```
 
 #osmdroid-third-party (google maps and bing support)
-osmdroid also has an optional library to provide addition features of 3rd party organizations.
+osmdroid also has an optional library to provide additional features of 3rd party organizations.
 
 ```groovy
 dependencies {
