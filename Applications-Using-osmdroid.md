@@ -30,6 +30,7 @@ Projects using osmdroid jar/aar
 * CycleStreets (Android version not yet released)
 * [LocationMapViewer](https://github.com/k3b/LocationMapViewer)
 * [APhotoManager](https://github.com/k3b/APhotoManager/)
+* [Trackbook](https://github.com/y20k/trackbook/)
 
 Projects using a copy of osmdroid source
 
