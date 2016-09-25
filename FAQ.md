@@ -6,7 +6,11 @@ Make sure your AndroidManifest.xml file has the android.permission.INTERNET perm
 
 Aug 2016 - someone managed to get the default user agent used by osmdroid banned from Open Street Maps tile servers. This can also be a reason for tiles failing to load (usually with an access denied, bad request or other similar HTTP error message). To fix, set your user agent to something unique for your app.
 
-##The map will not scroll when I drag my finger on the screen
+Also if you're on an API23+ device, make sure the app has sufficient runtime permissions (user granted).
+
+Also, if for some reason Environment.getExternalStorage() returns a read only mount point, maps tiles will also not be loaded. To overcome this, set the ` OpenStreetMapTileProviderConstants.setCachePath(new File("/sdcard/osmdroid2/").getAbsolutePath());`
+
+## The map will not scroll when I drag my finger on the screen
 
 Make sure you don't set the MapView to be "clickable". If you are using xml layouts make sure you don't have android:clickable="true" or if you are creating your MapView programmatically make sure you don't have mMapView.setClickable(true);. This should no longer be necessary starting with osmdroid-3.0.11.
 
