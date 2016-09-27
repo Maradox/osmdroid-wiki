@@ -380,3 +380,16 @@ Note: the method `tile2boundingBox` was pulled from OSM's [Slippy Map](http://wi
 
 Yes, as long as the endpoint supports the `export` API with bounding box then the above example should get you going. Note: ESRI's APIs can vary significantly by version and configuration settings. Consult their API guide additional details (and report back here!)
 
+# Translating Map Scale to OSM zoom levels
+
+| Approximate Map Scale | OSM Zoom Level |
+| --- | --- |
+5M | 5
+2M | 8
+1M | 9
+500k | 10
+250k | 11-12
+50 | 13-14
+25k | 15
+8k | 1
+
