@@ -1,8 +1,8 @@
-##Introduction
+## Introduction
 
-This page is to list some of the more important guidelines for developers contributing code to osmdroid.  This is not intended to strictly enforce a particular style - more to keep the code internally consistent.
+This page is to list some of the more important guidelines for developers **contributing code to osmdroid**.  This is not intended to strictly enforce a particular style - more to keep the code internally consistent.
 
-###General guidelines
+### General guidelines
 
  * Use spaces for indenting, not tabs (**recent change**)
  * Make variables final where possible
@@ -13,7 +13,7 @@ This page is to list some of the more important guidelines for developers contri
  * Use final wherever possible, especially parameters
  * Eclipse formatting and clean-up XML settings files (both of which cover most of the above) are included in the repository. Import them, and use them to make your life easier!
 
-###Guidelines for osmdroid-android project
+### Guidelines for osmdroid-android project
 
 Test your app with a device or emulate
 
@@ -25,8 +25,8 @@ or with gradle
 
 ## Building
 
-Make sure you build with the follow commands before opening a pull request. There are several related wiki pages on setting up the development environment (Maven is the only oddball) See https://github.com/osmdroid/osmdroid/wiki/How-to-build-OsmDroid-from-source
+Make sure you build with the follow commands before opening a pull request. There are several related wiki pages on setting up the development environment. See https://github.com/osmdroid/osmdroid/wiki/How-to-build-OsmDroid-from-source
 
-```` mvn clean install ````
+
 
 ```` gradle clean install connectedCheck ````
