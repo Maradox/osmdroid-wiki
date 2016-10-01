@@ -26,8 +26,19 @@ In your code you could get the map view preference and then instantiate a view o
 For some operations you may need to do more than simply instantiation, for example adding overlays.
 
 ````
-if(googleView) { com.google.android.maps.MapView mapView = new com.google.android.maps.MapView(...); com.google.android.maps.MyLocationOverlay myLocationOverlay = new com.google.android.maps.MyLocationOverlay(...); mapView.getOverlays().add(myLocationOverlay); mMapView = mapView; } else { org.osmdroid.views.MapView mapView = new org.osmdroid.views.MapView(...); org.osmdroid.views.overlay.MyLocationOverlay myLocationOverlay = org.osmdroid.views.overlay.MyLocationOverlay(...); mapView.getOverlays().add(myLocationOverlay); mMapView = mapView; }
-
+if (googleView) {
+            com.google.android.maps.MapView mapView = new com.google.android.maps.MapView(...);
+            com.google.android.maps.MyLocationOverlay myLocationOverlay = new com.google.android.maps.MyLocationOverlay(...)
+            ;
+            mapView.getOverlays().add(myLocationOverlay);
+            mMapView = mapView;
+        } else {
+            org.osmdroid.views.MapView mapView = new org.osmdroid.views.MapView(...);
+            org.osmdroid.views.overlay.MyLocationOverlay myLocationOverlay = org.osmdroid.views.overlay.MyLocationOverlay(...)
+            ;
+            mapView.getOverlays().add(myLocationOverlay);
+            mMapView = mapView;
+        }
 There's also more ways of instantiating the MapView, for example mMapView = (IMapView) findViewById(R.id.map);
 ````
 
