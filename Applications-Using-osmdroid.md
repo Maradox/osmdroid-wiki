@@ -1,3 +1,5 @@
+# Applications Using osmdroid
+
 osmdroid was originally created by Nicolas Gramlich, and he is still the project owner. His focus moved to AndNav, which is either the parent or the child of osmdroid, depending on how you look at it. These days he's mostly busy with AndEngine.
 
 osmdroid was originally used by other projects by copying the source. It was later converted to a simple jar that can be added as a library. Finally it moved to Maven.
