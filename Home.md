@@ -29,7 +29,6 @@ Chances are good that you want to get a map up and running in your app as soon a
 
 ## Commonly asked questions
  * [How big is it](How-big-is-it)
-
  * [Important notes on using osmdroid in your app](Important-notes-on-using-osmdroid-in-your-app)
  * [FAQ](FAQ)
  * [If you get 'resource not found' error](If-you-get-'resource-not-found'-error)
