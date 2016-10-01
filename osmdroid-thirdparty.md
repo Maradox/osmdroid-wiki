@@ -19,7 +19,6 @@ In your code you could get the map view preference and then instantiate a view o
 // member variable 
 IMapView mMapView;
 
-
 // create the required type of 
 MapView mMapView = googleView ? new com.google.android.maps.MapView(...) : new org.osmdroid.views.MapView(...);
 
