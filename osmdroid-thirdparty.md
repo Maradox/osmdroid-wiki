@@ -16,11 +16,15 @@ The osmdroid Google wrapper allows you to easily switch between a Google MapView
 In your code you could get the map view preference and then instantiate a view of the preferred type. This will be assigned to an IMapView variable. From then on the rest of the code can use the map view without regard to what type it is.
 
 ````
-// member variable IMapView mMapView;
+// member variable 
+IMapView mMapView;
 
-// create the required type of MapView mMapView = googleView ? new com.google.android.maps.MapView(...) : new org.osmdroid.views.MapView(...);
 
-// you can then use it regardless of which type it is, for example mMapView.getController().zoomIn();
+// create the required type of 
+MapView mMapView = googleView ? new com.google.android.maps.MapView(...) : new org.osmdroid.views.MapView(...);
+
+// you can then use it regardless of which type it is, for example 
+mMapView.getController().zoomIn();
 ````
 
 For some operations you may need to do more than simply instantiation, for example adding overlays.
