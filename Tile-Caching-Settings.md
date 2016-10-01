@@ -1,4 +1,6 @@
-TODO still working on this article, work in progress!
+# Tile Cache Settings
+
+** NOTICE ** This article is not complete, work in progress!
 
 
 This article is meant to describe how osmdroid caches tiles and how to tweak the settings if needed. The defaults work for most applications. Use with cautio
