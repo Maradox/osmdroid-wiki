@@ -1,3 +1,4 @@
+# Non-Maven, Non-Gradle users
 
 If you are not yet using Maven or Gradle, you can include osmdroid by downloading directly from [Maven Central](https://oss.sonatype.org/content/groups/public/org/osmdroid/).
 
