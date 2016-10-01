@@ -39,7 +39,12 @@ if (googleView) {
             mapView.getOverlays().add(myLocationOverlay);
             mMapView = mapView;
         }
-There's also more ways of instantiating the MapView, for example mMapView = (IMapView) findViewById(R.id.map);
+````
+
+There's also more ways of instantiating the MapView, for example 
+
+````
+mMapView = (IMapView) findViewById(R.id.map);
 ````
 
 Hopefully these samples make the idea of the Google wrapper clear
