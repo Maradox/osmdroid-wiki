@@ -13,31 +13,32 @@ Chances are good that you want to get a map up and running in your app as soon a
 
 ## Usage Guides
  * [How to use the osmdroid library](How to use the osmdroid library)
- * [Tile Caching Settings](Tile Caching Settings)
- * [osmdroid thirdparty](osmdroid thirdparty)
+ * [Tile Caching Settings](Tile-Caching-Settings)
+ * [osmdroid thirdparty](osmdroid-thirdparty)
 
 ## Upgrades and Changes
- * [Upgrade Guide](Upgrade Guide)
+ * [Upgrade Guide](Upgrade-Guide)
  * [Prerequisites](Prerequisites)
  * [Changelog](Changelog)
- * [Generated Change Log](Generated Change Log)
+ * [Generated Change Log](Generated-Change-Log)
 
 ## Understanding osmdroid's architecture and design
- * [Modular Tile Provider Architecture](Modular Tile Provider Architecture)
- * [Map Sources]()
- * [Offline Map Tiles](Offline Map Tiles)
+ * [Modular Tile Provider Architecture](Modular-Tile-Provider-Architecture)
+ * [Map Sources](Map-Sources)
+ * [Offline Map Tiles](Offline-Map-Tiles)
 
 ## Commonly asked questions
- * [How big is it](How big is it)
- * [Developer Guidelines](Developer Guidelines)
- * [Important notes on using osmdroid in your app](Important notes on using osmdroid in your app)
+ * [How big is it](How-big-is-it)
+
+ * [Important notes on using osmdroid in your app](Important-notes-on-using-osmdroid-in-your-app)
  * [FAQ](FAQ)
- * [If you get 'resource not found' error](If you get 'resource not found' error)
+ * [If you get 'resource not found' error](If-you-get-'resource-not-found'-error)
 
 ## Other information
- * [Related Projects](Related Projects)
- * [Applications Using osmdroid](Applications Using osmdroid)
+ * [Related Projects](Related-Projects)
+ * [Applications Using osmdroid](Applications-Using-osmdroid)
 
 ## Committer/Staff Notes
- * [Release Procedure](Release Procedure)
- * [How to build osmdroid from source](How to build osmdroid from source)
+ * [Release Procedure](Release-Procedure)
+ * [Developer Guidelines](Developer-Guidelines)
+ * [How to build osmdroid from source](How-to-build-osmdroid-from-source)
