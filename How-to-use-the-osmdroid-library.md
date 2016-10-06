@@ -171,7 +171,7 @@ this.mOsmv.setMultiTouchControls(true);
 ## How to add the My Location overlay
 
 ````
-this.mLocationOverlay = new MyLocationNewOverlay(context, new GpsMyLocationProvider(context),mMapView);
+this.mLocationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(context),mMapView);
 mMapView.getOverlays().add(this.mLocationOverlay);
 ````
 
