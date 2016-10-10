@@ -6,9 +6,9 @@ Edit gradle.properties and update the version information :
  - pom.version (usually just remove SNAPSHOT)
  - android.versionCode (it’s probably already okay)
 
-Commit the change and tag with git.
-
-Use the tag name: 'osmdroid-parent-{version}' to keep in line with the previous releases.
+Commit the change and tag with git.  
+Use the tag name: 'osmdroid-parent-{version}' to keep in line with the previous releases.  
+git push
 
 ## Set credentials in gradle.properties
 
