@@ -1,6 +1,11 @@
 # A guide for upgrading your app 
 
-## From version 5.4 to x.y (future placeholder)
+## From version 5.5 to x.y
+ - Behavioral change for tile caching. At start up, osmdroid will now scan for all mounted partitions and storage devices and will use the device with the largest free space be default. If there's no other solutions, it will use application private storage. To override, as always, you can set the Cache Directory via OpenStreetMapsTileConstants
+ - Behavior change for hardware acceleration. At start up, the osmdroid mapview is now a software acceleration mode only due to unpredictable crashes. This behavior can be updated using the constructor or by setting the MapView.hardwareAccelerated static variable before the MapView is created (layout inflation counts!)
+
+## From version 5.4 to 5.5 
+No APIs changes, just bug fixes
 
 ## From version 5.4 to 5.4.1 (current release from 2016-09-13)
 No APIs changes, just bug fixes
