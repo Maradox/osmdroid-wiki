@@ -172,6 +172,7 @@ this.mOsmv.setMultiTouchControls(true);
 
 ````
 this.mLocationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(context),mMapView);
+this.mMyLocationOverlay.enableMyLocation();
 mMapView.getOverlays().add(this.mLocationOverlay);
 ````
 
