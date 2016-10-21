@@ -179,6 +179,7 @@ mMapView.getOverlays().add(this.mLocationOverlay);
 
 ````
 this.mCompassOverlay = new CompassOverlay(context, new InternalCompassOrientationProvider(context), mMapView);
+this.mCompassOverlay.enableCompass();
 mMapView.getOverlays().add(this.mCompassOverlay);
 ````
 
