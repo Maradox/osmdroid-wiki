@@ -9,6 +9,19 @@ osmdroid provides a few mechanisms for tile caching (for when you're internet co
 
 When osmdroid downloads tiles, if the tile cannot be stored to disk, it will not be displayed to the user. Osmdroid needs a location that's writable for storing the tile cache. The location is determined by OpenStreetMapsTileProviderConstants.TILE_BASE_PATH. Android is strange in terms of storage locations.
 
+## Downloaded tiles expire
+
+Per the usage policy of just about every tile source, we do our best to honor the "expires" flag set on all downloaded tiles. This is handled differently for both tile writers.
+
+ - TileWriter (disk storage) - not supported
+ - SqlTileWriter (database storage) - at start up, database size is checked against OpenStreetMapTileProviderConstants. Tiles that are expired are the first to removed from the database. If needed (we are past the maximum size), additional tiles are removed (sorted by the tiles that will expire first).
+
+The default cache expiration date is now + 1 week's time.
+
+## Handling low disk space
+
+Version 5.6 adds a number of new features to help you manage free disk space. IFilesystemCache now provides methods to remove a specific tile, check the existence of a tile, purge the entire cache, get the current row count, and some methods to help convert old file system caches into the newer sqlite cache.
+
 ## Changes in versions of osmdroid
 
 | Version | Behavioral Changes
@@ -20,7 +33,7 @@ When osmdroid downloads tiles, if the tile cannot be stored to disk, it will not
 
 # Tile Cache Settings
 
-This article is meant to describe how osmdroid caches tiles and how to tweak the settings if needed. The defaults work for most applications. Use with cautio
+osmdroid caches tiles using a number of settings. This is how to tweak the settings if needed. The defaults work for most applications. Use with caution
 
 ## In memory LRU Cache
 
@@ -42,4 +55,9 @@ x.setOvershootTileCache(x.getOvershootTileCache() * 2);
 ## On disk cache (sqlite and file system storage)
 ````
 OpenStreetMapTileProviderConstants.setCacheSizes(max, trim);
+````
+
+## Set the cache location (both SqlTileWriter and TileWriter)
+````
+OpenStreetMapTileProviderConstants.setCachePath
 ````
