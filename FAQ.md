@@ -35,11 +35,7 @@ Starting with 5.1, the API has changed a bit for this. See the change log.
 
 ## Debugging tile loading issues
 
-When your app starts up, try the following. This will produce a lot of log output to help you narrow down where the issue is.
-````
-        OpenStreetMapTileProviderConstants.DEBUG_TILE_PROVIDERS=true;
-        OpenStreetMapTileProviderConstants.DEBUGMODE=true;
-````
+[Moved](Debugging-osmdroid)
 
 ## Does my device need an sd card or some kind of storage medium?
 
