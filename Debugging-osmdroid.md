@@ -6,6 +6,13 @@ This article contains a collection of tips, tricks, tools, and procedures that y
 
 When your app starts up, try the following. This will produce a lot of log output to help you narrow down where the issue is.
 ````
-        OpenStreetMapTileProviderConstants.DEBUG_TILE_PROVIDERS=true;
-        OpenStreetMapTileProviderConstants.DEBUGMODE=true;
+OpenStreetMapTileProviderConstants.DEBUG_TILE_PROVIDERS=true;
+OpenStreetMapTileProviderConstants.DEBUGMODE=true;
+````
+
+## Having download issues?
+
+Try this
+````
+MapTileDownloader.DEBUG = true
 ````
