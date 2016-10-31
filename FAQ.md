@@ -41,6 +41,8 @@ Starting with 5.1, the API has changed a bit for this. See the change log.
 
 Yes. osmdroid downloads and caches map data on device and it needs to be stored on some writable medium. We use `Environment.getExternalStorage` and if that doesn't return a writable location (which happens some devices) then the cache won't be available, which well lead to significantly increased data usage (or osmdroid just won't work at all). The location can be overridden to use application private storage or whatever.
 
+As of 5.6, this was updated to automatically select the largest writable storage directory on start up. The sample application has some logic that you'll definitely want to look at it.
+
 ## What's the Dex count for osmdroid?
 
 Rather small, at just over 2000 methods.
@@ -58,7 +60,7 @@ Yes! Both of these settings are in the following class
 
 ## I zoomed past level 20 and the everything disappeared!
 
-First all, I'd love to know what your requirement is for just a high zoom level and what map source you are using.
+UPDATE! This should be fixed for version 5.6 (fixed meaning the icons and graphics won't disappear at zoom 20-22.
 
 Yup, it's a known issue. See the following issues.
 
