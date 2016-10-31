@@ -12,7 +12,7 @@ OpenStreetMapTileProviderConstants.DEBUGMODE=true;
 
 ## Having download issues?
 
-Try this
+Try this. It should print out the download urls.
 ````
 MapTileDownloader.DEBUG = true
 ````
