@@ -8,11 +8,13 @@ When your app starts up, try the following. This will produce a lot of log outpu
 ````
 OpenStreetMapTileProviderConstants.DEBUG_TILE_PROVIDERS=true;
 OpenStreetMapTileProviderConstants.DEBUGMODE=true;
-````
-
-## Having download issues?
-
-Try this. It should print out the download urls.
-````
 MapTileDownloader.DEBUG = true
+````
+
+## More logging settings
+
+````
+CloudmadeUtil.DEBUGMODE=true
+MapViewConstants.DEBUGMODE=true
+OverlayConstants.DEBUGMODE=true
 ````
