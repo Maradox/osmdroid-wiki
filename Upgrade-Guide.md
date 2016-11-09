@@ -6,6 +6,7 @@
  - Behavioral change for tile caching. At start up, osmdroid will now scan for all mounted partitions and storage devices and will use the device with the largest free space be default. If there's no other solutions, it will use application private storage. See the sample application's MainActivityTo override, as always, you can set the Cache Directory via OpenStreetMapsTileConstants
  - The SqlTileWriter will at start up, will check its size and trim to be under the maximum size set by the OpenStreetMapTileProviderConstants setting. This can be disabled by setting `CLEANUP_ON_START` to false.
  - Behavior change for hardware acceleration. At start up, the osmdroid mapview is now a software acceleration mode only due to unpredictable crashes. This behavior can be updated using the constructor or by setting the MapView.hardwareAccelerated static variable before the MapView is created (layout inflation counts!)
+ - Overlay.onDraw is now public.
 
 ## From version 5.4 to 5.5 
 No APIs changes, just bug fixes
