@@ -6,9 +6,9 @@ Make sure your AndroidManifest.xml file has the android.permission.INTERNET perm
 
 Aug 2016 - someone managed to get the default user agent used by osmdroid banned from Open Street Maps tile servers. This can also be a reason for tiles failing to load (usually with an access denied, bad request or other similar HTTP error message). To fix, set your user agent to something unique for your app.
 
-Also if you're on an API23+ device, make sure the app has sufficient runtime permissions (user granted).
+If you're on an API23+ device, make sure the app has sufficient runtime permissions (user granted).
 
-Also, if for some reason Environment.getExternalStorage() returns a read only mount point, maps tiles will also not be loaded. To overcome this, set the ` OpenStreetMapTileProviderConstants.setCachePath(new File("/sdcard/osmdroid2/").getAbsolutePath());`
+Also, if for some reason Environment.getExternalStorage() returns a read only mount point, maps tiles will also not be loaded. To overcome this, set the ` OpenStreetMapTileProviderConstants.setCachePath(new File("/sdcard/osmdroid2/").getAbsolutePath());` or to some path that you know has write access. This will be revised with osmdroid 5.6 to automatically select the best available path on start up.
 
 ## The map will not scroll when I drag my finger on the screen
 
