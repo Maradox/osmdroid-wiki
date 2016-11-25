@@ -4,7 +4,7 @@
 
 Make sure your AndroidManifest.xml file has the android.permission.INTERNET permission. See Prerequisites.
 
-Aug 2016 - someone managed to get the default user agent used by osmdroid banned from Open Street Maps tile servers. This can also be a reason for tiles failing to load (usually with an access denied, bad request or other similar HTTP error message). To fix, set your user agent to something unique for your app.
+Aug 2016 - someone managed to get the default user agent used by osmdroid banned from Open Street Maps tile servers. This can also be a reason for tiles failing to load (usually with an access denied, bad request or other similar HTTP error message). To fix, set your user agent to something unique for your app. The User Agent is set via `org.osmdroid.tileprovider.constants.OpenStreetMapTileProviderConstants` class.
 
 If you're on an API23+ device, make sure the app has sufficient runtime permissions (user granted).
 
