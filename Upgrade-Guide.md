@@ -3,6 +3,7 @@
 ## From version 5.6 to x.y
 
 ## From version 5.5 to 5.6 (under dev)
+ - New overlay type added, efficient for many thousands of icons, see SimpleFastPointOverlay 
  - Behavioral change for tile caching. At start up, osmdroid will now scan for all mounted partitions and storage devices and will use the device with the largest free space be default. If there's no other solutions, it will use application private storage. See the sample application's MainActivity to override, as always, you can set the Cache Directory via OpenStreetMapsTileConstants. This is a significant change and may cause unexpected behavior if you don't handle this situation in the future (the mount point with the most free space, can change, therefore you should handle setting the cache path as a user preference).
  - The SqlTileWriter will at start up, will check its size and trim to be under the maximum size set by the OpenStreetMapTileProviderConstants setting. This can be disabled by setting `CLEANUP_ON_START` to false.
  - Behavior change for hardware acceleration. At start up, the osmdroid mapview is now automatically set to oftware acceleration mode only due to unpredictable crashes when using polylines or polygons. This behavior can be overridden using the constructor or by setting the MapView.hardwareAccelerated static variable before the MapView is created (layout inflation counts!)
