@@ -11,13 +11,12 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.6 (under dev)
  * Bug fixes
  * Thread pool is now adjustable
- * New overlay for faster drawing at high volumes
+ * MapView is now hardware disabled by default
+ * New overlay type, SimpleFastPointOverlay 
 
 ## 5.5 (current release from 2016-10-11)
  * IMap, IMapView API clean up
  * bug fixes
- * MapView is now hardware disabled by default
- * New overlay type, SimpleFastPointOverlay 
  * SqlTileWriter (tile cache) changes
 
 ## 5.4
