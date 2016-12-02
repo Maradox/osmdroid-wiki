@@ -111,7 +111,7 @@ Out of the box, we have the following (and they are checked in this order)
 
 This part is fairly simple. Copy your tiles into the osmdroid base path (which is by default /sdcard/osmdroid). This location can be changed programmatically (note this behavior will change with v5.6). You should have the following director structure
 
------
+````
 /sdcard/osmdroid/
                  myZippedArchive.zip
                  myOsmdroidDatabase.sqlite
@@ -119,8 +119,7 @@ This part is fairly simple. Copy your tiles into the osmdroid base path (which i
                  myGEMF.gemf
 /sdcard/osmdroid/tiles/
                        cache.db (this is used for downloaded tiles)
-                      
------
+````
 
 So now that your archives are there, there's a few options a few mechanisms that can be used to help you on your way towards disconnected bliss. The next step is to tell osmdroid's `map tile provider` about the map tiles.
 
