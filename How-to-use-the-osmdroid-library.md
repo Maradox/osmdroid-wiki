@@ -240,7 +240,7 @@ ItemizedOverlayWithFocus<OverlayItem> mOverlay = new ItemizedOverlayWithFocus<Ov
 	public boolean onItemLongPress(final int index, final OverlayItem item) {
 		return false;
 	}
-}, mResourceProxy);
+});
 mOverlay.setFocusItemsOnTap(true);
 
 mMapView.getOverlays().add(mOverlay);
