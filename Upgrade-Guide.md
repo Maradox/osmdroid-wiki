@@ -8,7 +8,7 @@
  - The SqlTileWriter will at start up, will check its size and trim to be under the maximum size set by the OpenStreetMapTileProviderConstants setting. This can be disabled by setting `CLEANUP_ON_START` to false.
  - Behavior change for hardware acceleration. At start up, the osmdroid mapview is now automatically set to oftware acceleration mode only due to unpredictable crashes when using polylines or polygons. This behavior can be overridden using the constructor or by setting the MapView.hardwareAccelerated static variable before the MapView is created (layout inflation counts!)
  - Overlay.onDraw is now a public method.
- - OpenStreetMapTileProviderConstants has been majorly redesign and refactored. Sorry if I caused you pain, but having a class with the same "constants" in it always irked me since the were in fact configuration settings. So all settings that was there, have been relocated to the IConfiguration/DefaultConfiguration settings class
+ - OpenStreetMapTileProviderConstants has been majorly redesign and refactored. Sorry if I caused you pain, but having a class with the name"constants" in it always irked me since the were in fact configuration settings. So all settings that was there, have been relocated to the IConfiguration/DefaultConfiguration settings class. In addition, all of the debug settings throughout the code base have been moved there. Also included are some automagic classes to help you set the tile cache locations and to store and load from shared preferences. See the sample application's MainActivity
 
 ## From version 5.4 to 5.5 
 No APIs changes, just bug fixes
