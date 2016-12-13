@@ -1,8 +1,8 @@
 # A guide for upgrading your app 
 
-## From version 5.6 to x.y
+## From version 5.6 to 5.6.1 (under dev)
 
-## From version 5.5 to 5.6 (under dev)
+## From version 5.5 to 5.6
  - New overlay type added, efficient for many thousands of icons (up to 100k depending on device), see `SimpleFastPointOverlay`
  - The SqlTileWriter will at start up, will check its size and trim to be under the maximum size set by the OpenStreetMapTileProviderConstants setting. Expired tiles are not touched until the trim size is reached
  - Behavior change for hardware acceleration. At start up, the osmdroid mapview is now automatically set to oftware acceleration mode only due to unpredictable crashes when using polylines or polygons. This behavior can be overridden using the constructor or by `Configuration.getInstance().setMapViewHardwareAccelerated()` before the MapView is created (layout inflation counts!)
