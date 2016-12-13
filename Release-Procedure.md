@@ -45,12 +45,7 @@ Go to
 [Sonatype](https://oss.sonatype.org/),
 select “staging repositories”, check osmdroid and click “close” and then “release”.
 
-## Prepare distribution package for Github
-```
-./gradlew distZip -Pprofile=dist
-```
-
-## Upload release zip on Github
+## Upload osmdroid-dist release zip on Github
 
 [https://github.com/osmdroid/osmdroid/releases/new](https://github.com/osmdroid/osmdroid/releases/new)
 
