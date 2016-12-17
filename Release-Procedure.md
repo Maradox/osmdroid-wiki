@@ -39,7 +39,6 @@ android.signingConfigs.release.keyPassword=***
 ./gradlew site
 ```
 
-You may need to repeat the `install` step a couple of times until it succeeds.
 
 Go to
 [Sonatype](https://oss.sonatype.org/),
