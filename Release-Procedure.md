@@ -56,7 +56,7 @@ Output APK is at OpenStreetMapViewer\build\outputs\apk\OpenStreetMapViewer-{vers
 
 ## Push the site changes
 
-Copy the contents of "docs" into a separate clone of osmdroid on the branch `gh-pages`, commit and push.
+Copy the contents of "build/src" into a separate clone of osmdroid on the branch `gh-pages`, commit and push.
 
 ## Post-release steps
 
