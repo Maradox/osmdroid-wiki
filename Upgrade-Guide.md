@@ -1,6 +1,9 @@
 # A guide for upgrading your app 
 
-## From version 5.6 to 5.6.1 (under dev)
+## From version 5.6.1 to 5.6.2 (under dev)
+
+## From version 5.6 to 5.6.1
+ - no code changes
 
 ## From version 5.5 to 5.6
  - New overlay type added, efficient for many thousands of icons (up to 100k depending on device), see `SimpleFastPointOverlay`
