@@ -1,6 +1,8 @@
 # A guide for upgrading your app 
 
 ## From version 5.6.1 to 5.6.2 (under dev)
+ - More flexibility with cache expiration dates (new IConfiguration options)
+ - Sample app now also includes a cache analyzer (only when debug is turned on), which lets you get various statistics about the cache database and browse the cache database records
 
 ## From version 5.6 to 5.6.1
  - no code changes
