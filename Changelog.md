@@ -12,6 +12,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Can now clear the cache for a specific tile source
  * Can now override or extend the expiration time of downloaded tiles
  * Fixes for USGS tile sources, new tiles sources for aviation and nautical maps
+ * Sample app has a cache analyzer, only shows up if debug mode is on and the device is api 11+
 
 ## 5.6.1
  * Republish of 5.6 due to a strange sonatype issue
