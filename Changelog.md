@@ -14,6 +14,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Fixes for USGS tile sources, new tiles sources for aviation and nautical maps
 
 ## 5.6.1
+ * Republish of 5.6 due to a strange sonatype issue
 
 ## 5.6
  * Bug fixes
