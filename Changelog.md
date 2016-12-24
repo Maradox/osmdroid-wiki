@@ -8,7 +8,14 @@ This list only includes major highlights or breaking changes. Check [here](https
  * WMS Map Source Client
  * osmdroid JDK and ADK raster tile server
 
-## 5.6 (under dev)
+## 5.6.2
+ * Can now clear the cache for a specific tile source
+ * Can now override or extend the expiration time of downloaded tiles
+ * Fixes for USGS tile sources, new tiles sources for aviation and nautical maps
+
+## 5.6.1
+
+## 5.6
  * Bug fixes
  * Thread pool is now adjustable
  * MapView is now hardware disabled by default
