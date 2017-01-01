@@ -6,7 +6,11 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ## 5.x (some future version)
  * WMS Map Source Client
- * osmdroid JDK and ADK raster tile server
+
+## 5.6.3 (some future version)
+ * osmdroid JDK raster tile server
+ * Redesigned sample menu (sample app)
+ * TODO
 
 ## 5.6.2
  * Can now clear the cache for a specific tile source
