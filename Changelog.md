@@ -7,10 +7,10 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.x (some future version)
  * WMS Map Source Client
 
-## 5.6.3 (some future version)
+## 5.6.3 (under dev)
  * osmdroid JDK raster tile server
  * Redesigned sample menu (sample app)
- * TODO
+ * Sample on how to create a simple heat map
 
 ## 5.6.2
  * Can now clear the cache for a specific tile source
