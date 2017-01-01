@@ -16,3 +16,5 @@ A collection of related projects for OSM, geospatial index, map sources and more
 * OsmReader - bz2 to sqlite on ADK or JDK - https://github.com/spyhunter99/osmreader
 * USGS Earth Explorer - http://earthexplorer.usgs.gov/
 * Nifty trick for better performance with polylines - http://fiskurgit.github.io/osmdroid_polyline_performance
+* Pocketmaps - https://github.com/junjunguo/PocketMaps
+* Grasshopper - https://github.com/graphhopper/graphhopper/blob/master/docs/android/index.md
