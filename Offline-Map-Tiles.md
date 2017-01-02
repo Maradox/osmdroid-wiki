@@ -38,7 +38,26 @@ General guidance
 
 ### Use the Cache Manager on device ( > version 5.2)
 
-TODO
+The Cache Manager provides programmatic access to the `cache of downloaded tiles`. It can also be used to create `tile archives`. Two key points here:
+ - `cache of downloaded tiles` is an expiring tile cache of tiles that osmdroid has downloaded from an online tile source. It expires. The default expiration is a based off of what the online tile source has specified or two weeks. The `cache` also has limits as far as how much storage space it is allowed to consume on user's devices. Both of these settings can be altered and overridden via OpenStreetMapTileProvideConstants for version < 5.6. 5.6 and newer uses the Configuration.getInstance() structure.
+ - `Tile Archives` are persistent, never expiring tile stores. This is great for offline users however care must be taken to understand what the online tile source's usage rights are on tiles. Many online sources explicitly ban you from creating a permanent tile store. Read the usage rights carefully.
+
+The cache manager can perform a number of tasks, including
+ - Downloading all tiles in a given bounding box and zoom levels
+ - Download all tiles that intersect a given set of points (like a route from point A to B) and zoom levels
+ - Clear all tiles for a given bounds, zoom level and tile source
+ - Clear all tiles for a given set of points (again, point A to B)
+
+The cache manager needs two things to operate. An online tile source and a tile writer. For tile writers, the default for API 8 to 9 is the file system based cache (writes to the zip archive style format using the file system). API10 and newer will default to SqlTileWriter, which uses a sqlite database to store the tiles (which is faster and avoids a number of issues with the maximum number of tiles per folder).
+
+### Cache Manager examples
+
+[Sample application sources](https://github.com/osmdroid/osmdroid/tree/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/cache)
+ - [Import from file system cache into the new sqlite based cache](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/cache/CacheImport.java)
+ - [Purge the entire cache](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/cache/CachePurge.java)
+ - [Purge a specific tile source](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/debug/CacheAnalyzerActivity.java#L110)
+ - [Make a tile archive](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/cache/SampleCacheDownloaderArchive.java)
+ - [Cache tiles for a given bounds](https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/cache/SampleCacheDownloader.java)
 
 ### Important note on tile source names.
 
