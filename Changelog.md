@@ -10,7 +10,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.6.3 (under dev)
  * osmdroid JDK raster tile server
  * Redesigned sample menu (sample app)
- * Sample on how to create a simple heat map
+ * Sample on how to create a simple heat map and async data loading based on map extend and zoom levels
 
 ## 5.6.2
  * Can now clear the cache for a specific tile source
