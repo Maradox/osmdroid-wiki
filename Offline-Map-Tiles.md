@@ -97,7 +97,7 @@ MOBAC, especially with huge tile sets, can be a memory hog. It's algorithms from
 
 Many map sources have disclaimers and legal statements that specifically state to NOT cache and rehost their map imagery. Some may have wording to disallows you to use their map imagery offline or to download large portions of the world.  Make sure you read the fine print! osmdroid takes no responsibility for map imagery misuse. That's between you and the imagery owner.
 
-# Can you support tile format `x`?
+# Can you support tile archive format `x`?
 
 We'll happily take pull requests. That said, it's fairly simple to make a new tile source for osmdroid. Here are the basic steps:
  1. Create a class that implements IArchiveProvider. At the most basic level, the IArchiveProvider needs to turn an OSM tile coordinates (Zoom, X and Y coordinates) into an InputStream representing the tile if it's available.
@@ -109,11 +109,13 @@ We'll happily take pull requests. That said, it's fairly simple to make a new ti
 
 Yes! However the answer depends on what version of osmdroid you're using.
 
-In general, the answer files within the following class.
-
-https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/constants/OpenStreetMapTileProviderConstants.java
+Versions older than 5.6: https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/constants/OpenStreetMapTileProviderConstants.java
 
 See `setCachePath` and `TILE_PATH_BASE`. Even though the class is called `Constants` many of the fields are writable. You can use this to tweak a number of settings for your needs.
+
+Versions 5.6 and newer: https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/config/Configuration.java
+
+`Configuration.getInstance().set...`
 
 # What other mechanisms exists for loading tiles?
 
@@ -121,7 +123,7 @@ Out of the box, we have the following (and they are checked in this order)
 
  - Assets, you can place exploded zip archives in the assets folder of your app
  - Local file system (archives like zip, sqlite, etc)
- - Network sources cache - by default /sdcard/osmdroid/tiles/SOURCE/Z/X/Y.extension
+ - Network sources cache - by default /sdcard/osmdroid/tiles/cache.db
  - Network sources - download what you need, when you need it
 
 # Using offline tile archives
@@ -137,7 +139,7 @@ This part is fairly simple. Copy your tiles into the osmdroid base path (which i
                  myMBTiles.mbtile
                  myGEMF.gemf
 /sdcard/osmdroid/tiles/
-                       cache.db (this is used for downloaded tiles)
+                       cache.db (this is used for downloaded and cached tiles)
 ````
 
 So now that your archives are there, there's a few options a few mechanisms that can be used to help you on your way towards disconnected bliss. The next step is to tell osmdroid's `map tile provider` about the map tiles.
