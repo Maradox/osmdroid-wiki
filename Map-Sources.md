@@ -426,6 +426,16 @@ Note: the method `tile2boundingBox` was pulled from OSM's [Slippy Map](http://wi
 
 Yes, as long as the endpoint supports the `export` API with bounding box then the above example should get you going. Note: ESRI's APIs can vary significantly by version and configuration settings. Consult their API guide additional details (and report back here!)
 
+# Tile Source Attribution and Copyright notices
+
+Most tile sources require you (as an app developer) to annotate on the map some kind of attribution or copyright notice. osmdroid v5.6.3 adds one. It's fairly simple to use.
+
+````
+mapview.getOverlays().add(new CopyrightOverlay(context));
+````
+
+Font sizes and colors are adjustable, as well as on screen positioning.
+
 # Translating Map Scale to OSM zoom levels
 
 | Approximate Map Scale | OSM Zoom Level |
