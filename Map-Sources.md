@@ -143,7 +143,9 @@ OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
 
 # Online Map Sources (out of the box)
 
-osmdroid comes with a few map sources preconfigured for you to use. Usage access rules vary based on the source. Make sure you read the fine print.
+osmdroid comes with a few map sources preconfigured for you to use. Usage access rules vary based on the source. Make sure you read the fine print for each
+
+** For the most up to date information, see [TileSourceFactory](https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/tilesource/TileSourceFactory.java)
 
 ## Mapnik (aka Open Street Maps)
 
@@ -314,14 +316,56 @@ bing.setStyle(BingMapTileSource.IMAGERYSET_AERIAL);
 
 ## Google Maps
 
+There's two options here. If you want to use the same API for osmdroid with Google Maps, see the osmdroid-thirdparty project and GoogleWrapperSample. If you want to use Google's tiles with your application, the following will get you going. Note, this is completely against Google's usage policy, as such, it will never be included with osmdroid. 
 Required Java dependencies
  - osmdroid-android
- - osmdroid-third-party
-
-MinSDK 9
 
 Code Sample:
-See the example "GoogleMapsWrapper" application
+````
+public static final OnlineTileSourceBase GoogleHybrid = new XYTileSource("Google-Hybrid",
+		0, 19, 256, ".png", new String[] {
+		"http://mt1.google.com",
+		"http://mt2.google.com",
+		"http://mt3.google.com",
+
+		}) {
+		@Override
+		public String getTileURLString(MapTile aTile) {
+			return getBaseUrl() + "/vt/lyrs=y&x=" + aTile.getX() + "&y=" +aTile.getY() + "&z=" + aTile.getZoomLevel();
+		}
+	};
+
+	public static final OnlineTileSourceBase GoogleSat = new XYTileSource("Google-Sat",
+		0, 19, 256, ".png", new String[] {
+		"http://mt1.google.com",
+		"http://mt2.google.com",
+		"http://mt3.google.com",
+
+	}) {
+		@Override
+		public String getTileURLString(MapTile aTile) {
+			return getBaseUrl() + "/vt/lyrs=s&x=" + aTile.getX() + "&y=" +aTile.getY() + "&z=" + aTile.getZoomLevel();
+		}
+	};
+
+	public static final OnlineTileSourceBase GoogleRoads = new XYTileSource("Google-Roads",
+		0, 19, 256, ".png", new String[] {
+		"http://mt1.google.com",
+		"http://mt2.google.com",
+		"http://mt3.google.com",
+
+	}) {
+		@Override
+		public String getTileURLString(MapTile aTile) {
+			return getBaseUrl() + "/vt/lyrs=m&x=" + aTile.getX() + "&y=" +aTile.getY() + "&z=" + aTile.getZoomLevel();
+		}
+	};
+
+
+TileSourceFactory.addTileSource(GoogleSat);
+TileSourceFactory.addTileSource(GoogleRoads);
+TileSourceFactory.addTileSource(GoogleHybrid);
+````
 
 
 ## WMS Support
