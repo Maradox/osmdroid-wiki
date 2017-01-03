@@ -11,6 +11,8 @@ This list only includes major highlights or breaking changes. Check [here](https
  * osmdroid JDK raster tile server
  * Redesigned sample menu (sample app)
  * Sample on how to create a simple heat map and async data loading based on map extend and zoom levels
+ * Copyright/Attribution overlay. This adds a new constructor to all ITileSource constructs (a copyright notice).
+ * Fixed (again) android studio layout preview
 
 ## 5.6.2
  * Can now clear the cache for a specific tile source
