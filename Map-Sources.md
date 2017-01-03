@@ -145,7 +145,7 @@ OpenStreetMapTileProviderConstants.setCacheSizes(1000L, 900L);
 
 osmdroid comes with a few map sources preconfigured for you to use. Usage access rules vary based on the source. Make sure you read the fine print for each
 
-** For the most up to date information, see [TileSourceFactory](https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/tilesource/TileSourceFactory.java) **
+**For the most up to date information, see [TileSourceFactory](https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/tileprovider/tilesource/TileSourceFactory.java)**
 
 ## Mapnik (aka Open Street Maps)
 
