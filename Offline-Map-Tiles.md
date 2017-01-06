@@ -16,7 +16,7 @@ There are a few different options.
 
 ## OSM Map Tile Packager
 
-osmdroid comes with a tool to enable you to download tiles and storage them for offline use called the `OSM Map Tile Packager`. See the [readme.md for more information](https://github.com/osmdroid/osmdroid/blob/master/OSMMapTilePackager/readme.md).
+osmdroid comes with a tool to enable you to download tiles and store them for offline use called the `OSM Map Tile Packager`. See the [readme.md for more information](https://github.com/osmdroid/osmdroid/blob/master/OSMMapTilePackager/readme.md).
 
 ## Mobile Atlas Creator (MOBAC)
 
@@ -36,7 +36,7 @@ General guidance
 
 [Maperitive](http://maperitive.net/) supports generating tile images from OSM data API and can be used as a replacement for MOBAC which has been [blocked by openstreetmap.org](http://wiki.openstreetmap.org/wiki/Blocked_applications) for overusing traffic.
 
-### Use the Cache Manager on device ( > version 5.2)
+## Use osmdroid's Cache Manager on device ( > version 5.2)
 
 The Cache Manager provides programmatic access to the `cache of downloaded tiles`. It can also be used to create `tile archives`. Two key points here:
  - `cache of downloaded tiles` is an expiring tile cache of tiles that osmdroid has downloaded from an online tile source. It expires. The default expiration is a based off of what the online tile source has specified or two weeks. The `cache` also has limits as far as how much storage space it is allowed to consume on user's devices. Both of these settings can be altered and overridden via OpenStreetMapTileProvideConstants for version < 5.6. 5.6 and newer uses the Configuration.getInstance() structure.
