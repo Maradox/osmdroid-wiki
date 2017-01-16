@@ -7,12 +7,18 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.x (some future version)
  * WMS Map Source Client
 
-## 5.6.3 (under dev)
+## 5.6.4 (under dev)
+ * TBD
+
+## 5.6.3 (current release)
  * osmdroid JDK raster tile server
  * Redesigned sample menu (sample app)
  * Sample on how to create a simple heat map and async data loading based on map extend and zoom levels
+ * Many more samples
  * Copyright/Attribution overlay. This adds a new constructor to all ITileSource constructs (a copyright notice).
  * Fixed (again) android studio layout preview
+ * Geopackage support via  new AAR, sample added to Open Map
+ * Forge sample app removed, migrated into the Open Map sample
 
 ## 5.6.2
  * Can now clear the cache for a specific tile source
