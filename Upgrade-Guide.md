@@ -6,6 +6,7 @@
  - Old mapsforge example had a memory leak, which is now fixed on the sample with Open Map
  - Geopackage support added, see sample
  - Sample app Cache Analyzer is now available always
+ - Bing tile source was moved into osmdroid-android and added to the Sample Open Map
 
 
 ## From version 5.6.1 to 5.6.2 
