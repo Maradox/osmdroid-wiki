@@ -33,6 +33,7 @@ Projects using osmdroid jar/aar
 * [LocationMapViewer](https://github.com/k3b/LocationMapViewer)
 * [APhotoManager](https://github.com/k3b/APhotoManager/)
 * [Trackbook](https://github.com/y20k/trackbook/)
+* [OSMNavigator](https://github.com/MKergall/osmbonuspack/wiki/OSMNavigator)
 
 Projects using a copy of osmdroid source
 
