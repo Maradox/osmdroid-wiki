@@ -7,7 +7,7 @@
  - Geopackage support added, see sample
  - Sample app Cache Analyzer is now available always
  - Bing tile source was moved into osmdroid-android and added to the Sample Open Map
-
+ - There were a number of memory leak prevention fixes that went in this build, specificaly on MyNewLocationOverlay. As such, you must be destroy your MyNewLocationOverlay onPause and create a new one onResume
 
 ## From version 5.6.1 to 5.6.2 
  - More flexibility with cache expiration dates (new IConfiguration options)
