@@ -34,6 +34,7 @@ Projects using osmdroid jar/aar
 * [APhotoManager](https://github.com/k3b/APhotoManager/)
 * [Trackbook](https://github.com/y20k/trackbook/)
 * [OSMNavigator](https://github.com/MKergall/osmbonuspack/wiki/OSMNavigator)
+* [Dragobrat](https://play.google.com/store/apps/details?id=org.dragobrat)
 
 Projects using a copy of osmdroid source
 
