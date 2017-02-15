@@ -47,6 +47,7 @@ import org.osmdroid.views.MapView;
 public class MainActivity extends Activity {
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+	Context ctx = getApplicationContext();
         //important! set your user agent to prevent getting banned from the osm servers  
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
         setContentView(R.layout.activity_main);
