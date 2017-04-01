@@ -9,7 +9,10 @@ There's a few things you need to know about osmdroid before deploying your app t
 ... by adding
 
 ````
+   //pre 5.6
    OpenStreetMapTileProviderConstants.setUserAgentValue(BuildConfig.APPLICATION_ID);
+   //5.6 and newer
+   Configuration.getInstance().setUserAgentValue(BuildConfig.APPLICATION_ID)
 ````
 
 in onCreate in the Map Activity, Fragment or Application.
