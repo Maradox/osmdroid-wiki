@@ -12,7 +12,7 @@ Chances are good that you want to get a map up and running in your app as soon a
 
 
 ## Usage Guides
- * [How to use the osmdroid library](How to use the osmdroid library)
+ * [How to use the osmdroid library](How-to-use-the-osmdroid-library)
  * [Tile Caching Settings](Tile-Caching-Settings)
  * [osmdroid thirdparty](osmdroid-thirdparty)
 
