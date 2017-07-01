@@ -1,6 +1,17 @@
 # A guide for upgrading your app 
 
+## From version 5.6.4 to 5.6.5
+
+ - Several new fields were added to `IConfigurationProvider` interface. If you've written your own, expect to do some work (it's minor). If you've extended the `DefaultConfigurationProvider`, then you should be ok.
+ - There were several changes to the CacheManager API.
+ - There were several improvements made to the scale bar overlay class. None that should be API breaking.
+
+## From version 5.6.3 to 5.6.4
+ 
+ - No major or minor API changes. Upgrading should be straight forward
+
 ## From version 5.6.2 to 5.6.3
+
  - No breaking API changes, new constructors added for tile source for the copyright notice
  - Consider using the CopyrightOverlay to give proper attribution to the map source owner
  - Old mapsforge example had a memory leak, which is now fixed on the sample with Open Map
