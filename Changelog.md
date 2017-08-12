@@ -5,12 +5,39 @@ This list only includes major highlights or breaking changes. Check [here](https
 [Upgrading?](https://github.com/osmdroid/osmdroid/wiki/Upgrade-Guide)
 
 ## 5.x (some future version)
+
  * WMS Map Source Client
 
-## 5.6.4 (under dev)
- * TBD
+## 5.6.6 (under dev)
+  
+ * Floating point zoom levels with smoother zooming
 
-## 5.6.3 (current release)
+## 5.6.5
+
+ * #625 Network Proxy 
+ * #570 More Request Properties for Online Sources enhancement
+ * #616 NullPointerException MapController.setCenter() bug 
+ * #551 Interested by buttons to center, follow position, set orientation to 0? enhancement
+ * #560 Move marker up when dragging
+ * #604 Improvement for ScaleBarOverlay enhancement 
+ * #598 SQLite Cache still not being cleaned with CacheManager.cleanAreaAsync bug
+ * #581 BoundingBox: add clone and concat methods enhancement
+ * #573 OpenCycleMap now requires API key
+
+In addition, several modifications were made for polyline support with hardware acceleration turned on.
+
+## 5.6.4
+
+relatively minor change set, primarily bug fixes
+
+ * #553 add tile server to distribution bug build process
+ * #549 Iss tracker doesn't resume with the activity bug
+ * #548 better cache location support
+ * #547 Map tile bug
+ * #544 permissions issue on android 6 with permissions granted (sample app) bug
+ * #541 add geopackage library to the distribution package bug build process
+
+## 5.6.3
  * osmdroid JDK raster tile server
  * Redesigned sample menu (sample app)
  * Sample on how to create a simple heat map and async data loading based on map extend and zoom levels
