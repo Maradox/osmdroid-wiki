@@ -11,7 +11,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.6.6 (under dev)
   
  * Floating point zoom levels with smoother zooming
- * Map Tile Approximater #646:
+ * Map Tile Approximater #646
 
 ## 5.6.5
 
