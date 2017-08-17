@@ -1,4 +1,9 @@
 # A guide for upgrading your app 
+## From version 5.6.5 to 5.6.6 (under dev)
+
+ - Several new fields were added to `IConfigurationProvider` interface. If you've written your own, expect to do some work (it's minor). If you've extended the `DefaultConfigurationProvider`, then you should be ok.
+ - There was several changes to MapView and MapController, none of which should be breaking. These methods involve getting/setting the current zoom level and animation to a zoom level. Impacts should be minimal.
+ - With floating point zoom, custom implementations of overlays may have to perform some tweaking.
 
 ## From version 5.6.4 to 5.6.5
 
