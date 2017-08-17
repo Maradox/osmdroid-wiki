@@ -12,6 +12,8 @@ This list only includes major highlights or breaking changes. Check [here](https
   
  * Floating point zoom levels with smoother zooming
  * Map Tile Approximater #646
+ * GEMF + JPG archives are now functional
+ * Variable zoom animation speed
 
 ## 5.6.5
 
