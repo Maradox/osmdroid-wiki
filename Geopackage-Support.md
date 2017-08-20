@@ -1,5 +1,9 @@
 # Geopackage support for osmdroid
 
+NOTICE: 
+
+Geopackage support for osmdroid is still evolving. This guide may be out of date
+or change frequently. 
 
 ## What is Geopackage?
 
@@ -168,4 +172,7 @@ try {
 
 
 ### Adding a geopackage feature tile set to the osmdroid map
+
+TODO
+
 
