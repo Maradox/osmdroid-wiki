@@ -7,6 +7,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.x (some future version)
 
  * WMS Map Source Client
+ * Geopackage support for feature sets via conversion and via tile rendering
 
 ## 5.6.6 (under dev)
   
