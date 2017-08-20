@@ -45,6 +45,8 @@ compile 'org.osmdroid:osmdroid-geopackage:5.6.6'
 
 ### Adding a geopackage raster tile set to the osmdroid map
 
+Note: this was added in 5.6.4
+
 For a complete working example see:
 
 https://github.com/osmdroid/osmdroid/blob/master/OpenStreetMapViewer/src/main/java/org/osmdroid/samplefragments/tileproviders/GeopackageSample.java
@@ -107,6 +109,8 @@ if (tileSourceBounds != null) {
 
 ### Adding a geopackage features to the osmdroid map
 
+Note: this was added after 5.6.5.
+
 For smale feature sets, you can use the following code to convert all
 features in a given geopackage feature table into osmdroid overlays (Marker, Polyline and Polygon).
 
@@ -140,7 +144,8 @@ for (File f : maps) {
 Start the conversion
 
 ````
-// Open database
+// Open database, we are assuming the first one is the one we want
+// good place to ask the user
 GeoPackage geoPackage = manager.open(databases.get(0));
 
 OsmMapShapeConverter converter = new OsmMapShapeConverter(null);
@@ -149,7 +154,9 @@ OsmMapShapeConverter converter = new OsmMapShapeConverter(null);
 List<String> features = geoPackage.getFeatureTables();
 
 // Query Features
-String featureTable = features.get(1);
+// get the first table, this is an assumption, ask the user what they want
+
+String featureTable = features.get(0);
 FeatureDao featureDao = geoPackage.getFeatureDao(featureTable);
 FeatureCursor featureCursor = featureDao.queryForAll();
 try {
