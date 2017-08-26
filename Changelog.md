@@ -16,6 +16,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * GEMF + JPG archives are now functional
  * Variable zoom animation speed
  * WMS Map Source Client
+ * Geopackage feature tiles and feature > overlays convertor
 
 ## 5.6.5
 
