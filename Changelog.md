@@ -6,7 +6,7 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 ## 5.x (some future version)
 
- * WMS Map Source Client
+
  * Geopackage support for feature sets via conversion and via tile rendering
 
 ## 5.6.6 (under dev)
@@ -15,6 +15,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Map Tile Approximater #646
  * GEMF + JPG archives are now functional
  * Variable zoom animation speed
+ * WMS Map Source Client
 
 ## 5.6.5
 
@@ -58,15 +59,17 @@ relatively minor change set, primarily bug fixes
  * Sample app has a cache analyzer, only shows up if debug mode is on and the device is api 11+
 
 ## 5.6.1
+
  * Republish of 5.6 due to a strange sonatype issue
 
 ## 5.6
+
  * Bug fixes
  * Thread pool is now adjustable
  * MapView is now hardware disabled by default
  * New overlay type, SimpleFastPointOverlay 
 
-## 5.5 (current release from 2016-10-11)
+## 5.5
  * IMap, IMapView API clean up
  * bug fixes
  * SqlTileWriter (tile cache) changes
