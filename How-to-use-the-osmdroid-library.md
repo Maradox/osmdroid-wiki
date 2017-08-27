@@ -266,3 +266,21 @@ Reusing drawables for icons will help with memory usage too.
 ## Map Sources, Imagery and Tile sets.
 
 See https://github.com/osmdroid/osmdroid/wiki/Map-Sources
+
+
+## Using osmdroid in a recycler view
+
+Applies to: v5.6.5 and older. (v5.6.6+ has this fix applied already)
+
+It has been brought up a view times that osmdroid's `MapView` does not play nicely in a `RecyclerView`. The `MapView` is a custom android `ViewGroup` that implements the necessary API calls that ViewGroup requires, namely onDetachedFromWindow. In this function call, osmdroid basically calls destructors on all associated overlays, threading, tile loading, etc. This is destructive and cannot be reinitialized. This was done primarily to prevent memory leaks. Since `ViewGroup` does not have a destroy method or anything else that happens during garbage collection, this is really the only place we can put clean up code. As such, using the map in a recycler view won't work without this simple one liner.
+
+````
+    if (Build.VERSION.SDK_INT >= 16)
+	mapView.setHasTransientState(true);
+````
+
+Now naturally, this will only function on devices at API16 (Jelly Bean) and newer so the recommendation is to simply not use osmdroid in a recycler view for older APIs. The alternative approach is for you to extend the `MapView` and override the method for `public void onDetach()` and simply provide an empty body. This will create memory leaks though so use with caution.
+
+Related tickets:
+ - https://github.com/osmdroid/osmdroid/issues/588
+ - https://github.com/osmdroid/osmdroid/issues/568
