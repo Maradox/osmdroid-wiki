@@ -13,6 +13,6 @@ osmdroid also has an optional library to provide additional features of 3rd part
 
 ```groovy
 dependencies {
-    compile 'org.osmdroid:osmdroid-third-party:(INSERT_VERSION_HERE):release@aar'
+    compile 'org.osmdroid:osmdroid-third-party:(INSERT_VERSION_HERE):@aar'
 }
 ```
