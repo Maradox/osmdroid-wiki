@@ -182,7 +182,7 @@ Have a custom offline tile storage format? Great.
 
 Make a new class that implements `org.osmdroid.tileprovider.modules.IArchiveFile`. There's only a few methods to implement and implementing your own should be trivial. Keep in mind that there will be one instance of this class per archive file and that each instance can be called from multiple threads concurrently. Try to avoid situations where synchronization is needed.
 
-Then register it **before the map is created**. This means before layout inflating. A good place would be somewhere in your `Application` class.
+Then register it **before the map is created**. This means before layout inflating. A good place would be somewhere in your (Application)[https://developer.android.com/reference/android/app/Application.html] class.
 
     `org.osmdroid.tileprovider.modules.ArchiveFileFactory.registerArchiveFileProvider(provider,"ext");`
 
