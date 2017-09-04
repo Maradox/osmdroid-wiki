@@ -175,3 +175,19 @@ If you don't know the tile source name ahead or plan on changing it frequently, 
 MBTiles does not store a tile source name in the database. Calling IArchiveFile.getTileSources will return an empty set in this case. On the flip side, MBTiles files will display to on the map regardless of what tile source the mapView is set to.
 
 It is possible to remove all checks for tile source name comparisons for offline tiles, which would in effect, create a composite tile source. This could work out great if your archives don't overlap. To do this, extend the existing IArchiveFile providers to remove the checks, then register them as the with the `ArchiveFileFactory`
+
+## Adding a new File Archive provider
+
+Have a custom offline tile storage format? Great. 
+
+Make a new class that implements `org.osmdroid.tileprovider.modules.IArchiveFile`. There's only a few methods to implement and implementing your own should be trivial. Keep in mind that there will be one instance of this class per archive file and that each instance can be called from multiple threads concurrently. Try to avoid situations where synchronization is needed.
+
+Then register it **before the map is created**. This means before layout inflating. A good place would be somewhere in your `Application` class.
+
+    `org.osmdroid.tileprovider.modules.ArchiveFileFactory.registerArchiveFileProvider(provider,"ext");`
+
+Where `ext` is your file extension. 
+
+Finally, put some archives on your device. Whatever `Configuration.getInstance().getOsmdroidBasePath()` returns is where the files should be. Without external storage permissions, this defaults to application private storage, which is normally `/data/data/packagename/osmdroid/`. With external storage permissions, this defaults to the largest mount point that is writable. This is usually `/sdcard/osmdroid`. 
+
+All that's left to do is to start up the map and the set the tile source. If you notice in `org.osmdroid.tileprovider.modules.IArchiveFile`, the main method that loads tiles is `InputStream getInputStream(ITileSource tileSource, MapTile tile);` The default tile source for the map is `org.osmdroid.tileprovider.tilesource.TileSourceFactory.MAPNIK`. If the map is set to MAPNIK, then the expected behavior is to return tiles that match that source name.
