@@ -175,7 +175,7 @@ map.getOverlayManager().add(polygon);
 
 | Device         | Markers | Itemized Icon Overlay | Fast Overlay | Polylines | Polygons |
 | -------------- | ------- | --------------------- | ------------ | --------- | -------- |
-| Samsung S5     | 5k      | 3-6k                  | 100k         | 1000s     |
+| Samsung S5     | 5k      | 3-6k                  | 100k         | 1000s     | 2k
 
 
 The answer is greatly dependent on what hardware the osmdroid based app is running on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary. X86 Android running on modern hardware will perform great at even higher numbers. However, it's recommended to limit the amount of stuff you're rendering, if at all possible.
