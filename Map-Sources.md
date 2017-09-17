@@ -27,7 +27,7 @@ http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
 
 # Tile providers vs Tile Source
 
-osmdroid uses two components to display map imagery, the Tile Provider and the Tile Source. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqlite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader. There are other alternate providers included with osmdroid that change the way tiles are loaded offline. osmdroid BonusPack has a number of alternative provides that use other libraries like MapForge to generate tiles on the fly using OSM data while offline.
+osmdroid uses two components to display map imagery, the Tile Provider and the Tile Source. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source, Assets, Offline zip/sqlite/etc in (/sdcard/osmdroid), Downloaded tile cache (/sdcard/osmdroid/tiles) and then finally the downloader. There are other alternate providers included with osmdroid that change the way tiles are loaded offline. osmdroid has a number of alternative providers that use other libraries like MapForge and Geopackage to generate tiles on the fly using OSM data while offline.
 
 # Creating a custom tile provider chain
 
