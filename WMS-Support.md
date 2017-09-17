@@ -16,17 +16,20 @@ Server's we have tested against
  - Geoserver, works in most cases
  - NASA's endpoints, most do NOT work.
 
-The WMS server needs to support producing a tile for a specific bounding box at a specific pixel size. Many of the NASA layers are a fixed pixel size and they will not chop it up for us. 
+The following coordinate/spatial reference systems (CRS/SRS) are supported
+- WGS84, EPSG:4326, CRS:84, this your standard lat/lon
+- EPSG:900913
 
+General WMS server requirements 
+ - The WMS server needs to support producing a tile for a specific bounding box at a specific pixel size. 
  - Layers that require additional input parameters, such as time offsets, is not supported.
  - Layers that require a HTTP post message is not supported.
  - Layers that use non-square pixels (i.e. the height and width of the image are not equal) is not supported.
+ - Only layers that use the supported CRS/SRS can be used
 
-Styling per layer is supported
+Styling per layer is supported, the first style is auto selected.
 
-Layers that use the following coordinate/spatial reference systems are supported
-- WGS84, EPSG:4326, CRS:84
-- EPSG:900913
+Multiple tile layers active at the same time is not currently supported (this would be useful for getting the best tile available as you zoom in and out).
 
 ## Integration Guide
 
