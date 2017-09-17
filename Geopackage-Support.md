@@ -39,7 +39,7 @@ Min SDK: 14
 Add it your project
 
 ````
-compile 'org.osmdroid:osmdroid-geopackage:5.6.6'
+compile 'org.osmdroid:osmdroid-geopackage:<VERSION>'
 ````
 
 
@@ -180,6 +180,43 @@ try {
 
 ### Adding a geopackage feature tile set to the osmdroid map
 
-TODO
+This was added after 5.6.5
 
+The following code opens a Geopackage database and adds 1 tile overlay to the map per feature tile table.
 
+````
+ // Get a manager
+GeoPackageManager manager = GeoPackageFactory.getManager(getContext());
+
+// Available databases
+List<String> databases = manager.databases();
+
+// Import database
+for (File f : maps) {
+	try {
+		boolean imported = manager.importGeoPackage(f);
+	} catch (Exception ex) {
+		ex.printStackTrace();
+	}
+}
+
+if (!databases.isEmpty()) {
+	for (int k = 0; k < databases.size(); k++) {
+		// Open database
+		GeoPackage geoPackage = manager.open(databases.get(k));
+		// Feature tile tables
+		List<String> features = geoPackage.getFeatureTables();
+		// Query Features
+		if (!features.isEmpty()) {
+			for (int i = 0; i < features.size(); i++) {
+				GeoPackageFeatureTileProvider provider = new GeoPackageFeatureTileProvider(
+					new XYTileSource(databases.get(k) + ":" + features.get(i),0,22,256,"png",new String[0])
+				);
+				GeopackageFeatureTilesOverlay overlay = new GeopackageFeatureTilesOverlay(provider,getContext());
+				overlay.setDatabaseAndFeatureTable(databases.get(k),  features.get(i));
+				mMapView.getOverlayManager().add(overlay);
+			}
+		}
+	}
+}
+````
