@@ -7,16 +7,18 @@ This list only includes major highlights or breaking changes. Check [here](https
 ## 5.x (some future version)
 
 
- * Geopackage support for feature sets via conversion and via tile rendering
+
 
 ## 5.6.6 (under dev)
   
  * Floating point zoom levels with smoother zooming
- * Map Tile Approximater #646
+ * Map Tile Approximater #646, this fixes the "grey" tiles by stretching/scaling tiles from other zoom levels to fill in the gaps
  * GEMF + JPG archives are now functional
  * Variable zoom animation speed
- * WMS Map Source Client
- * Geopackage feature tiles and feature > overlays convertor
+ * BETA WMS Map Source Client
+ * Geopackage feature tiles and feature > overlays converter
+ * Geopackage support for feature sets via conversion and via tile rendering
+ * Max zoom to 29
 
 ## 5.6.5
 
