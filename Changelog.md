@@ -4,12 +4,10 @@ This list only includes major highlights or breaking changes. Check [here](https
 
 [Upgrading?](https://github.com/osmdroid/osmdroid/wiki/Upgrade-Guide)
 
-## 5.x (some future version)
+## 6.x (some future version)
 
 
-
-
-## 5.6.6 (under dev)
+## 6.0 (under dev)
   
  * Floating point zoom levels with smoother zooming
  * Map Tile Approximater #646, this fixes the "grey" tiles by stretching/scaling tiles from other zoom levels to fill in the gaps
