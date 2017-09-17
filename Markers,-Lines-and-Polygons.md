@@ -5,6 +5,7 @@ This articles discusses how to perform some common interactions with this follow
   - Marker - near API compatible with Google Maps v2 
   - Fast Icon Overlays
 - Geospatially referenced Lines and Polygons
+- Folder overlay
 
 ##  Geospatially referenced icons
 
