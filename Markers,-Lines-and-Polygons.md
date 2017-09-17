@@ -175,6 +175,11 @@ map.getOverlayManager().add(polygon);
 ```
 ![](https://github.com/osmdroid/osmdroid/raw/master/src/site/images/polygon.png)
 
+### Folder Overlay
+
+The [Folder Overlay](https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/views/overlay/FolderOverlay.java) class is just a container of other overlays. Useful for bunching stuff together. 
+
+
 ## How much stuff can I put on the map?
 
 | Device         | Markers | Itemized Icon Overlay | Fast Overlay | Polylines | Polygons |
