@@ -4,6 +4,7 @@ Since we can only run the dex counter on APKs, the best estimates we can give ar
 
 So in general, osmdroid is pretty small in terms of method counts. Just the base `osmdroid-android` library is around 2k methods. The sample app, geopackage, mapsforge and the android support libraries they require, increase this to nearly 40k. The breakdown is below
 
+````
 Processing C:\projects\osmdroid\OpenStreetMapViewer\build\outputs\apk\OpenStreetMapViewer-5.6.6-SNAPSHOT-debug.apk
 Read in 40162 method IDs and 21067 field IDs
 ----------------------------------
@@ -379,3 +380,4 @@ Read in 40162 method IDs and 21067 field IDs
 ----------------------------------
 
 
+````
