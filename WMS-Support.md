@@ -64,7 +64,7 @@ Here is a great spot to prompt the user for some kind of layer selection.
 Here we are selecting the first layer and telling osmdroid to use it. 
 
 ````
-WMSTileSource source = WMSTileSource.createFrom(cap, wmsEndpoint.getLayers().get(0) );
+WMSTileSource source = WMSTileSource.createFrom(wmsEndpoint, wmsEndpoint.getLayers().get(0) );
 if (layer.getBbox() != null) {
 	//center map on this location
 	mMapView.zoomToBoundingBox(layer.getBbox(),true);
