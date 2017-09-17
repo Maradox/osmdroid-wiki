@@ -127,10 +127,11 @@ sfpo.setOnClickListener(new SimpleFastPointOverlay.OnClickListener() {
 // add overlay
 mMapView.getOverlays().add(sfpo);
 ```
+![](https://github.com/osmdroid/osmdroid/raw/master/src/site/images/fastovelray.png)
 
 ## Geospatially referenced Lines and Polygons
 
-osmdroid includes two classes that more or less mirror Google Maps v2 API, the `Polyline` and `Polygon`
+osmdroid includes two classes that more or less mirror Google Maps v2 API, the `Polyline` and `Polygon`.
 
 ### Polylines
 
@@ -148,7 +149,7 @@ line.setOnClickListener(new Polyline.OnClickListener() {
 });
 map.getOverlayManager().add(line);
 ```
-
+![](https://github.com/osmdroid/osmdroid/raw/master/src/site/images/polyline.png)
 
 ### Polygons
 
@@ -161,19 +162,20 @@ geoPoints.add(geoPoints.get(0));    //forces the loop to close
 polygon.setPoints(geoPoints);
 polygon.setTitle("A sample polygon");
 
-//polygons supports holes too, points should be in a clockwise order
+//polygons supports holes too, points should be in a counter-clockwise order
 List<List<GeoPoint>> holes = new ArrayList<>();
 holes.add(geoPoints);
 polygon.setHoles(holes);
 
 map.getOverlayManager().add(polygon);
 ```
+![](https://github.com/osmdroid/osmdroid/raw/master/src/site/images/polygon.png)
 
 ## How much stuff can I put on the map?
 
 | Device         | Markers | Itemized Icon Overlay | Fast Overlay | Polylines | Polygons |
 | -------------- | ------- | --------------------- | ------------ | --------- | -------- |
-| Samsung S5     | 5k      | 3-6k                  | 100k         |           |
+| Samsung S5     | 5k      | 3-6k                  | 100k         | 1000s     |
 
 
 The answer is greatly dependent on what hardware the osmdroid based app is running on. A Samsung S5 (no endorsement intended) ran just fine at 3k icons and was noticeably choppy at 6k icons. Your mileage may vary. X86 Android running on modern hardware will perform great at even higher numbers. However, it's recommended to limit the amount of stuff you're rendering, if at all possible.
