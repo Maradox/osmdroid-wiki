@@ -6,7 +6,9 @@ This articles discusses how to perform some common interactions with this follow
   - Fast Icon Overlays
 - Geospatially referenced Lines and Polygons
 
-## Icons
+##  Geospatially referenced icons
+
+Pushpins, markers, icons, symbols, etc
 
 ### Itemized Icon Overlay with click listener
 
@@ -47,7 +49,6 @@ Marker startMarker = new Marker(map);
 startMarker.setPosition(startPoint);
 startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
 map.getOverlays().add(startMarker);
-map.invalidate();
 ```
 
 Clicking on it opens an empty cartoon-bubble.
@@ -61,6 +62,25 @@ startMarker.setTitle("Start point");
 The bubble can be customized with your own layouts too
 
 ![](https://github.com/osmdroid/osmdroid/raw/master/osmdroid-android/src/main/java/org/osmdroid/views/overlay/doc-files/marker-infowindow-classes.png)
+
+#### Marker using a text label instead of an icon
+
+The marker class can render a simple text label for icons without an icon. This is an opt in feature and is global. It is super useful for certain KML scenarios (osmbonuspack required).
+
+```java
+//enables this opt in feature
+Marker.ENABLE_TEXT_LABELS_WHEN_NO_IMAGE = true;
+//build the marker
+Marker m = new Marker(mapView);
+m.setTextLabelBackgroundColor(backgroundColor);
+m.setTextLabelFontSize(fontSizeDp);
+m.setTextLabelForegroundColor(fontColor);
+m.setTitle("hello world");
+//must set the icon to null last
+m.setIcon(null);
+m.setPosition(new GeoPoint(0d,0d));
+map.getOverlays().add(m);
+```
 
 ### Fast Overlay
 
@@ -106,6 +126,47 @@ sfpo.setOnClickListener(new SimpleFastPointOverlay.OnClickListener() {
 
 // add overlay
 mMapView.getOverlays().add(sfpo);
+```
+
+## Geospatially referenced Lines and Polygons
+
+osmdroid includes two classes that more or less mirror Google Maps v2 API, the `Polyline` and `Polygon`
+
+### Polylines
+
+```java
+List<GeoPoint> geoPoints = new ArrayList<>();
+//add your points here
+Polyline line = new Polyline();
+line.setPoints(geoPoints);
+line.setOnClickListener(new Polyline.OnClickListener() {
+	@Override
+	public boolean onClick(Polyline polyline, MapView mapView, GeoPoint eventPos) {
+		Toast.makeText(mapView.getContext(), "polyline with " + polyline.getPoints().size() + "pts was tapped", Toast.LENGTH_LONG).show();
+		return false;
+	}
+});
+map.getOverlayManager().add(line);
+```
+
+
+### Polygons
+
+```java
+List<GeoPoint> geoPoints = new ArrayList<>();
+//add your points here
+Polygon polygon = new Polygon();
+polygon.setFillColor(Color.argb(75, 255,0,0));
+geoPoints.add(geoPoints.get(0));    //forces the loop to close
+polygon.setPoints(geoPoints);
+polygon.setTitle("A sample polygon");
+
+//polygons supports holes too, points should be in a clockwise order
+List<List<GeoPoint>> holes = new ArrayList<>();
+holes.add(geoPoints);
+polygon.setHoles(holes);
+
+map.getOverlayManager().add(polygon);
 ```
 
 ## How much stuff can I put on the map?
