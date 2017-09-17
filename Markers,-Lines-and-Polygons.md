@@ -82,6 +82,10 @@ m.setPosition(new GeoPoint(0d,0d));
 map.getOverlays().add(m);
 ```
 
+Easy place to see this in action? The LatLonGridLineOverlay
+
+![](https://github.com/osmdroid/osmdroid/raw/master/src/site/images/latlon.png)
+
 ### Fast Overlay
 
 The fast overlay is great if you have a huge number points to render and they all share the same icon. It is optimized to render over 100k points, however performance will vary based on hardware.
