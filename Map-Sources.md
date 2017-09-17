@@ -379,7 +379,7 @@ TileSourceFactory.addTileSource(GoogleHybrid);
 
 ## WMS Support
 
-WMS support was added in osmdroid v6.0. Details are located at [WMS Support]. If it doesn't work for your setup, you can use MOBAC to connected to a WMS map provider, then convert those tiles into an offline map source.
+WMS support was added in osmdroid v6.0. Details are located at [WMS Support](https://github.com/osmdroid/osmdroid/wiki/WMS-Support). If it doesn't work for your setup, you can use MOBAC to connected to a WMS map provider, then convert those tiles into an offline map source.
 
 ## Geopackage Support
 
