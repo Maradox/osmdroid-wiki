@@ -17,6 +17,7 @@ This list only includes major highlights or breaking changes. Check [here](https
  * Geopackage feature tiles and feature > overlays converter
  * Geopackage support for feature sets via conversion and via tile rendering
  * Max zoom to 29
+ * Hardware acceleration turned on by default
 
 ## 5.6.5
 
