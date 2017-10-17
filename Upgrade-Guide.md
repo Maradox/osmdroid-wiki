@@ -5,7 +5,8 @@
  - Several new fields were added to `IConfigurationProvider` interface. If you've written your own, expect to do some work (it's minor). If you've extended the `DefaultConfigurationProvider`, then you should be ok.
  - There was several changes to MapView and MapController, none of which should be breaking. These methods involve getting/setting the current zoom level and animation to a zoom level. Impacts should be minimal.
  - With floating point zoom, custom implementations of overlays may have to perform some tweaking.
- - MapView in a recycler is now supported and functions on API16+ devices. This sets the default value for `view.setHasTransientState(true)` when the MapView is created. If this causes issues, you can opt out of this setting via the new `IConfiguration#setMapViewRecyclerFriendly(boolean)` setting
+ - MapView in a recycler is now supported and functions on API16+ devices. This sets the default value for `view.setHasTransientState(true)` when the MapView is created. If this causes issues, you can opt out of this setting via the new `IConfiguration#setMapViewRecyclerFriendly(boolean)` setting\
+ - The built zoom controls have been removed in favor of a simple overlay based classes with some basic always on screen zoom buttons. There's no API change so you can still use the `MapView.setUseBuiltInZoomControls(true/false)`. If this doesn't work for you, fork, fix, and pr. The old zoom buttons were actually built into the Android and were memory leak prone and will log some nasty warning messages under certain circumstances. 
 
 ## From version 5.6.4 to 5.6.5
 
