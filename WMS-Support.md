@@ -1,4 +1,8 @@
+# WMS Support
+
 This article is a basic integration guide for using WMS tile servers with osmdroid.
+
+It's not perfect and will not work with many use cases.
 
 ## Architecture and workflow
 
