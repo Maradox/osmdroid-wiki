@@ -14,9 +14,9 @@ What can you do with osmdroid (including known add-ons?)
  * Multi-touch support with some basic gestures (pinch zoom, fling, etc)
  * Map can be rotated and oriented in any direction
  * Rich set of Overlays - "things you want to draw on the map": 
-  ** Markers, Polylines and Polygons - with popup bubbles if needed
-  ** Compass, minimap, scalebar
-  ** My current location
+   * Markers, Polylines and Polygons - with popup bubbles if needed
+   * Compass, minimap, scalebar
+   * My current location
  * KML / GeoJson (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
  * POI search (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
  * Routing (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
