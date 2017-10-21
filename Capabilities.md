@@ -1,8 +1,8 @@
 # Capabilities 
 
-What can you do with osmdroid (including known add-ons?)
+What can you do with osmdroid:
 
- * osmdroid is a 2D map engine and is small, lightweight, with a similar API to Google Maps V1
+ * osmdroid is a 2D map engine, small, lightweight, with an API similar to Google Maps V1
  * Raster tile based (no vector), with support for numerous tile providers - free or not - most of them based on OpenStreetMap. 
  * Extensible architecture for map tile support with adapters for:
    * Geopackage
@@ -17,7 +17,9 @@ What can you do with osmdroid (including known add-ons?)
    * Markers, Polylines and Polygons - with popup bubbles if needed
    * Compass, minimap, scalebar
    * My current location
- * KML / GeoJson (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
+
+And with add-ons:
+ * Support for KML and GeoJson (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
  * POI search (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
  * Routing (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
  * Marker clustering (with [OSMBonusPack](https://github.com/MKergall/osmbonuspack/))
