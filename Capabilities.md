@@ -3,13 +3,13 @@
 What can you do with osmdroid:
 
  * osmdroid is a 2D map engine, small, lightweight, with an API similar to Google Maps V1
- * Raster tile based (no vector), with support for numerous tile providers - free or not - most of them based on OpenStreetMap. 
+ * Raster tile based (no vector), with support for numerous [tile providers](Map-Sources) - free or not - most of them based on OpenStreetMap. 
  * Extensible architecture for map tile support with adapters for:
-   * Geopackage
+   * [Geopackage](Geopackage-Support)
    * Mapsforge (vector)
-   * Basic WMS support
+   * Basic [WMS support](WMS-Support)
  * Tiles available online/offline/embedded, with pre-caching options
- * Offline support using a variety of tile archive types
+ * [Offline support](Offline-Map-Tiles) using a variety of tile archive types
  * Supports zoom 0 (1:15Mkm) to 29 (1:0.05m) at the equator (inches of screen real estate)
  * Multi-touch support with some basic gestures (pinch zoom, fling, etc)
  * Map can be rotated and oriented in any direction
