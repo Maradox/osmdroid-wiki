@@ -2,7 +2,7 @@
 
 What can you do with osmdroid (including known add-ons?)
 
- * osmdroid a 2D map engine and is small, light weight, with a similar API to Google Maps
+ * osmdroid is a 2D map engine and is small, light weight, with a similar API to Google Maps
  * Offline support using a variety of tile archive types
  * Supports zoom 0 (1:15Mkm) to 29 (1:0.05m) at the equator (inches of screen real estate)
  * Map can be rotated and oriented in any direction
