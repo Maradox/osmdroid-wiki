@@ -276,7 +276,6 @@ Before using Bing Maps, make sure fully understand their usage terms. Bing maps 
 
 Required Java dependencies
  - osmdroid-android
- - osmdroid-third-party
 
 Manifest (optional):
 Under manifest/application
