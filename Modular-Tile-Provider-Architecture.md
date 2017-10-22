@@ -24,6 +24,8 @@ This top-level tile provider allows an SDK user to provide an array of modular a
 
 ## Tile Provider Modules
 
+![Map Tile Provider Modules](images/MapTileModuleProviderBase2.png)
+
 * The MapTileProviderArray is the basis for the modular tile architecture and is the "manager" class that handles calls to the tile provider modules. The provided tile provider modules available for use are:
 * MapTileFilesystemProvider (extends MapTileModuleProviderBase) - Implements a file system cache and provides cached tiles. This functions as a tile provider by serving cached tiles. It also implements an !IFilesystemCacheProvider which can be used by other tile providers to register for file system cache access so they can put their tiles in the file system cache.
 * MapTileFileArchiveProvider (extends MapTileFileStorageProviderBase) - This tile provider can provide tiles stored in a file archive.
