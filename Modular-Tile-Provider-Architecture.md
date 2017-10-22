@@ -1,5 +1,4 @@
-# NOTICE
-This page was blindly copied over from the old wiki on google code. it may be out of date
+# Modular Tile Provider Architecture
 
 ## Introduction
 
@@ -19,6 +18,7 @@ MapTileProviderArray (extends MapTileProviderBase) - This top-level tile provide
 * MapTileFilesystemProvider (extends MapTileModuleProviderBase) - Implements a file system cache and provides cached tiles. This functions as a tile provider by serving cached tiles. It also implements an !IFilesystemCacheProvider which can be used by other tile providers to register for file system cache access so they can put their tiles in the file system cache.
 * MapTileFileArchiveProvider (extends MapTileFileStorageProviderBase) - This tile provider can provide tiles stored in a file archive.
 * MapTileDownloader (extends MapTileModuleProviderBase) - The MapTileDownloader loads tiles from an HTTP server. It subscribes to a FilesystemCacheProvider if available and saves data in it.
+ * MapTileApproximater (extends MapTileModuleProviderBase) - This module will attempt to fill in tile coverage gaps using available tile imagery at current zoom-1 to minimum zoom. This works by stretching and scaling the best resolution available tile with the goal of reducing the visibility of the gray grid.
 
 ## Tile Sources
 
