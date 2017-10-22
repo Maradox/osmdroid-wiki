@@ -43,6 +43,7 @@ relatively minor change set, primarily bug fixes
  * #547 Map tile bug
  * #544 permissions issue on android 6 with permissions granted (sample app) bug
  * #541 add geopackage library to the distribution package bug build process
+ * Bing tile source was migrated from 3rd party to osmdroid-android
 
 ## 5.6.3
  * osmdroid JDK raster tile server
