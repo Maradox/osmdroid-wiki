@@ -1,5 +1,7 @@
 # Modular Tile Provider Architecture
 
+Note: This article has a number of UML diagrams that were generated during the site generation process circa Oct 2017. They may be out of date or inaccurate. For the most up to date graphs, see the osmdroid javadocs.
+
 ## Introduction
 
 osmdroid has a modular and extensible tile provider architecture that allows tiles to be provided from a number of sources including online sources, local archive sources, and file store sources.
@@ -44,4 +46,13 @@ The asynchronous tile request chain works as such:
 
 ## File System Cache Model
 
+![IFile System Cache](images/IFilesystemCache.png)
+
 To provide a universal file system cache for use to all providers, an IFilesystemCacheProvider is used. This can be used by tile providers if they wish to cache their tiles in a filesystem cache for quicker retrieval next time the tile is requested.
+
+There are currently 3 implementions
+
+ - TileWriter, used for API9 and older devices, stores files on the raw file system. This limitations and scaling issues. Cached content will expire over time.
+ - SqlTileWriter, used for API10+ devices, this stores all tiles in a sqlite database. Cached content will expire over time.
+ - SqlArchiveTileWriter, this writer produces osmdroid sqlite file archives which does not expire. This effectively provides a MOBAC like capability on device.
+
