@@ -4,7 +4,16 @@ Note: This article has a number of UML diagrams that were generated during the s
 
 ## Introduction
 
-osmdroid has a modular and extensible tile provider architecture that allows tiles to be provided from a number of sources including online sources, local archive sources, and file store sources.
+osmdroid uses two components to display map imagery, the **Tile Provider** and the **Tile Source**. The Tile Provider is used to determine how to load tiles (online, offline, assets folders, etc). The Tile Source determines what imagery set is displayed, such as Bing, Mapquest, Mapnik, etc. The default Tile Provider, searches the following for your Tile Source
+
+ - Assets, 
+ - Offline zip/sqlite/etc in (/sdcard/osmdroid), 
+ - Downloaded tile cache (/sdcard/osmdroid/tiles) 
+ - Tile Downloader
+
+Osmdroid has a number of alternative providers that use other libraries like MapForge and Geopackage to generate tiles on the fly using OSM data while offline.
+
+osmdroid has a modular and extensible tile provider architecture that allows tiles to be provided from a number of sources including online sources, local archive sources, and file store sources. This article primarily discusses the **Tile Provider** structure and components.
 
 ## Top Level Tile Provider
 
