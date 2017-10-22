@@ -8,9 +8,17 @@ osmdroid has a modular and extensible tile provider architecture that allows til
 
 The tile provider architecture begins with a top-level tile provider that manages calls to get tiles. There are two top-level tile providers provided for SDK users:
 
-MapTileProviderBasic (extends MapTileProviderArray) - This top-level tile provider implements a default tile request chain which includes a MapTileFilesystemProvider (a file-system cache), a MapTileFileArchiveProvider (provides tiles from archives) and a MapTileDownloader (downloads map tiles from HTTP server). It is designed to get you up and running quickly and requires very little set up.
+### MapTileProviderBasic (extends MapTileProviderArray)
 
-MapTileProviderArray (extends MapTileProviderBase) - This top-level tile provider allows an SDK user to provide an array of modular asynchronous tile providers to be used to obtain map tiles. When a tile is requested, the MapTileProviderArray first checks the MapTileCache (synchronously) and returns the tile if available. If not, then the tile request is sent asynchronously to each tile provider in the MapTileProviderArray until one of the providers can provide the tile or until the request fails due to no more providers to try.
+![Map Tile Provider Base](images/MapTileProviderBase.png)
+
+This top-level tile provider implements a default tile request chain which includes a MapTileFilesystemProvider (a file-system cache), a MapTileFileArchiveProvider (provides tiles from archives) and a MapTileDownloader (downloads map tiles from HTTP server). It is designed to get you up and running quickly and requires very little set up.
+
+### MapTileProviderArray (extends MapTileProviderBase)
+
+![Map Tile Provider Array](images/MapTileProviderArray.png)
+
+This top-level tile provider allows an SDK user to provide an array of modular asynchronous tile providers to be used to obtain map tiles. When a tile is requested, the MapTileProviderArray first checks the MapTileCache (synchronously) and returns the tile if available. If not, then the tile request is sent asynchronously to each tile provider in the MapTileProviderArray until one of the providers can provide the tile or until the request fails due to no more providers to try.
 
 ## Tile Provider Modules
 
