@@ -15,6 +15,10 @@ Osmdroid has a number of alternative providers that use other libraries like Map
 
 osmdroid has a modular and extensible tile provider architecture that allows tiles to be provided from a number of sources including online sources, local archive sources, and file store sources. This article primarily discusses the **Tile Provider** structure and components.
 
+![Map Tile Provider Structure](images/tileprovideroverall.png)
+
+The diagram (above) depicts the typical arrangement of references and classes when starting up osmdroid.
+
 ## Top Level Tile Provider
 
 The tile provider architecture begins with a top-level tile provider that manages calls to get tiles. There are two top-level tile providers provided for SDK users:
