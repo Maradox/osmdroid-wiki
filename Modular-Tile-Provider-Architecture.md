@@ -32,7 +32,14 @@ This top-level tile provider allows an SDK user to provide an array of modular a
 
 ## Tile Sources
 
-Tile providers use tile sources classes to encapsulate information about the type of tiles the provider serves. A tile source also provides rendering services to create Drawables. Tile sources that provide raster images (bitmap, jpg, png, gif, etc...) can extend the BitmapTileSourceBase class. If the tile source is online (accessible via HTTP), then they can extend the OnlineTileSourceBase. OnlineTileSourceBase classes are the only tile sources that the MapTileDownloader can serve.
+![Bitmap Tile Source](images/BitmapTileSourceBase.png)
+
+Tile providers use tile sources classes to encapsulate information about the type of tiles the provider serves. A tile source also provides rendering services to create Drawables. Tile sources that provide raster images (bitmap, jpg, png, gif, etc...) can extend the BitmapTileSourceBase class. 
+
+![Online Tile Source](images/OnlineTileSourceBase.png)
+
+If the tile source is online (accessible via HTTP), then they can extend the OnlineTileSourceBase. OnlineTileSourceBase classes are the only tile sources that the MapTileDownloader can serve.
+
 
 ## Asynchronous Tile Request Chain Details
 
