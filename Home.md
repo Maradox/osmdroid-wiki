@@ -19,6 +19,7 @@ Chances are good that you want to get a map up and running in your app as soon a
  * [WMS](WMS-Support)
  * [Tile Caching Settings](Tile-Caching-Settings)
  * [osmdroid thirdparty](osmdroid-thirdparty)
+ * [MapsForge](Mapsforge)
 
 ## Upgrades and Changes
  * [Upgrade Guide](Upgrade-Guide)
