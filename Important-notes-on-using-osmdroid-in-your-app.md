@@ -1,5 +1,3 @@
-TODO this article needs updating. Most of these settings were revised in v5.6
-
 # Important notes on using osmdroid in your app
 
 There's a few things you need to know about osmdroid before deploying your app to public repositories, app stores, fdroid, etc. These settings should be configured individually for every app that uses osmdroid.
@@ -58,3 +56,7 @@ Prefer using MapViews via xml layouts instead as demonstrated in
 ## How to credit OpenStreetMap
 
 OpenStreetMap requires that you add “© OpenStreetMap contributors” to the map, if you use their data. For more dedails see http://www.openstreetmap.org/copyright/en 
+
+## Handling Cache Storage
+
+osmdroid does not work without somewhere to cache the tiles. The first time starting an application using osmdroid will scan for all available, writable mount points on the device. It auto selects the largest mount point. This, of course can be changed via the `IConfigurationProvider`. If that mount point suddenly becomes read only or disappears, osmdroid will not handle this scenario. Instead, users will get the familiar gray grid with no map tiles being displayed (uh oh). To overcome this, applications using osmdroid should probably check on startup to see what the selected cache location is via `ConfigurationProvider.getOsmdroidTileCache()` [source](https://github.com/osmdroid/osmdroid/blob/master/osmdroid-android/src/main/java/org/osmdroid/config/DefaultConfigurationProvider.java#L234) then by checking `StorageUtils.isWritable`. If it is writable, no further action is required. Otherwise, you should probably prompt the user or autoselect the next best location.
