@@ -6,7 +6,7 @@ What can you do with osmdroid:
  * Raster tile based (no vector), with support for numerous [tile providers](Map-Sources) - free or not - most of them based on OpenStreetMap. 
  * Extensible architecture for map tile support with adapters for:
    * [Geopackage](Geopackage-Support)
-   * Mapsforge
+   * [Mapsforge](Mapsforge)
    * Basic [WMS support](WMS-Support)
  * Tiles available online/offline/embedded, with [pre-caching](Cache-Manager) options
  * [Offline support](Offline-Map-Tiles) using a variety of tile archive types
